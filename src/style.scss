@@ -17,6 +17,10 @@
   z-index: 325;
 }*/
 
+body {
+  margin: 0;
+}
+
 ul, menu, dir {
   display: block;
   list-style-type: disc;
@@ -129,6 +133,59 @@ ul, menu, dir {
   }
 }
 
+.slider {
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 281;
+  }
+}
+
+.color-filter {
+  background-color: rgb(83, 99, 219);
+  position: relative;
+  width: 100%;
+  z-index: 280;
+}
+
+
+.color-filter-copy_2 {
+  background-color: rgb(83, 99, 219);
+  position: relative;
+  width: 100%;
+  z-index: 282;
+}
+
+.color-filter-copy_3 {
+  background-color: rgb(83, 99, 219);
+  opacity: 0.8;
+  position: relative;
+  width: 100%;
+  z-index: 283;
+}
+
+.s-text {
+  font-family: $slider-font-1;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 185px;
+  right: 340px;
+  z-index: 282;
+
+}
+
+.s-text-1 {
+  font-family: $slider-font-2;
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 305px;
+  right: 470px;
+  z-index: 282;
+
+}
 
 
 
