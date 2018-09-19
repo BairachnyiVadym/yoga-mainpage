@@ -1,0 +1,12 @@
+//@content is a placeholder to allow pass the CSS content block when declaring a mixin
+@mixin responsive($resolution) {
+  @media ( min-width: $resolution ) {
+    @content;
+  }
+};
+
+//need prefixes to work properly in all browsers. check if autoprefixer works!
+@mixin columns($count, $width) {
+  column-count: $count;
+  column-width: $width;
+}
