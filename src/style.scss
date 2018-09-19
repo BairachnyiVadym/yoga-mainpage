@@ -187,6 +187,46 @@ ul, menu, dir {
 
 }
 
+.rounded-rectangle {
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: 440px;
+  top: 140px;
+  width: 210px;
+  height: 285px;
+  box-sizing: border-box;
+  padding: 25px 10px 20px 15px;
+  z-index: 288;
+}
+.block-head {
+  font-family: $menu-font;
+  font-size: 20px;
+  color: #5363db;
+}
+
+.round-input {
+  border-radius: 8px;
+  background-color: rgb(242, 242, 242);
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.block-submit {
+  border-radius: 8px;
+  background-color: rgb(91, 108, 235);
+  box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: white;
+  margin: 15px 10px 15px;
+  padding: 10px 0px;
+  width: 100px;
+  float: right;
+}
+
+
 
 
 

@@ -155,3 +155,42 @@ ul, menu, dir {
   top: 305px;
   right: 470px;
   z-index: 282; }
+
+.rounded-rectangle {
+  border-radius: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: 440px;
+  top: 140px;
+  width: 210px;
+  height: 285px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25px 10px 20px 15px;
+  z-index: 288; }
+
+.block-head {
+  font-family: "Open Sans Semibold";
+  font-size: 20px;
+  color: #5363db; }
+
+.round-input {
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.block-submit {
+  border-radius: 8px;
+  background-color: #5b6ceb;
+  -webkit-box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: white;
+  margin: 15px 10px 15px;
+  padding: 10px 0px;
+  width: 100px;
+  float: right; }
