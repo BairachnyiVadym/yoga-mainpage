@@ -30,8 +30,16 @@
         <form>
             <input class="round-input" type="text" name="name" placeholder="Enter your name">
             <input class="round-input" type="text" name="phone" placeholder="Enter your phone">
-            <input class="round-input" type="text" name="class" placeholder="Choose your class">
-            <input class="block-submit" value="Try it">
+
+            <select class="round-input" name="choose-class">
+                <option value="" disabled selected hidden>Choose your class</option>
+                <option value='Yoga for health'>Yoga for health</option>
+                <option value='Yoga for loose weight'>Yoga for loose weight</option>
+                <option value='Yoga for children'>Yoga for children</option>
+                <option value='Yoga for eldery'>Yoga for eldery</option>
+            </select>
+
+            <button class="block-submit" type="button">Try it</button>
         </form>
     </div>
 

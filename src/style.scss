@@ -1,22 +1,5 @@
 @import './partials/variables';
-
-/*.header {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 5572px;
-  z-index: 326;
-}
-.header_menu {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 5572px;
-  z-index: 325;
-}*/
-
+//overriding default behaviour
 body {
   margin: 0;
 }
@@ -30,6 +13,36 @@ ul, menu, dir {
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px;
 }
+
+input {
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  padding: 0px;
+  border: none;
+  border-color: initial;
+  border-image: initial;
+  &:focus {
+    outline-offset: 0px;
+    outline: -webkit-focus-ring-color none 0px;
+  }
+}
+select{
+  &:focus {
+    border: none;
+    outline: -webkit-focus-ring-color none 0px;
+  }
+}
+
+button {
+  border: none;
+  &:focus {
+    outline: -webkit-focus-ring-color none 0px;
+  }
+}
+
+///////////
 
 .header {
   background-color: rgb(255, 255, 255);
@@ -67,15 +80,6 @@ ul, menu, dir {
     z-index: 322;
   }
 }
-
-/*.menu {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1920px;
-  height: 5572px;
-  z-index: 320;
-}*/
 
 .main-menu-left {
   font-size: 14px;
@@ -134,35 +138,18 @@ ul, menu, dir {
 }
 
 .slider {
+  background-color: rgb(83, 99, 219);
+  position: relative;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  z-index: 282;
   img {
     position: relative;
     width: 100%;
     height: auto;
     z-index: 281;
   }
-}
-
-.color-filter {
-  background-color: rgb(83, 99, 219);
-  position: relative;
-  width: 100%;
-  z-index: 280;
-}
-
-
-.color-filter-copy_2 {
-  background-color: rgb(83, 99, 219);
-  position: relative;
-  width: 100%;
-  z-index: 282;
-}
-
-.color-filter-copy_3 {
-  background-color: rgb(83, 99, 219);
-  opacity: 0.8;
-  position: relative;
-  width: 100%;
-  z-index: 283;
 }
 
 .s-text {
@@ -172,7 +159,7 @@ ul, menu, dir {
   position: absolute;
   top: 185px;
   right: 340px;
-  z-index: 282;
+  z-index: 283;
 
 }
 
@@ -183,7 +170,7 @@ ul, menu, dir {
   position: absolute;
   top: 305px;
   right: 470px;
-  z-index: 282;
+  z-index: 283;
 
 }
 
@@ -199,6 +186,10 @@ ul, menu, dir {
   box-sizing: border-box;
   padding: 25px 10px 20px 15px;
   z-index: 288;
+  select {
+    width: 175px;
+    border-style: none;
+  }
 }
 .block-head {
   font-family: $menu-font;
@@ -210,8 +201,12 @@ ul, menu, dir {
   border-radius: 8px;
   background-color: rgb(242, 242, 242);
   margin-top: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0px 10px 5px;
+  color: #888888;
+  &::placeholder {
+    color: #888888;
+    opacity: 1;
+  }
 }
 
 .block-submit {
@@ -220,15 +215,8 @@ ul, menu, dir {
   box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
   text-align: center;
   color: white;
-  margin: 15px 10px 15px;
+  margin: 20px 10px;
   padding: 10px 0px;
   width: 100px;
   float: right;
 }
-
-
-
-
-
-
-

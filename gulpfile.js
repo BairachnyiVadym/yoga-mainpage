@@ -19,7 +19,13 @@ gulp.task('reload-css', function () {
         .pipe(livereload());
 });
 
+gulp.task('reload-html', function () {
+   gulp.src('./src/index.html')
+       .pipe(livereload());
+});
+
 gulp.task('default', function() {
     livereload.listen();
     gulp.watch('./src/style.scss', ['reload-css']);
+    gulp.watch('./src/index.html', ['reload-html'])
 });
