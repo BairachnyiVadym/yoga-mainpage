@@ -1,4 +1,5 @@
 @import './partials/variables';
+
 //overriding default behaviour
 body {
   margin: 0;
@@ -45,7 +46,7 @@ button {
 ///////////
 
 .header {
-  background-color: rgb(255, 255, 255);
+  background-color: $main-background-color;
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
   position: absolute;
   left: 0px;
@@ -66,7 +67,7 @@ button {
 
   &-name {
     font-size: 14px;
-    font-family: "Champagne & Limousines";
+    font-family: $logo-font;
     color: rgb(83, 99, 219);
     font-weight: bold;
     line-height: 1.2;
@@ -81,59 +82,61 @@ button {
   }
 }
 
-.main-menu-left {
-  font-size: 14px;
-  font-family: $menu-font;
-  color: rgb(83, 99, 219);
-  font-weight: bold;
-  text-align: center;
-  position: absolute;
-  left: 20%;
-  top: 40%;
-  list-style: none;
-  z-index: 318;
-
-  li {
-    display: inline-block;
-    padding-right: 20px;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
- /* a:hover {
-    border-width: 1px;
-    border-color: rgb(83, 99, 219);
-    border-style: solid;
-    background-color: rgb(0, 0, 0);
+#nav {
+  .main-menu-left {
+    font-size: 14px;
+    font-family: $menu-font;
+    color: $menu-font-color;
+    font-weight: bold;
+    text-align: center;
     position: absolute;
-    left: 541px;
-    top: 60px;
-    width: 30px;
-    height: 0;
-    z-index: 319;
-  }*/
-}
-.main-menu-right {
-  font-size: 14px;
-  font-family: $menu-font;
-  color: rgb(85, 85, 85);
-  font-weight: bold;
-  text-align: center;
-  position: absolute;
-  right: 23%;
-  top: 40%;
-  list-style: none;
-  z-index: 317;
+    left: 20%;
+    top: 40%;
+    list-style: none;
+    z-index: 318;
 
-  li {
-    display: inline-block;
-    padding-right: 20px;
+    li {
+      display: inline-block;
+      padding-right: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* a:hover {
+       border-width: 1px;
+       border-color: rgb(83, 99, 219);
+       border-style: solid;
+       background-color: rgb(0, 0, 0);
+       position: absolute;
+       left: 541px;
+       top: 60px;
+       width: 30px;
+       height: 0;
+       z-index: 319;
+     }*/
   }
+  .main-menu-right {
+    font-size: 14px;
+    font-family: $menu-font;
+    color: $menu-font-color;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    right: 23%;
+    top: 40%;
+    list-style: none;
+    z-index: 317;
 
-  a {
-    text-decoration: none;
+    li {
+      display: inline-block;
+      padding-right: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 
@@ -149,7 +152,7 @@ button {
     left:0;
     right:0;
     bottom:0;
-    background: rgb(83, 99, 219);
+    background: $slider-filter-color;
     opacity: 0.8;
     //z-index: 282;
   }
@@ -159,33 +162,31 @@ button {
     height: auto;
     z-index: 281;
   }
-}
 
-.s-text {
-  font-family: $slider-font-1;
-  font-size: 30px;
-  color: white;
-  position: absolute;
-  top: 185px;
-  right: 340px;
-  z-index: 283;
+  &-text {
+    font-family: $slider-font-1;
+    font-size: 30px;
+    color: $main-background-color;
+    position: absolute;
+    top: 185px;
+    right: 340px;
+    z-index: 283;
+  }
 
-}
-
-.s-text-1 {
-  font-family: $slider-font-2;
-  font-size: 25px;
-  color: white;
-  position: absolute;
-  top: 305px;
-  right: 470px;
-  z-index: 283;
-
+  &-text-1 {
+    font-family: $slider-font-2;
+    font-size: 25px;
+    color: $main-background-color;
+    position: absolute;
+    top: 305px;
+    right: 470px;
+    z-index: 283;
+  }
 }
 
 .rounded-rectangle {
   border-radius: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: $main-background-color;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
   position: absolute;
   left: 440px;
@@ -195,37 +196,41 @@ button {
   box-sizing: border-box;
   padding: 25px 10px 20px 15px;
   z-index: 288;
+
+  &-header {
+    font-family: $menu-font;
+    font-size: 20px;
+    color: $menu-font-color;
+  }
+
+  .round-input {
+    border-radius: 8px;
+    background-color: rgb(242, 242, 242);
+    margin-top: 15px;
+    padding: 10px 0px 10px 5px;
+    color: $input-text-color;
+    &::placeholder {
+      color: $input-text-color;
+      opacity: 1;
+    }
+  }
+
   select {
     width: 175px;
     border-style: none;
   }
-}
-.block-head {
-  font-family: $menu-font;
-  font-size: 20px;
-  color: #5363db;
-}
 
-.round-input {
-  border-radius: 8px;
-  background-color: rgb(242, 242, 242);
-  margin-top: 15px;
-  padding: 10px 0px 10px 5px;
-  color: #888888;
-  &::placeholder {
-    color: #888888;
-    opacity: 1;
+  .block-submit {
+    border-radius: 8px;
+    background-color: $submit-background-color;
+    box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: $main-background-color;
+    margin: 20px 10px;
+    padding: 10px 0px;
+    width: 100px;
+    float: right;
   }
 }
 
-.block-submit {
-  border-radius: 8px;
-  background-color: rgb(91, 108, 235);
-  box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  color: white;
-  margin: 20px 10px;
-  padding: 10px 0px;
-  width: 100px;
-  float: right;
-}
+
