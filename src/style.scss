@@ -54,69 +54,108 @@ button {
   margin-right: auto;
 }
 
+.logo-container {
+  display: block;
+  @include responsive($sm-w3c-px) {
+    display: inline-block;
+    max-width: 70px;
+    height: auto;
+  }
+}
+
 .header {
   background-color: $main-background-color;
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
   position: fixed;
-  left: 0;
-  top: 0;
+  overflow: hidden;
   width: 100%;
-  height: 6.25em; //100px
-  //line-height: 100px;
+  min-height: 6.25em; //100px
   z-index: 315;
-}
-
-.logo {
-  position: absolute;
-  left: 47%;
-  top: 15px;
-  line-height: 1.2;
-  font-size: 24px;
-  z-index: 324;
-
-  &-name {
-    font-size: 14px;
-    font-family: $logo-font;
-    color: rgb(83, 99, 219);
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: left;
-    transform: matrix( 1.71410546396865,0,0,1.71410546396865,0,0);
-    position: absolute;
-    left: 48%;
-    top: 66.6px;
-    z-index: 322;
-  }
 }
 
 #nav {
   .main-menu {
+    box-sizing: border-box;
     font-size: 14px;
     font-family: $menu-font;
-    color: $menu-font-color;
     font-weight: bold;
-    text-align: center;
-    position: absolute;
-    top: 40%;
+    color: $menu-font-color;
     list-style: none;
-
+    @include responsive($sm-w3c-px) {
+      display: inline-block;
+      margin-bottom: 15px;
+    }
     &-left {
-      left: 20%;
+      @include responsive($sm-w3c-px) {
+        margin-left: 250px;
+        margin-right: 50px;
+      }
+
+    }
+    &-left li {
+      float: none;
       z-index: 318;
+      @include responsive($sm-w3c-px) {
+        float: left;
+        margin-right: 25px;
+      }
     }
 
     &-right {
-      right: 23%;
-      z-index: 317;
-    }
+      @include responsive($sm-w3c-px) {
+        margin-left: 50px;
+      }
 
-    li {
-      display: inline-block;
-      padding-right: 20px;
+    }
+    &-right li {
+      float: none;
+      z-index: 317;
+      @include responsive($sm-w3c-px) {
+        float: right;
+        margin-left: 25px;
+      }
     }
 
     a {
+      display: block;
+      text-align: center;
       text-decoration: none;
+      line-height: 1.2;
+      @include responsive($sm-w3c-px) {
+        display: inline-block;
+      }
+    }
+  }
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 0% 1% 0%;
+    font-size: 2em;
+    z-index: 324;
+    @include responsive($sm-w3c-px) {
+      display: inline-block;
+      padding: 15px 0px 0px 0px;
+    }
+
+    &-name {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0% 0% 1% 0%;
+      font-size: 14px;
+      font-family: $logo-font;
+      color: rgb(83, 99, 219);
+      font-weight: bold;
+      text-align: center;
+      transform: matrix( 1.71410546396865,0,0,1.71410546396865,0,0);
+      z-index: 322;
+      @include responsive($sm-w3c-px) {
+        position: relative;
+        display: block;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+      }
     }
   }
 }
