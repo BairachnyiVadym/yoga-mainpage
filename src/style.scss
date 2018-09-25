@@ -3,7 +3,11 @@
 @import "./partials/mixins";
 
 //overriding default behaviour
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
 }
 
@@ -55,8 +59,15 @@ button {
 }
 
 .logo-container {
-  display: block;
-  @include responsive($sm-w3c-px) {
+  position: absolute;
+  display: inline-block;
+  bottom: 2px;
+  left: 177px;
+  max-width: 70px;
+  height: auto;
+
+  @include responsive($laptop) {
+    position: static;
     display: inline-block;
     max-width: 70px;
     height: auto;
@@ -69,48 +80,123 @@ button {
   position: fixed;
   overflow: hidden;
   width: 100%;
-  min-height: 6.25em; //100px
+  height: auto;
   z-index: 315;
+  @include responsive($laptop) {
+    min-height: 100px;
+  }
 }
 
 #nav {
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 32px 20px;
+    position: relative;
+    user-select: none;
+    @include responsive($laptop) {
+      display: none;
+    }
+
+    .navicon {
+      background: #333;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 18px;
+      &:before,
+      &:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+      }
+      &:before {
+        top: 5px;
+      }
+      &:after {
+        top: -5px;
+      }
+    }
+  }
+  .menu-btn {
+    display: none;
+    &:checked ~ .logo-container {
+      position: absolute;
+      display: inline-block;
+      bottom: 217px;
+      //margin-bottom: 5px;
+      left: 177px;
+      max-width: 70px;
+      height: auto;
+    }
+    &:checked ~ .main-menu {
+      max-height: 240px;
+    }
+    &:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+    &:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+    &:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+    &:checked ~ .menu-icon:not(.steps) .navicon:before,
+    &:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }
+  }
+
   .main-menu {
-    box-sizing: border-box;
     font-size: 14px;
     font-family: $menu-font;
     font-weight: bold;
     color: $menu-font-color;
     list-style: none;
-    @include responsive($sm-w3c-px) {
+    overflow: hidden;
+
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+
+    @include responsive($laptop) {
       display: inline-block;
       margin-bottom: 15px;
+
+      clear: none;
+      max-height: none;
+
     }
     &-left {
-      @include responsive($sm-w3c-px) {
-        margin-left: 250px;
+      @include responsive($laptop) {
+        margin-left: 200px;
         margin-right: 50px;
       }
-
     }
     &-left li {
       float: none;
       z-index: 318;
-      @include responsive($sm-w3c-px) {
+      @include responsive($laptop) {
         float: left;
         margin-right: 25px;
       }
     }
 
     &-right {
-      @include responsive($sm-w3c-px) {
+      @include responsive($laptop) {
         margin-left: 50px;
       }
-
     }
     &-right li {
       float: none;
       z-index: 317;
-      @include responsive($sm-w3c-px) {
+      @include responsive($laptop) {
         float: right;
         margin-left: 25px;
       }
@@ -118,10 +204,11 @@ button {
 
     a {
       display: block;
-      text-align: center;
+      text-align: left;
       text-decoration: none;
       line-height: 1.2;
-      @include responsive($sm-w3c-px) {
+      padding: 10px 10px;
+      @include responsive($laptop) {
         display: inline-block;
       }
     }
@@ -130,10 +217,10 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 1% 0% 1% 0%;
+    padding-bottom: 2px;
     font-size: 2em;
     z-index: 324;
-    @include responsive($sm-w3c-px) {
+    @include responsive($laptop) {
       display: inline-block;
       padding: 15px 0px 0px 0px;
     }
@@ -142,7 +229,7 @@ button {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      padding: 0% 0% 1% 0%;
+      padding: 0px 0px 0px 0px;
       font-size: 14px;
       font-family: $logo-font;
       color: rgb(83, 99, 219);
@@ -150,12 +237,6 @@ button {
       text-align: center;
       transform: matrix( 1.71410546396865,0,0,1.71410546396865,0,0);
       z-index: 322;
-      @include responsive($sm-w3c-px) {
-        position: relative;
-        display: block;
-        padding: 0px 0px 0px 0px;
-        margin: 0px 0px 0px 0px;
-      }
     }
   }
 }
@@ -192,7 +273,6 @@ button {
     right: 340px;
     z-index: 283;
   }
-
   &-text-1 {
     font-family: $slider-font-2;
     font-size: 25px;
@@ -212,7 +292,6 @@ button {
     top: 155px;
     width: 210px;
     height: 285px;
-    box-sizing: border-box;
     padding: 25px 10px 20px 15px;
     z-index: 288;
 
