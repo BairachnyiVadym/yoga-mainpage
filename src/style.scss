@@ -21,6 +21,13 @@ ul, menu, dir {
   -webkit-padding-start: 0px;
 }
 
+a:-webkit-any-link {
+  color: $menu-font-color;
+  &:active {
+    color: $menu-font-color;
+  }
+}
+
 input {
   -webkit-appearance: textfield;
   background-color: white;
@@ -62,7 +69,7 @@ button {
   position: absolute;
   display: inline-block;
   bottom: 2px;
-  left: 177px;
+  left: 39%;
   max-width: 70px;
   height: auto;
 
@@ -130,8 +137,7 @@ button {
       position: absolute;
       display: inline-block;
       bottom: 217px;
-      //margin-bottom: 5px;
-      left: 177px;
+      left: 39%;
       max-width: 70px;
       height: auto;
     }
@@ -167,7 +173,7 @@ button {
 
     @include responsive($laptop) {
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
 
       clear: none;
       max-height: none;
@@ -208,6 +214,9 @@ button {
       text-decoration: none;
       line-height: 1.2;
       padding: 10px 10px;
+      &:hover {
+        background-color: lightgray;
+      }
       @include responsive($laptop) {
         display: inline-block;
       }
@@ -266,7 +275,7 @@ button {
 
   &-text {
     font-family: $slider-font-1;
-    font-size: 30px;
+    font-size: 2.20vw;                  //in viewport width to make text responsive
     color: $main-background-color;
     position: absolute;
     top: 185px;
@@ -275,7 +284,7 @@ button {
   }
   &-text-1 {
     font-family: $slider-font-2;
-    font-size: 25px;
+    font-size: 1.85vw;                  //in viewport width to make text responsive
     color: $main-background-color;
     position: absolute;
     top: 305px;

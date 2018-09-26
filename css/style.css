@@ -19,6 +19,11 @@ ul, menu, dir {
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px; }
 
+a:-webkit-any-link {
+  color: #5363db; }
+  a:-webkit-any-link:active {
+    color: #5363db; }
+
 input {
   -webkit-appearance: textfield;
   background-color: white;
@@ -51,7 +56,7 @@ button {
   position: absolute;
   display: inline-block;
   bottom: 2px;
-  left: 177px;
+  left: 39%;
   max-width: 70px;
   height: auto; }
   @media (min-width: 1024px) {
@@ -117,7 +122,7 @@ button {
     position: absolute;
     display: inline-block;
     bottom: 217px;
-    left: 177px;
+    left: 39%;
     max-width: 70px;
     height: auto; }
   #nav .menu-btn:checked ~ .main-menu {
@@ -151,7 +156,7 @@ button {
   @media (min-width: 1024px) {
     #nav .main-menu {
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
       clear: none;
       max-height: none; } }
   @media (min-width: 1024px) {
@@ -181,6 +186,8 @@ button {
     text-decoration: none;
     line-height: 1.2;
     padding: 10px 10px; }
+    #nav .main-menu a:hover {
+      background-color: lightgray; }
     @media (min-width: 1024px) {
       #nav .main-menu a {
         display: inline-block; } }
@@ -231,7 +238,7 @@ button {
     z-index: 281; }
   .slider-text {
     font-family: "Open Sans";
-    font-size: 30px;
+    font-size: 2.20vw;
     color: white;
     position: absolute;
     top: 185px;
@@ -239,7 +246,7 @@ button {
     z-index: 283; }
   .slider-text-1 {
     font-family: "Freestyle Script";
-    font-size: 25px;
+    font-size: 1.85vw;
     color: white;
     position: absolute;
     top: 305px;
