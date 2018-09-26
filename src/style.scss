@@ -252,6 +252,7 @@ button {
 
 .slider {
   position: relative;
+  //display: inline-block;
   width: 100%;
   height: auto;
 
@@ -264,7 +265,6 @@ button {
     bottom:0;
     background: $slider-filter-color;
     opacity: 0.8;
-    //z-index: 282;
   }
   img {
     display: block;
@@ -278,8 +278,8 @@ button {
     font-size: 2.20vw;                  //in viewport width to make text responsive
     color: $main-background-color;
     position: absolute;
-    top: 185px;
-    right: 340px;
+    top: 37%;
+    right: 25.1%;
     z-index: 283;
   }
   &-text-1 {
@@ -287,8 +287,8 @@ button {
     font-size: 1.85vw;                  //in viewport width to make text responsive
     color: $main-background-color;
     position: absolute;
-    top: 305px;
-    right: 470px;
+    top: 62%;
+    right: 34.4%;
     z-index: 283;
   }
 
