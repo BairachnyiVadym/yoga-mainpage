@@ -55,9 +55,9 @@ button {
 .logo-container {
   position: absolute;
   display: inline-block;
-  bottom: 2px;
-  left: 39%;
-  max-width: 70px;
+  top: 8%;
+  left: 42.5%;
+  max-width: 40px;
   height: auto; }
   @media (min-width: 1024px) {
     .logo-container {
@@ -83,7 +83,7 @@ button {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 32px 20px;
+  padding: 20px 0px;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -121,9 +121,9 @@ button {
   #nav .menu-btn:checked ~ .logo-container {
     position: absolute;
     display: inline-block;
-    bottom: 217px;
-    left: 39%;
-    max-width: 70px;
+    top: 1%;
+    left: 42.5%;
+    max-width: 40px;
     height: auto; }
   #nav .menu-btn:checked ~ .main-menu {
     max-height: 240px; }
@@ -198,8 +198,9 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 2px;
-  font-size: 2em;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 1px;
   z-index: 324; }
   @media (min-width: 1024px) {
     #nav .logo {
@@ -209,8 +210,7 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 0px 0px 0px 0px;
-    font-size: 14px;
+    font-size: 9px;
     font-family: "Champagne & Limousines";
     color: #5363db;
     font-weight: bold;
@@ -221,12 +221,13 @@ button {
     z-index: 322; }
     @media (min-width: 1024px) {
       #nav .logo-name {
-        padding-bottom: 15px; } }
+        padding-bottom: 15px;
+        font-size: 1.02vw; } }
 
 .slider {
   position: relative;
   width: 100%;
-  height: auto; }
+  top: 35px; }
   .slider::after {
     content: "";
     position: absolute;
@@ -258,27 +259,48 @@ button {
     left: 53%;
     z-index: 283; }
   .slider .rounded-form {
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: white;
     -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
     position: absolute;
-    left: 440px;
-    top: 155px;
-    width: 210px;
-    height: 285px;
-    padding: 25px 10px 20px 15px;
+    height: 80%;
+    width: 80%;
+    top: 12.5%;
+    left: 10%;
+    padding: 1.5%;
     z-index: 288; }
+    @media (min-width: 1024px) {
+      .slider .rounded-form {
+        height: 55%;
+        width: 16%;
+        top: 31%;
+        left: 32.5%;
+        border-radius: 20px; } }
     .slider .rounded-form-header {
       font-family: "Open Sans Semibold";
-      font-size: 20px;
+      font-size: 2.4vw;
       color: #5363db; }
+      @media (min-width: 1024px) {
+        .slider .rounded-form-header {
+          font-size: 1.4vw; } }
+    .slider .rounded-form #select {
+      width: 99.5%;
+      padding: 0%; }
+      @media (min-width: 1024px) {
+        .slider .rounded-form #select {
+          width: 100%;
+          padding: 5% 0% 5% 2.5%;
+          font-size: 13.33px; } }
     .slider .rounded-form .round-input {
-      border-radius: 8px;
+      border-radius: 4px;
       background-color: #f2f2f2;
-      margin-top: 15px;
-      padding: 10px 0px 10px 5px;
-      color: #888888; }
+      border-style: none;
+      color: #888888;
+      position: relative;
+      width: 49%;
+      margin-bottom: 1.5%;
+      padding: 1%; }
       .slider .rounded-form .round-input::-webkit-input-placeholder {
         color: #888888;
         opacity: 1; }
@@ -291,17 +313,26 @@ button {
       .slider .rounded-form .round-input::placeholder {
         color: #888888;
         opacity: 1; }
-    .slider .rounded-form select {
-      width: 175px;
-      border-style: none; }
+      @media (min-width: 1024px) {
+        .slider .rounded-form .round-input {
+          border-radius: 8px;
+          width: 100%;
+          margin-top: 7.5%;
+          padding: 5% 0% 5% 2.5%; } }
     .slider .rounded-form .block-submit {
-      border-radius: 8px;
+      border-radius: 4px;
       background-color: #5b6ceb;
       -webkit-box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
       box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
-      text-align: center;
       color: white;
-      margin: 20px 10px;
-      padding: 10px 0px;
-      width: 100px;
-      float: right; }
+      text-align: center;
+      margin-bottom: 2%;
+      padding: 1%;
+      width: 99.5%; }
+      @media (min-width: 1024px) {
+        .slider .rounded-form .block-submit {
+          float: right;
+          border-radius: 8px;
+          margin: 10% 0%;
+          padding: 5% 0%;
+          width: 50%; } }

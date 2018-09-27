@@ -68,9 +68,9 @@ button {
 .logo-container {
   position: absolute;
   display: inline-block;
-  bottom: 2px;
-  left: 39%;
-  max-width: 70px;
+  top: 8%;
+  left: 42.5%;
+  max-width: 40px;
   height: auto;
 
   @include responsive($laptop) {
@@ -99,7 +99,7 @@ button {
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 32px 20px;
+    padding: 20px 0px;
     position: relative;
     user-select: none;
     @include responsive($laptop) {
@@ -136,9 +136,9 @@ button {
     &:checked ~ .logo-container {
       position: absolute;
       display: inline-block;
-      bottom: 217px;
-      left: 39%;
-      max-width: 70px;
+      top: 1%;
+      left: 42.5%;
+      max-width: 40px;
       height: auto;
     }
     &:checked ~ .main-menu {
@@ -177,7 +177,6 @@ button {
 
       clear: none;
       max-height: none;
-
     }
     &-left {
       @include responsive($laptop) {
@@ -228,8 +227,9 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 2px;
-    font-size: 2em;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 1px;
     z-index: 324;
     @include responsive($laptop) {
       display: inline-block;
@@ -240,8 +240,7 @@ button {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      padding: 0px 0px 0px 0px;
-      font-size: 14px;
+      font-size: 9px;
       font-family: $logo-font;
       color: rgb(83, 99, 219);
       font-weight: bold;
@@ -250,6 +249,7 @@ button {
       z-index: 322;
       @include responsive($laptop) {
         padding-bottom: 15px;
+        font-size: 1.02vw;
       }
     }
   }
@@ -257,9 +257,8 @@ button {
 
 .slider {
   position: relative;
-  //display: inline-block;
   width: 100%;
-  height: auto;
+  top: 35px;
   &::after {
     content:"";
     position: absolute;
@@ -297,49 +296,80 @@ button {
   }
 
   .rounded-form {
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: $main-background-color;
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
     position: absolute;
-    left: 440px;
-    top: 155px;
-    width: 210px;
-    height: 285px;
-    padding: 25px 10px 20px 15px;
+    height: 80%;
+    width: 80%;
+    top: 12.5%;
+    left: 10%;
+    padding: 1.5%;
     z-index: 288;
+    @include responsive($laptop) {
+      height: 55%;
+      width: 16%;
+      top: 31%;
+      left: 32.5%;
+      border-radius: 20px;
+    }
     &-header {
       font-family: $menu-font;
-      font-size: 20px;
+      font-size: 2.4vw;
       color: $menu-font-color;
+      @include responsive($laptop) {
+        font-size: 1.4vw;
+      }
+    }
+
+    #select {
+      width: 99.5%;
+      padding: 0%;
+      @include responsive($laptop) {
+        width: 100%;
+        padding: 5% 0% 5% 2.5%;
+        font-size: 13.33px;
+      }
     }
 
     .round-input {
-      border-radius: 8px;
-      background-color: rgb(242, 242, 242);
-      margin-top: 15px;
-      padding: 10px 0px 10px 5px;
+      border-radius: 4px;
+      background-color: $input-background-color;
+      border-style: none;
       color: $input-text-color;
+      position: relative;
+      width: 49%;
+      margin-bottom: 1.5%;
+      padding: 1%;
       &::placeholder {
         color: $input-text-color;
         opacity: 1;
       }
-    }
 
-    select {
-      width: 175px;
-      border-style: none;
+      @include responsive($laptop) {
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 7.5%;
+        padding: 5% 0% 5% 2.5%;
+      }
     }
 
     .block-submit {
-      border-radius: 8px;
+      border-radius: 4px;
       background-color: $submit-background-color;
       box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
-      text-align: center;
       color: $main-background-color;
-      margin: 20px 10px;
-      padding: 10px 0px;
-      width: 100px;
-      float: right;
+      text-align: center;
+      margin-bottom: 2%;
+      padding: 1%;
+      width: 99.5%;
+      @include responsive($laptop) {
+        float: right;
+        border-radius: 8px;
+        margin: 10% 0%;
+        padding: 5% 0%;
+        width: 50%;
+      }
     }
   }
 }
