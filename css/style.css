@@ -336,3 +336,24 @@ button {
           margin: 10% 0%;
           padding: 5% 0%;
           width: 50%; } }
+
+.yoga-classes {
+  position: relative;
+  height: 1025px; }
+  .yoga-classes-header {
+    position: absolute;
+    display: inline-block;
+    top: 12.2%;
+    left: 36.8%;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 2.19vw;
+    color: #5b6ceb; }
+  .yoga-classes-header-1 {
+    position: absolute;
+    display: inline-block;
+    top: 17.07%;
+    left: 46.5%;
+    font-family: "Freestyle Script";
+    font-size: 2.92vw;
+    color: #777777; }

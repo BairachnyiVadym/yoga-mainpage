@@ -374,4 +374,29 @@ button {
   }
 }
 
+.yoga-classes {
+  position: relative;
+  height: 1025px;
+
+  &-header {
+    position: absolute;
+    display: inline-block;
+    top: 12.2%;
+    left: 36.8%;
+    font-family: $slider-font-1;
+    font-weight: bold;
+    font-size: 2.19vw;
+    color: $submit-background-color;
+  }
+  &-header-1 {
+    position: absolute;
+    display: inline-block;
+    top: 17.07%;
+    left: 46.5%;
+    font-family: $slider-font-2;
+    font-size: 2.92vw;
+    color: $yoga-classes-header-2;
+  }
+}
+
 
