@@ -56,6 +56,16 @@ button {
   }
 }
 
+h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
 ///////////
 
 //  TODO: add containers where they needed
@@ -418,27 +428,67 @@ button {
 
 .yoga-classes {
   position: relative;
-  height: 1025px;
-
   &-header {
     position: absolute;
     display: inline-block;
-    top: 12.2%;
-    left: 36.8%;
+    top: 2.5%;
+    left: 28%;
     font-family: $slider-font-1;
     font-weight: bold;
-    font-size: 2.19vw;
+    font-size: 3.5vw; //2.19vw
     color: $submit-background-color;
   }
   &-header-1 {
     position: absolute;
     display: inline-block;
-    top: 17.07%;
-    left: 46.5%;
+    top: 3.2%;
+    left: 42.5%;
     font-family: $slider-font-2;
-    font-size: 2.92vw;
+    font-size: 5vw; //2.92vw
     color: $yoga-classes-header-2;
+    @include responsive($tablet) {
+      top: 4.2%;
+    }
+  }
+
+  &-photo-container {
+    display: inline-block;
+    margin-top: 30%;
+    @include responsive($tablet) {
+      margin-top: 18%;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      @include responsive($tablet) {
+        float: left;
+        margin-right: 2%;
+      }
+    }
+    
+    .caption-header {
+      font-family: $slider-font-1;
+      color: $yoga-classes-header-2;
+      text-align: center;
+      @include responsive($tablet) {
+        clear: both;
+        padding: 3% 0% 1% 0%;
+      }
+    }
+    .caption {
+      margin-block-start: 0em; //overriding defaults
+      font-family: $slider-font-1;
+      font-size: 14px;
+      color: $yoga-classes-caption-body;
+      text-align: left;
+
+    }
+    .caption-footer {
+      color: $yoga-classes-caption-footer;
+      text-align: right;
+    }
   }
 }
-
 
