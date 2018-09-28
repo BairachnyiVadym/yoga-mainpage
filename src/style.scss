@@ -478,11 +478,13 @@ h5 {
       }
     }
     .caption {
-      margin-block-start: 0em; //overriding defaults
       font-family: $slider-font-1;
       font-size: 14px;
       color: $yoga-classes-caption-body;
       text-align: left;
+      @include responsive($tablet) {
+        margin-block-start: 0em; //overriding defaults
+      }
 
     }
     .caption-footer {
