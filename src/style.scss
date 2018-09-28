@@ -60,7 +60,7 @@ button {
 
 //  TODO: add containers where they needed
 .container {
-  max-width: 85.65%;
+  max-width: 86.74%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -69,9 +69,13 @@ button {
   position: absolute;
   display: inline-block;
   top: 8%;
-  left: 42.5%;
+  left: 43.5%;
   max-width: 40px;
   height: auto;
+  @include responsive($tablet) {
+    max-width: 50px;
+    left: 46.5%;
+  }
 
   @include responsive($laptop) {
     position: static;
@@ -98,10 +102,13 @@ button {
   .menu-icon {
     cursor: pointer;
     display: inline-block;
+    position: relative;
     float: right;
     padding: 20px 0px;
-    position: relative;
     user-select: none;
+    @include responsive($tablet) {
+      padding: 25px 0px;
+    }
     @include responsive($laptop) {
       display: none;
     }
@@ -137,9 +144,13 @@ button {
       position: absolute;
       display: inline-block;
       top: 1%;
-      left: 42.5%;
+      left: 43.5%;
       max-width: 40px;
       height: auto;
+      @include responsive($tablet) {
+        max-width: 50px;
+        left: 46.5%;
+      }
     }
     &:checked ~ .main-menu {
       max-height: 240px;
@@ -173,7 +184,7 @@ button {
 
     @include responsive($laptop) {
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 1.9%;
 
       clear: none;
       max-height: none;
@@ -306,6 +317,13 @@ button {
     left: 10%;
     padding: 1.5%;
     z-index: 288;
+    @include responsive($tablet) {
+      height: 75%;
+      width: 40%;
+      top: 15%;
+      left: 5%;
+      border-radius: 10px;
+    }
     @include responsive($laptop) {
       height: 55%;
       width: 16%;
@@ -325,6 +343,12 @@ button {
     #select {
       width: 99.5%;
       padding: 0%;
+      @include responsive($tablet) {
+        width: 100%;
+        padding: 3% 0% 3% 1%;
+        border-radius: 6px;
+        margin-top: 2%;
+      }
       @include responsive($laptop) {
         width: 100%;
         padding: 5% 0% 5% 2.5%;
@@ -345,7 +369,12 @@ button {
         color: $input-text-color;
         opacity: 1;
       }
-
+      @include responsive($tablet) {
+        border-radius: 6px;
+        width: 100%;
+        margin-top: 2%;
+        padding: 3% 0% 3% 2.5%;
+      }
       @include responsive($laptop) {
         border-radius: 8px;
         width: 100%;
@@ -363,6 +392,12 @@ button {
       margin-bottom: 2%;
       padding: 1%;
       width: 99.5%;
+      @include responsive($tablet) {
+        border-radius: 6px;
+        width: 100%;
+        margin-top: 2%;
+        padding: 3% 0% 3% 2.5%;
+      }
       @include responsive($laptop) {
         float: right;
         border-radius: 8px;

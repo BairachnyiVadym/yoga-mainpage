@@ -48,7 +48,7 @@ button {
     outline: -webkit-focus-ring-color none 0px; }
 
 .container {
-  max-width: 85.65%;
+  max-width: 86.74%;
   margin-left: auto;
   margin-right: auto; }
 
@@ -56,9 +56,13 @@ button {
   position: absolute;
   display: inline-block;
   top: 8%;
-  left: 42.5%;
+  left: 43.5%;
   max-width: 40px;
   height: auto; }
+  @media (min-width: 768px) {
+    .logo-container {
+      max-width: 50px;
+      left: 46.5%; } }
   @media (min-width: 1024px) {
     .logo-container {
       position: static;
@@ -82,13 +86,16 @@ button {
 #nav .menu-icon {
   cursor: pointer;
   display: inline-block;
+  position: relative;
   float: right;
   padding: 20px 0px;
-  position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  @media (min-width: 768px) {
+    #nav .menu-icon {
+      padding: 25px 0px; } }
   @media (min-width: 1024px) {
     #nav .menu-icon {
       display: none; } }
@@ -122,9 +129,13 @@ button {
     position: absolute;
     display: inline-block;
     top: 1%;
-    left: 42.5%;
+    left: 43.5%;
     max-width: 40px;
     height: auto; }
+    @media (min-width: 768px) {
+      #nav .menu-btn:checked ~ .logo-container {
+        max-width: 50px;
+        left: 46.5%; } }
   #nav .menu-btn:checked ~ .main-menu {
     max-height: 240px; }
   #nav .menu-btn:checked ~ .menu-icon .navicon {
@@ -156,7 +167,7 @@ button {
   @media (min-width: 1024px) {
     #nav .main-menu {
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 1.9%;
       clear: none;
       max-height: none; } }
   @media (min-width: 1024px) {
@@ -270,6 +281,13 @@ button {
     left: 10%;
     padding: 1.5%;
     z-index: 288; }
+    @media (min-width: 768px) {
+      .slider .rounded-form {
+        height: 75%;
+        width: 40%;
+        top: 15%;
+        left: 5%;
+        border-radius: 10px; } }
     @media (min-width: 1024px) {
       .slider .rounded-form {
         height: 55%;
@@ -287,6 +305,12 @@ button {
     .slider .rounded-form #select {
       width: 99.5%;
       padding: 0%; }
+      @media (min-width: 768px) {
+        .slider .rounded-form #select {
+          width: 100%;
+          padding: 3% 0% 3% 1%;
+          border-radius: 6px;
+          margin-top: 2%; } }
       @media (min-width: 1024px) {
         .slider .rounded-form #select {
           width: 100%;
@@ -313,6 +337,12 @@ button {
       .slider .rounded-form .round-input::placeholder {
         color: #888888;
         opacity: 1; }
+      @media (min-width: 768px) {
+        .slider .rounded-form .round-input {
+          border-radius: 6px;
+          width: 100%;
+          margin-top: 2%;
+          padding: 3% 0% 3% 2.5%; } }
       @media (min-width: 1024px) {
         .slider .rounded-form .round-input {
           border-radius: 8px;
@@ -329,6 +359,12 @@ button {
       margin-bottom: 2%;
       padding: 1%;
       width: 99.5%; }
+      @media (min-width: 768px) {
+        .slider .rounded-form .block-submit {
+          border-radius: 6px;
+          width: 100%;
+          margin-top: 2%;
+          padding: 3% 0% 3% 2.5%; } }
       @media (min-width: 1024px) {
         .slider .rounded-form .block-submit {
           float: right;
