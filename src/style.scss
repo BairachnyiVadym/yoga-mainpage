@@ -86,7 +86,6 @@ h5 {
     max-width: 50px;
     left: 46.5%;
   }
-
   @include responsive($laptop) {
     position: static;
     display: inline-block;
@@ -201,7 +200,11 @@ h5 {
     }
     &-left {
       @include responsive($laptop) {
-        margin-left: 13.15%;
+        margin-left: 7.4%;
+        margin-right: 7.4%;
+      }
+      @include responsive($laptop-L) {
+        margin-left: 14.5%;
         margin-right: 10.4%;
       }
     }
@@ -216,7 +219,11 @@ h5 {
 
     &-right {
       @include responsive($laptop) {
-        margin-right: 13.15%;
+        margin-right: 7.4%;
+        margin-left: 7.4%;
+      }
+      @include responsive($laptop-L) {
+        margin-right: 14.5%;
         margin-left: 10.4%;
       }
     }
@@ -254,7 +261,7 @@ h5 {
     z-index: 324;
     @include responsive($laptop) {
       display: inline-block;
-      padding-top: 15px;
+      padding-top: 22%;
     }
 
     &-name {
@@ -268,9 +275,12 @@ h5 {
       text-align: center;
       transform: matrix( 1.71410546396865,0,0,1.71410546396865,0,0);
       z-index: 322;
+      @include responsive($tablet) {
+        font-size: 11px;
+      }
       @include responsive($laptop) {
-        padding-bottom: 15px;
-        font-size: 1.02vw;
+        padding-bottom: 22%;
+        font-size: 14px;
       }
     }
   }
@@ -365,7 +375,8 @@ h5 {
       }
       @include responsive($laptop) {
         width: 100%;
-        padding: 5% 0% 5% 2.5%;
+        padding: 5% 0% 5% 1%;
+        margin-top: 5.5%;
         font-size: 13.33px;
       }
     }
@@ -395,8 +406,8 @@ h5 {
       @include responsive($laptop) {
         border-radius: 8px;
         width: 100%;
-        margin-top: 7.5%;
-        padding: 5% 0% 5% 2.5%;
+        margin-top: 5.5%;
+        padding: 5% 0% 5% 3.5%;
       }
     }
 
@@ -418,7 +429,7 @@ h5 {
       @include responsive($laptop) {
         float: right;
         border-radius: 8px;
-        margin: 10% 0%;
+        margin: 8% 0%;
         padding: 5% 0%;
         width: 50%;
       }
@@ -431,65 +442,82 @@ h5 {
   &-header {
     position: absolute;
     display: inline-block;
-    top: 2.5%;
+    top: 3.5%;
     left: 28%;
     font-family: $slider-font-1;
     font-weight: bold;
     font-size: 3.5vw; //2.19vw
     color: $submit-background-color;
+    @include responsive($tablet) {
+      top: 6%;
+    }
   }
   &-header-1 {
     position: absolute;
     display: inline-block;
-    top: 3.2%;
+    top: 4.5%;
     left: 42.5%;
     font-family: $slider-font-2;
     font-size: 5vw; //2.92vw
     color: $yoga-classes-header-2;
     @include responsive($tablet) {
-      top: 4.2%;
+      top: 8.4%;
+    }
+    @include responsive($laptop) {
+      top: 9.2%;
     }
   }
 
   &-photo-container {
     display: inline-block;
-    margin-top: 30%;
+    margin-top: 38%;
     @include responsive($tablet) {
-      margin-top: 18%;
+      margin-top: 25%;
     }
 
     img {
       display: block;
       max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
       height: auto;
       @include responsive($tablet) {
         float: left;
-        margin-right: 2%;
+        margin: 3% 3% 0% 0%;
       }
     }
-    
-    .caption-header {
-      font-family: $slider-font-1;
-      color: $yoga-classes-header-2;
-      text-align: center;
-      @include responsive($tablet) {
-        clear: both;
-        padding: 3% 0% 1% 0%;
+
+    figcaption {
+      &::after {
+        @include responsive($tablet) {
+          content: "";
+          clear: both;
+          display: table;
+        }
       }
     }
+
     .caption {
       font-family: $slider-font-1;
-      font-size: 14px;
       color: $yoga-classes-caption-body;
+      font-size: 13px;
       text-align: left;
       @include responsive($tablet) {
-        margin-block-start: 0em; //overriding defaults
+        font-size: 14px;
       }
 
+    }
+    .caption-header {
+      color: $yoga-classes-header-2;
+      font-size: .83em;
+      @include responsive($tablet) {
+        padding: 3% 0% 1% 0%;
+      }
     }
     .caption-footer {
       color: $yoga-classes-caption-footer;
       text-align: right;
+      margin-bottom: 10%;
     }
   }
 }

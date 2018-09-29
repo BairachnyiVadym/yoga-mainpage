@@ -185,7 +185,11 @@ h5 {
       max-height: none; } }
   @media (min-width: 1024px) {
     #nav .main-menu-left {
-      margin-left: 13.15%;
+      margin-left: 7.4%;
+      margin-right: 7.4%; } }
+  @media (min-width: 1440px) {
+    #nav .main-menu-left {
+      margin-left: 14.5%;
       margin-right: 10.4%; } }
   #nav .main-menu-left li {
     float: none;
@@ -196,7 +200,11 @@ h5 {
         margin-right: 30px; } }
   @media (min-width: 1024px) {
     #nav .main-menu-right {
-      margin-right: 13.15%;
+      margin-right: 7.4%;
+      margin-left: 7.4%; } }
+  @media (min-width: 1440px) {
+    #nav .main-menu-right {
+      margin-right: 14.5%;
       margin-left: 10.4%; } }
   #nav .main-menu-right li {
     float: none;
@@ -229,7 +237,7 @@ h5 {
   @media (min-width: 1024px) {
     #nav .logo {
       display: inline-block;
-      padding-top: 15px; } }
+      padding-top: 22%; } }
   #nav .logo-name {
     display: block;
     margin-left: auto;
@@ -243,10 +251,13 @@ h5 {
     -ms-transform: matrix(1.71411, 0, 0, 1.71411, 0, 0);
     transform: matrix(1.71411, 0, 0, 1.71411, 0, 0);
     z-index: 322; }
+    @media (min-width: 768px) {
+      #nav .logo-name {
+        font-size: 11px; } }
     @media (min-width: 1024px) {
       #nav .logo-name {
-        padding-bottom: 15px;
-        font-size: 1.02vw; } }
+        padding-bottom: 22%;
+        font-size: 14px; } }
 
 .slider {
   position: relative;
@@ -331,7 +342,8 @@ h5 {
       @media (min-width: 1024px) {
         .slider .rounded-form #select {
           width: 100%;
-          padding: 5% 0% 5% 2.5%;
+          padding: 5% 0% 5% 1%;
+          margin-top: 5.5%;
           font-size: 13.33px; } }
     .slider .rounded-form .round-input {
       border-radius: 4px;
@@ -367,8 +379,8 @@ h5 {
         .slider .rounded-form .round-input {
           border-radius: 8px;
           width: 100%;
-          margin-top: 7.5%;
-          padding: 5% 0% 5% 2.5%; } }
+          margin-top: 5.5%;
+          padding: 5% 0% 5% 3.5%; } }
     .slider .rounded-form .block-submit {
       border-radius: 4px;
       background-color: #5b6ceb;
@@ -389,7 +401,7 @@ h5 {
         .slider .rounded-form .block-submit {
           float: right;
           border-radius: 8px;
-          margin: 10% 0%;
+          margin: 8% 0%;
           padding: 5% 0%;
           width: 50%; } }
 
@@ -398,54 +410,65 @@ h5 {
   .yoga-classes-header {
     position: absolute;
     display: inline-block;
-    top: 2.5%;
+    top: 3.5%;
     left: 28%;
     font-family: "Open Sans";
     font-weight: bold;
     font-size: 3.5vw;
     color: #5b6ceb; }
+    @media (min-width: 768px) {
+      .yoga-classes-header {
+        top: 6%; } }
   .yoga-classes-header-1 {
     position: absolute;
     display: inline-block;
-    top: 3.2%;
+    top: 4.5%;
     left: 42.5%;
     font-family: "Freestyle Script";
     font-size: 5vw;
     color: #777777; }
     @media (min-width: 768px) {
       .yoga-classes-header-1 {
-        top: 4.2%; } }
+        top: 8.4%; } }
+    @media (min-width: 1024px) {
+      .yoga-classes-header-1 {
+        top: 9.2%; } }
   .yoga-classes-photo-container {
     display: inline-block;
-    margin-top: 30%; }
+    margin-top: 38%; }
     @media (min-width: 768px) {
       .yoga-classes-photo-container {
-        margin-top: 18%; } }
+        margin-top: 25%; } }
     .yoga-classes-photo-container img {
       display: block;
       max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
       height: auto; }
       @media (min-width: 768px) {
         .yoga-classes-photo-container img {
           float: left;
-          margin-right: 2%; } }
-    .yoga-classes-photo-container .caption-header {
-      font-family: "Open Sans";
-      color: #777777;
-      text-align: center; }
-      @media (min-width: 768px) {
-        .yoga-classes-photo-container .caption-header {
-          clear: both;
-          padding: 3% 0% 1% 0%; } }
+          margin: 3% 3% 0% 0%; } }
+    @media (min-width: 768px) {
+      .yoga-classes-photo-container figcaption::after {
+        content: "";
+        clear: both;
+        display: table; } }
     .yoga-classes-photo-container .caption {
       font-family: "Open Sans";
-      font-size: 14px;
       color: #555555;
+      font-size: 13px;
       text-align: left; }
       @media (min-width: 768px) {
         .yoga-classes-photo-container .caption {
-          -webkit-margin-before: 0em;
-          margin-block-start: 0em; } }
+          font-size: 14px; } }
+    .yoga-classes-photo-container .caption-header {
+      color: #777777;
+      font-size: .83em; }
+      @media (min-width: 768px) {
+        .yoga-classes-photo-container .caption-header {
+          padding: 3% 0% 1% 0%; } }
     .yoga-classes-photo-container .caption-footer {
       color: #999999;
-      text-align: right; }
+      text-align: right;
+      margin-bottom: 10%; }
