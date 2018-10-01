@@ -3,6 +3,145 @@
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px; } }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px; }
+  .row:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+[class^=col-] {
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left; }
+
+.col-xs-12 {
+  width: 100%; }
+
+.col-xs-11 {
+  width: 91.66666667%; }
+
+.col-xs-10 {
+  width: 83.33333333%; }
+
+.col-xs-9 {
+  width: 75%; }
+
+.col-xs-8 {
+  width: 66.66666667%; }
+
+.col-xs-7 {
+  width: 58.33333333%; }
+
+.col-xs-6 {
+  width: 50%; }
+
+.col-xs-5 {
+  width: 41.66666667%; }
+
+.col-xs-4 {
+  width: 33.33333333%; }
+
+.col-xs-3 {
+  width: 25%; }
+
+.col-xs-2 {
+  width: 16.66666667%; }
+
+.col-xs-1 {
+  width: 8.33333333%; }
+
+@media (min-width: 768px) {
+  .col-sm-12 {
+    width: 100%; }
+  .col-sm-11 {
+    width: 91.66666667%; }
+  .col-sm-10 {
+    width: 83.33333333%; }
+  .col-sm-9 {
+    width: 75%; }
+  .col-sm-8 {
+    width: 66.66666667%; }
+  .col-sm-7 {
+    width: 58.33333333%; }
+  .col-sm-6 {
+    width: 50%; }
+  .col-sm-5 {
+    width: 41.66666667%; }
+  .col-sm-4 {
+    width: 33.33333333%; }
+  .col-sm-3 {
+    width: 25%; }
+  .col-sm-2 {
+    width: 16.66666667%; }
+  .col-sm-1 {
+    width: 8.33333333%; } }
+
+@media (min-width: 992px) {
+  .col-md-12 {
+    width: 100%; }
+  .col-md-11 {
+    width: 91.66666667%; }
+  .col-md-10 {
+    width: 83.33333333%; }
+  .col-md-9 {
+    width: 75%; }
+  .col-md-8 {
+    width: 66.66666667%; }
+  .col-md-7 {
+    width: 58.33333333%; }
+  .col-md-6 {
+    width: 50%; }
+  .col-md-5 {
+    width: 41.66666667%; }
+  .col-md-4 {
+    width: 33.33333333%; }
+  .col-md-3 {
+    width: 25%; }
+  .col-md-2 {
+    width: 16.66666667%; }
+  .col-md-1 {
+    width: 8.33333333%; } }
+
+@media (min-width: 1200px) {
+  .col-lg-12 {
+    width: 100%; }
+  .col-lg-11 {
+    width: 91.66666667%; }
+  .col-lg-10 {
+    width: 83.33333333%; }
+  .col-lg-9 {
+    width: 75%; }
+  .col-lg-8 {
+    width: 66.66666667%; }
+  .col-lg-7 {
+    width: 58.33333333%; }
+  .col-lg-6 {
+    width: 50%; }
+  .col-lg-5 {
+    width: 41.66666667%; }
+  .col-lg-4 {
+    width: 33.33333333%; }
+  .col-lg-3 {
+    width: 25%; }
+  .col-lg-2 {
+    width: 16.66666667%; }
+  .col-lg-1 {
+    width: 8.33333333%; } }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -61,27 +200,19 @@ h5 {
   font-weight: bold; }
 
 .container {
-  max-width: 86.74%;
   margin-left: auto;
   margin-right: auto; }
 
 .logo-container {
-  position: absolute;
-  display: inline-block;
-  top: 8%;
-  left: 43.5%;
   max-width: 40px;
-  height: auto; }
+  margin: 5px 0px 5px 193px; }
   @media (min-width: 768px) {
     .logo-container {
       max-width: 50px;
-      left: 46.5%; } }
+      margin: 5px auto; } }
   @media (min-width: 1024px) {
     .logo-container {
-      position: static;
-      display: inline-block;
-      max-width: 70px;
-      height: auto; } }
+      max-width: 70px; } }
 
 .header {
   background-color: white;
@@ -90,9 +221,8 @@ h5 {
   position: fixed;
   overflow: hidden;
   width: 100%;
-  height: auto;
   z-index: 315; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .header {
       max-height: 100px; } }
 
@@ -101,15 +231,12 @@ h5 {
   display: inline-block;
   position: relative;
   float: right;
-  padding: 20px 0px;
+  padding: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
   @media (min-width: 768px) {
-    #nav .menu-icon {
-      padding: 25px 0px; } }
-  @media (min-width: 1024px) {
     #nav .menu-icon {
       display: none; } }
   #nav .menu-icon .navicon {
@@ -138,17 +265,6 @@ h5 {
 
 #nav .menu-btn {
   display: none; }
-  #nav .menu-btn:checked ~ .logo-container {
-    position: absolute;
-    display: inline-block;
-    top: 1%;
-    left: 43.5%;
-    max-width: 40px;
-    height: auto; }
-    @media (min-width: 768px) {
-      #nav .menu-btn:checked ~ .logo-container {
-        max-width: 50px;
-        left: 46.5%; } }
   #nav .menu-btn:checked ~ .main-menu {
     max-height: 240px; }
   #nav .menu-btn:checked ~ .menu-icon .navicon {
@@ -177,42 +293,34 @@ h5 {
   -webkit-transition: max-height .2s ease-out;
   -o-transition: max-height .2s ease-out;
   transition: max-height .2s ease-out; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     #nav .main-menu {
-      display: inline-block;
-      margin-bottom: 1.9%;
+      margin-top: 18px;
       clear: none;
       max-height: none; } }
   @media (min-width: 1024px) {
+    #nav .main-menu {
+      margin-top: 28px; } }
+  @media (min-width: 768px) {
     #nav .main-menu-left {
-      margin-left: 7.4%;
-      margin-right: 7.4%; } }
-  @media (min-width: 1440px) {
-    #nav .main-menu-left {
-      margin-left: 14.5%;
-      margin-right: 10.4%; } }
+      float: right; } }
+  @media (min-width: 768px) {
+    #nav .main-menu-right {
+      float: left; } }
   #nav .main-menu-left li {
     float: none;
     z-index: 318; }
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       #nav .main-menu-left li {
         float: left;
-        margin-right: 30px; } }
-  @media (min-width: 1024px) {
-    #nav .main-menu-right {
-      margin-right: 7.4%;
-      margin-left: 7.4%; } }
-  @media (min-width: 1440px) {
-    #nav .main-menu-right {
-      margin-right: 14.5%;
-      margin-left: 10.4%; } }
+        margin-left: 30px; } }
   #nav .main-menu-right li {
     float: none;
-    z-index: 317; }
-    @media (min-width: 1024px) {
+    z-index: 319; }
+    @media (min-width: 768px) {
       #nav .main-menu-right li {
-        float: right;
-        margin-left: 30px; } }
+        float: left;
+        margin-right: 30px; } }
   #nav .main-menu a {
     display: block;
     text-align: left;
@@ -221,32 +329,22 @@ h5 {
     padding: 10px 10px; }
     #nav .main-menu a:hover {
       background-color: lightgray; }
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       #nav .main-menu a {
-        display: inline-block;
         padding: 0px; } }
 
 #nav .logo {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 100%;
   height: auto;
   padding-bottom: 1px;
   z-index: 324; }
-  @media (min-width: 1024px) {
-    #nav .logo {
-      display: inline-block;
-      padding-top: 22%; } }
   #nav .logo-name {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 9px;
     font-family: "Champagne & Limousines";
-    color: #5363db;
-    font-weight: bold;
     text-align: center;
+    color: #5363db;
     -webkit-transform: matrix(1.71411, 0, 0, 1.71411, 0, 0);
     -ms-transform: matrix(1.71411, 0, 0, 1.71411, 0, 0);
     transform: matrix(1.71411, 0, 0, 1.71411, 0, 0);
@@ -256,8 +354,7 @@ h5 {
         font-size: 11px; } }
     @media (min-width: 1024px) {
       #nav .logo-name {
-        padding-bottom: 22%;
-        font-size: 14px; } }
+        font-size: 15px; } }
 
 .slider {
   position: relative;
