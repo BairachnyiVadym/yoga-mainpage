@@ -5,8 +5,14 @@
   }
 };
 
-//need prefixes to work properly in all browsers. check if autoprefixer works!
 @mixin columns($count, $width) {
   column-count: $count;
   column-width: $width;
+}
+
+@mixin responsive-bg-image($image-width, $image-height) {
+  background-size: 100%;
+  height: 0;
+  padding-bottom: percentage($image-height / $image-width);
+  display: block;
 }

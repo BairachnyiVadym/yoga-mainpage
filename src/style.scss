@@ -8,9 +8,20 @@
   box-sizing: border-box;
 }
 
+body {
+  padding-top: 50px;
+  @include responsive($tablet) {
+    padding-top: 78px;
+  }
+  @include responsive($laptop) {
+    padding-top: 100px;
+  }
+}
+
 html, body {
   margin: 0;
 }
+
 
 ul, menu, dir {
   display: block;
@@ -79,7 +90,7 @@ h5 {
   margin: 5px 0px 5px 193px;
   @include responsive($tablet) {
     max-width: 60px;
-    margin: 18px auto;
+    margin: 9px auto;
   }
   @include responsive($laptop) {
     max-width: 70px;
@@ -91,14 +102,16 @@ h5 {
   background-color: $main-background-color;
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
   position: fixed;
+  top: 0;
+  left: 0;
   overflow: hidden;
   width: 100%;
   z-index: 315;
   @include responsive($tablet) {
-    max-height: 100px;
+    max-height: 80px;
   }
   @include responsive($laptop) {
-    height: 100px;
+    max-height: 100px;
   }
 }
 
@@ -108,7 +121,7 @@ h5 {
     display: inline-block;
     position: relative;
     float: right;
-    padding: 22px;
+    padding: 24px;
     user-select: none;
     @include responsive($tablet) {
       display: none;
@@ -173,10 +186,13 @@ h5 {
     max-height: 0;
     transition: max-height .2s ease-out;
     @include responsive($tablet) {
-      margin-top: 42px;
+      margin-top: 32px;
       //styles for hamburger-menu appropriate behaviour
       clear: none;
       max-height: none;
+    }
+    @include responsive($laptop) {
+      margin-top: 42px;
     }
 
     &-left {
@@ -228,8 +244,14 @@ h5 {
   .logo {
     width: 100%;
     height: auto;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
     z-index: 324;
+    @include responsive($tablet) {
+      margin-bottom: 4px;
+    }
+    @include responsive($laptop) {
+      margin-bottom: 8px;
+    }
 
     &-name {
       display: block;
@@ -251,8 +273,8 @@ h5 {
 
 .slider {
   position: relative;
-  width: 100%;
-  top: 35px;
+  background-image: url('../elements/slider-background-image.png');
+  @include responsive-bg-image(320px, 118px);
   &::after {
     content:"";
     position: absolute;
@@ -263,29 +285,24 @@ h5 {
     background: $img-filter-color;
     opacity: 0.8;
   }
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    z-index: 281;
-  }
 
-  &-text {
+  &-slogan {
     font-family: $slider-font-1;
-    font-size: 2.20vw;                  //in viewport width to make text responsive
+    font-size: 2.50vw; //in viewport width to make text responsive
+    font-weight: bold;
     color: $main-background-color;
-    position: absolute;
-    top: 37%;
-    left: 53%;
+    position: relative;
+    display: block;
+    margin: 102px 0px 20px 6px;
     z-index: 283;
   }
-  &-text-1 {
+  &-slogan-1 {
     font-family: $slider-font-2;
-    font-size: 1.85vw;                  //in viewport width to make text responsive
+    font-size: 2.2vw;                  //in viewport width to make text responsive
     color: $main-background-color;
-    position: absolute;
-    top: 62%;
-    left: 53%;
+    position: relative;
+    display: block;
+    margin-left: 6px;
     z-index: 283;
   }
 
@@ -293,30 +310,27 @@ h5 {
     border-radius: 5px;
     background-color: $main-background-color;
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    height: 80%;
-    width: 80%;
-    top: 12.5%;
-    left: 10%;
-    padding: 1.5%;
+    position: relative;
+    margin: 6px;
+    padding: 5px;
     z-index: 288;
+    @include responsive($mobile-M) {
+      margin: 10px;
+    }
+    @include responsive($mobile-L) {
+      margin: 14.5px;
+    }
     @include responsive($tablet) {
-      height: 78%;
-      width: 40%;
-      top: 14%;
-      left: 5%;
       border-radius: 10px;
+      padding: 10px;
+      margin: 20px 0px 20px 30px;
     }
     @include responsive($laptop) {
-      height: 55%;
-      width: 16%;
-      top: 31%;
-      left: 32.5%;
       border-radius: 20px;
     }
     &-header {
       font-family: $menu-font;
-      font-size: 2.4vw;
+      font-size: 3.5vw;
       color: $menu-hover-font-color;
       @include responsive($laptop) {
         font-size: 1.4vw;
