@@ -159,7 +159,7 @@ ul, menu, dir {
   -webkit-padding-start: 0px; }
 
 a:-webkit-any-link {
-  color: #5363db; }
+  color: #555555; }
   a:-webkit-any-link:active {
     color: #5363db; }
 
@@ -208,11 +208,12 @@ h5 {
   margin: 5px 0px 5px 193px; }
   @media (min-width: 768px) {
     .logo-container {
-      max-width: 50px;
-      margin: 5px auto; } }
+      max-width: 60px;
+      margin: 18px auto; } }
   @media (min-width: 1024px) {
     .logo-container {
-      max-width: 70px; } }
+      max-width: 70px;
+      margin: 14px auto; } }
 
 .header {
   background-color: white;
@@ -225,6 +226,9 @@ h5 {
   @media (min-width: 768px) {
     .header {
       max-height: 100px; } }
+  @media (min-width: 1024px) {
+    .header {
+      height: 100px; } }
 
 #nav .menu-icon {
   cursor: pointer;
@@ -284,8 +288,7 @@ h5 {
 #nav .main-menu {
   font-size: 14px;
   font-family: "Open Sans Semibold";
-  font-weight: bold;
-  color: #5363db;
+  color: #555555;
   list-style: none;
   overflow: hidden;
   clear: both;
@@ -295,32 +298,27 @@ h5 {
   transition: max-height .2s ease-out; }
   @media (min-width: 768px) {
     #nav .main-menu {
-      margin-top: 18px;
+      margin-top: 42px;
       clear: none;
       max-height: none; } }
-  @media (min-width: 1024px) {
-    #nav .main-menu {
-      margin-top: 28px; } }
   @media (min-width: 768px) {
     #nav .main-menu-left {
       float: right; } }
   @media (min-width: 768px) {
     #nav .main-menu-right {
       float: left; } }
-  #nav .main-menu-left li {
+  #nav .main-menu li {
     float: none;
     z-index: 318; }
     @media (min-width: 768px) {
-      #nav .main-menu-left li {
-        float: left;
-        margin-left: 30px; } }
-  #nav .main-menu-right li {
-    float: none;
-    z-index: 319; }
-    @media (min-width: 768px) {
-      #nav .main-menu-right li {
-        float: left;
-        margin-right: 30px; } }
+      #nav .main-menu li {
+        float: left; } }
+  @media (min-width: 768px) {
+    #nav .main-menu-left li {
+      margin-left: 30px; } }
+  @media (min-width: 768px) {
+    #nav .main-menu-right li {
+      margin-right: 30px; } }
   #nav .main-menu a {
     display: block;
     text-align: left;
@@ -328,16 +326,17 @@ h5 {
     line-height: 1.2;
     padding: 10px 10px; }
     #nav .main-menu a:hover {
-      background-color: lightgray; }
+      color: #5363db;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #5363db; }
     @media (min-width: 768px) {
       #nav .main-menu a {
         padding: 0px; } }
 
 #nav .logo {
-  display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  padding-bottom: 1px;
+  margin-bottom: 8px;
   z-index: 324; }
   #nav .logo-name {
     display: block;
@@ -351,7 +350,7 @@ h5 {
     z-index: 322; }
     @media (min-width: 768px) {
       #nav .logo-name {
-        font-size: 11px; } }
+        font-size: 12px; } }
     @media (min-width: 1024px) {
       #nav .logo-name {
         font-size: 15px; } }
