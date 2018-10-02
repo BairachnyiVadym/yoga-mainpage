@@ -336,7 +336,7 @@ h5 {
         font-size: 1.4vw;
       }
     }
-
+    //TODO: refactor this to have proper layout on all screens
     #select {
       width: 99.5%;
       padding: 0%;
@@ -417,81 +417,63 @@ h5 {
 .yoga-classes {
   position: relative;
   &-header {
-    position: absolute;
-    display: inline-block;
-    top: 3.5%;
-    left: 28%;
+    display: block;
     font-family: $slider-font-1;
     font-weight: bold;
     font-size: 3.5vw; //2.19vw
     color: $submit-background-color;
-    @include responsive($tablet) {
-      top: 6%;
-    }
+    text-align: center;
   }
   &-header-1 {
-    position: absolute;
-    display: inline-block;
-    top: 4.5%;
-    left: 42.5%;
+    display: block;
     font-family: $slider-font-2;
     font-size: 5vw; //2.92vw
     color: $yoga-classes-header-2;
+    text-align: center;
+  }
+
+  &-figure {
+    //TBD
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
     @include responsive($tablet) {
-      top: 8.4%;
-    }
-    @include responsive($laptop) {
-      top: 9.2%;
+      float: left;
+      margin-right: 25px;
     }
   }
 
-  &-photo-container {
-    display: inline-block;
-    margin-top: 38%;
+  figcaption {
+    &::after {
+      @include responsive($tablet) {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    }
+  }
+
+  .caption {
+    font-family: $slider-font-1;
+    color: $yoga-classes-caption-body;
+    font-size: 13px;
+    text-align: left;
     @include responsive($tablet) {
-      margin-top: 25%;
+      font-size: 14px;
     }
-
-    img {
-      display: block;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      height: auto;
-      @include responsive($tablet) {
-        float: left;
-        margin: 3% 3% 0% 0%;
-      }
-    }
-
-    figcaption {
-      &::after {
-        @include responsive($tablet) {
-          content: "";
-          clear: both;
-          display: table;
-        }
-      }
-    }
-
-    .caption {
-      font-family: $slider-font-1;
-      color: $yoga-classes-caption-body;
-      font-size: 13px;
-      text-align: left;
-      @include responsive($tablet) {
-        font-size: 14px;
-      }
-
-    }
-    .caption-header {
+    &-header {
       color: $yoga-classes-header-2;
       font-size: .83em;
       @include responsive($tablet) {
         padding: 3% 0% 1% 0%;
       }
     }
-    .caption-footer {
+    &-footer {
       color: $yoga-classes-caption-footer;
       text-align: right;
       margin-bottom: 10%;

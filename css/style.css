@@ -520,67 +520,48 @@ h5 {
 .yoga-classes {
   position: relative; }
   .yoga-classes-header {
-    position: absolute;
-    display: inline-block;
-    top: 3.5%;
-    left: 28%;
+    display: block;
     font-family: "Open Sans";
     font-weight: bold;
     font-size: 3.5vw;
-    color: #5b6ceb; }
-    @media (min-width: 768px) {
-      .yoga-classes-header {
-        top: 6%; } }
+    color: #5b6ceb;
+    text-align: center; }
   .yoga-classes-header-1 {
-    position: absolute;
-    display: inline-block;
-    top: 4.5%;
-    left: 42.5%;
+    display: block;
     font-family: "Freestyle Script";
     font-size: 5vw;
-    color: #777777; }
+    color: #777777;
+    text-align: center; }
+  .yoga-classes img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto; }
     @media (min-width: 768px) {
-      .yoga-classes-header-1 {
-        top: 8.4%; } }
-    @media (min-width: 1024px) {
-      .yoga-classes-header-1 {
-        top: 9.2%; } }
-  .yoga-classes-photo-container {
-    display: inline-block;
-    margin-top: 38%; }
+      .yoga-classes img {
+        float: left;
+        margin-right: 25px; } }
+  @media (min-width: 768px) {
+    .yoga-classes figcaption::after {
+      content: "";
+      clear: both;
+      display: table; } }
+  .yoga-classes .caption {
+    font-family: "Open Sans";
+    color: #555555;
+    font-size: 13px;
+    text-align: left; }
     @media (min-width: 768px) {
-      .yoga-classes-photo-container {
-        margin-top: 25%; } }
-    .yoga-classes-photo-container img {
-      display: block;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      height: auto; }
-      @media (min-width: 768px) {
-        .yoga-classes-photo-container img {
-          float: left;
-          margin: 3% 3% 0% 0%; } }
-    @media (min-width: 768px) {
-      .yoga-classes-photo-container figcaption::after {
-        content: "";
-        clear: both;
-        display: table; } }
-    .yoga-classes-photo-container .caption {
-      font-family: "Open Sans";
-      color: #555555;
-      font-size: 13px;
-      text-align: left; }
-      @media (min-width: 768px) {
-        .yoga-classes-photo-container .caption {
-          font-size: 14px; } }
-    .yoga-classes-photo-container .caption-header {
+      .yoga-classes .caption {
+        font-size: 14px; } }
+    .yoga-classes .caption-header {
       color: #777777;
       font-size: .83em; }
       @media (min-width: 768px) {
-        .yoga-classes-photo-container .caption-header {
+        .yoga-classes .caption-header {
           padding: 3% 0% 1% 0%; } }
-    .yoga-classes-photo-container .caption-footer {
+    .yoga-classes .caption-footer {
       color: #999999;
       text-align: right;
       margin-bottom: 10%; }
