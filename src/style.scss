@@ -78,6 +78,15 @@ h5 {
   font-weight: bold;
 }
 
+figure {
+  @include responsive($laptop) {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+}
+
 ///////////
 
 .container {
@@ -464,6 +473,10 @@ h5 {
     font-size: 3.5vw; //2.19vw
     color: $submit-background-color;
     text-align: center;
+    margin-top: 30px;
+    @include responsive($laptop) {
+      margin-top: 70px;
+    }
   }
   &-header-1 {
     display: block;
@@ -471,10 +484,10 @@ h5 {
     font-size: 5vw; //2.92vw
     color: $yoga-classes-header-2;
     text-align: center;
-  }
-
-  &-figure {
-    //TBD
+    margin-top: 5px;
+    @include responsive($laptop) {
+      margin-bottom: 30px;
+    }
   }
 
   img {
@@ -482,20 +495,24 @@ h5 {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: auto;
     @include responsive($tablet) {
       float: left;
-      margin-right: 25px;
+      margin: 0 15px 15px 0;
+    }
+    @include responsive($laptop) {
+      max-width: 50%;
     }
   }
 
   figcaption {
-    &::after {
-      @include responsive($tablet) {
-        content: "";
-        clear: both;
-        display: table;
-      }
+    @include responsive($mobile-M) {
+      margin: 0 12px 0 13px;
+    }
+    @include responsive($mobile-L) {
+      margin: 0 37px 0 38px;
+    }
+    @include responsive($tablet) {
+      margin: 0 5px 0 5px;
     }
   }
 
@@ -511,13 +528,13 @@ h5 {
       color: $yoga-classes-header-2;
       font-size: .83em;
       @include responsive($tablet) {
-        padding: 3% 0% 1% 0%;
+        padding: 20px 0 6px 0;
       }
     }
     &-footer {
       color: $yoga-classes-caption-footer;
       text-align: right;
-      margin-bottom: 10%;
+      margin-bottom: 30px;
     }
   }
 }

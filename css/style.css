@@ -208,6 +208,17 @@ h5 {
   margin-inline-end: 0px;
   font-weight: bold; }
 
+@media (min-width: 1024px) {
+  figure {
+    -webkit-margin-before: 1em;
+    margin-block-start: 1em;
+    -webkit-margin-after: 1em;
+    margin-block-end: 1em;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+    -webkit-margin-end: 0;
+    margin-inline-end: 0; } }
+
 .container {
   margin-left: auto;
   margin-right: auto; }
@@ -563,28 +574,42 @@ h5 {
     font-weight: bold;
     font-size: 3.5vw;
     color: #5b6ceb;
-    text-align: center; }
+    text-align: center;
+    margin-top: 30px; }
+    @media (min-width: 1024px) {
+      .yoga-classes-header {
+        margin-top: 70px; } }
   .yoga-classes-header-1 {
     display: block;
     font-family: "Freestyle Script";
     font-size: 5vw;
     color: #777777;
-    text-align: center; }
+    text-align: center;
+    margin-top: 5px; }
+    @media (min-width: 1024px) {
+      .yoga-classes-header-1 {
+        margin-bottom: 30px; } }
   .yoga-classes img {
     display: block;
     max-width: 100%;
     margin-left: auto;
-    margin-right: auto;
-    height: auto; }
+    margin-right: auto; }
     @media (min-width: 768px) {
       .yoga-classes img {
         float: left;
-        margin-right: 25px; } }
+        margin: 0 15px 15px 0; } }
+    @media (min-width: 1024px) {
+      .yoga-classes img {
+        max-width: 50%; } }
+  @media (min-width: 375px) {
+    .yoga-classes figcaption {
+      margin: 0 12px 0 13px; } }
+  @media (min-width: 425px) {
+    .yoga-classes figcaption {
+      margin: 0 37px 0 38px; } }
   @media (min-width: 768px) {
-    .yoga-classes figcaption::after {
-      content: "";
-      clear: both;
-      display: table; } }
+    .yoga-classes figcaption {
+      margin: 0 5px 0 5px; } }
   .yoga-classes .caption {
     font-family: "Open Sans";
     color: #555555;
@@ -598,8 +623,8 @@ h5 {
       font-size: .83em; }
       @media (min-width: 768px) {
         .yoga-classes .caption-header {
-          padding: 3% 0% 1% 0%; } }
+          padding: 20px 0 6px 0; } }
     .yoga-classes .caption-footer {
       color: #999999;
       text-align: right;
-      margin-bottom: 10%; }
+      margin-bottom: 30px; }
