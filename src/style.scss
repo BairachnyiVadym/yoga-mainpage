@@ -292,18 +292,30 @@ h5 {
     font-weight: bold;
     color: $main-background-color;
     position: relative;
-    display: block;
+    display: none;
     margin: 102px 0px 20px 6px;
     z-index: 283;
+    @include responsive($tablet) {
+      display: block;
+    }
+    @include responsive($laptop) {
+      margin: 138px 0px 20px 10px;
+    }
   }
   &-slogan-1 {
     font-family: $slider-font-2;
     font-size: 2.2vw;                  //in viewport width to make text responsive
     color: $main-background-color;
     position: relative;
-    display: block;
+    display: none;
     margin-left: 6px;
     z-index: 283;
+    @include responsive($tablet) {
+      display: block;
+    }
+    @include responsive($laptop) {
+      margin-left: 10px;
+    }
   }
 
   .rounded-form {
@@ -311,50 +323,59 @@ h5 {
     background-color: $main-background-color;
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
     position: relative;
-    margin: 6px;
+    margin: 9.5px 6px;
     padding: 5px;
     z-index: 288;
     @include responsive($mobile-M) {
-      margin: 10px;
+      margin: 12px 8px 12px 6px;
     }
     @include responsive($mobile-L) {
-      margin: 14.5px;
+      margin: 12px 11px 12px 6px;
     }
     @include responsive($tablet) {
       border-radius: 10px;
       padding: 10px;
-      margin: 20px 0px 20px 30px;
+      margin: 32px 10px 32px 20px;
     }
     @include responsive($laptop) {
       border-radius: 20px;
+      margin: 65px 0 0 250px;
+      height: 245px;
+      width: 200px;
     }
+
     &-header {
       font-family: $menu-font;
       font-size: 3.5vw;
       color: $menu-hover-font-color;
+      display: block;
+      @include responsive($tablet) {
+         font-size: 2.5vw;
+      }
       @include responsive($laptop) {
-        font-size: 1.4vw;
+        font-size: 2vw;
       }
     }
-    //TODO: refactor this to have proper layout on all screens
+
     #select {
-      width: 99.5%;
-      padding: 0%;
+      width: 298px;
+      padding: 1px 0;
       @include responsive($mobile-M) {
-        padding: 0.5% 0%;
-        margin-bottom: 3%;
+        width: 350px;
+        padding: 3px 0;
+      }
+      @include responsive($mobile-L) {
+        width: 398px;
+        padding: 4px 0;
       }
       @include responsive($tablet) {
-        width: 100%;
-        padding: 3% 0% 3% 1%;
-        border-radius: 6px;
-        margin-top: 2%;
+        width: 310px;
+        margin: 10px 0 0 0;
+        padding: 7px 0;
       }
       @include responsive($laptop) {
-        width: 100%;
-        padding: 5% 0% 5% 1%;
-        margin-top: 5.5%;
-        font-size: 13.33px;
+        width: 180px;
+        padding: 9px 0 9px 6px;
       }
     }
 
@@ -364,27 +385,33 @@ h5 {
       border-style: none;
       color: $input-text-color;
       position: relative;
-      width: 49%;
-      margin-bottom: 1.5%;
-      padding: 1%;
+      width: 147px;
+      margin: 2.5px 0;
+      padding: 2.5px 3.5px;
       &::placeholder {
         color: $input-text-color;
         opacity: 1;
       }
       @include responsive($mobile-M) {
-        margin-top: 0.5%;
+        width: 173px;
+        padding: 4px;
+        margin: 5px 0 0 0;
+      }
+      @include responsive($mobile-L) {
+        width: 197px;
+        padding: 6px 3.5px;
+        margin: 8px 0 0 0;
       }
       @include responsive($tablet) {
         border-radius: 6px;
-        width: 100%;
-        margin-top: 2%;
-        padding: 3% 0% 3% 2.5%;
+        width: 310px;
+        padding: 9px 3.5px;
+        margin: 10px 0 0 0;
       }
       @include responsive($laptop) {
         border-radius: 8px;
-        width: 100%;
-        margin-top: 5.5%;
-        padding: 5% 0% 5% 3.5%;
+        width: 180px;
+        padding: 11px 0 11px 10px;
       }
     }
 
@@ -394,21 +421,35 @@ h5 {
       box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
       color: $main-background-color;
       text-align: center;
-      margin-bottom: 2%;
-      padding: 1%;
-      width: 99.5%;
+      width: 298px;
+      margin: 2.5px 0;
+      padding: 2px;
+      &:hover {
+        background-color: $img-filter-color;
+      }
+      @include responsive($mobile-M) {
+        width: 350px;
+        margin: 5px 0 0 0;
+        padding: 4px;
+      }
+      @include responsive($mobile-L) {
+        width: 398px;
+        margin: 8px 0 0 0;
+        padding: 6px;
+      }
       @include responsive($tablet) {
         border-radius: 6px;
-        width: 100%;
-        margin-top: 2%;
-        padding: 3% 0% 3% 2.5%;
+        width: 310px;
+        margin: 10px 0 0 0;
+        padding: 9px;
       }
       @include responsive($laptop) {
-        float: right;
         border-radius: 8px;
-        margin: 8% 0%;
-        padding: 5% 0%;
-        width: 50%;
+        width: 120px;
+        margin: 14px 0 0 0;
+        padding: 11px;
+        float: right;
+
       }
     }
   }

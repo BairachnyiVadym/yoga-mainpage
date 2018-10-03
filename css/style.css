@@ -397,75 +397,95 @@ h5 {
     font-weight: bold;
     color: white;
     position: relative;
-    display: block;
+    display: none;
     margin: 102px 0px 20px 6px;
     z-index: 283; }
+    @media (min-width: 768px) {
+      .slider-slogan {
+        display: block; } }
+    @media (min-width: 1024px) {
+      .slider-slogan {
+        margin: 138px 0px 20px 10px; } }
   .slider-slogan-1 {
     font-family: "Freestyle Script";
     font-size: 2.2vw;
     color: white;
     position: relative;
-    display: block;
+    display: none;
     margin-left: 6px;
     z-index: 283; }
+    @media (min-width: 768px) {
+      .slider-slogan-1 {
+        display: block; } }
+    @media (min-width: 1024px) {
+      .slider-slogan-1 {
+        margin-left: 10px; } }
   .slider .rounded-form {
     border-radius: 5px;
     background-color: white;
     -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
     position: relative;
-    margin: 6px;
+    margin: 9.5px 6px;
     padding: 5px;
     z-index: 288; }
     @media (min-width: 375px) {
       .slider .rounded-form {
-        margin: 10px; } }
+        margin: 12px 8px 12px 6px; } }
     @media (min-width: 425px) {
       .slider .rounded-form {
-        margin: 14.5px; } }
+        margin: 12px 11px 12px 6px; } }
     @media (min-width: 768px) {
       .slider .rounded-form {
         border-radius: 10px;
         padding: 10px;
-        margin: 20px 0px 20px 30px; } }
+        margin: 32px 10px 32px 20px; } }
     @media (min-width: 1024px) {
       .slider .rounded-form {
-        border-radius: 20px; } }
+        border-radius: 20px;
+        margin: 65px 0 0 250px;
+        height: 245px;
+        width: 200px; } }
     .slider .rounded-form-header {
       font-family: "Open Sans Semibold";
       font-size: 3.5vw;
-      color: #5363db; }
+      color: #5363db;
+      display: block; }
+      @media (min-width: 768px) {
+        .slider .rounded-form-header {
+          font-size: 2.5vw; } }
       @media (min-width: 1024px) {
         .slider .rounded-form-header {
-          font-size: 1.4vw; } }
+          font-size: 2vw; } }
     .slider .rounded-form #select {
-      width: 99.5%;
-      padding: 0%; }
+      width: 298px;
+      padding: 1px 0; }
       @media (min-width: 375px) {
         .slider .rounded-form #select {
-          padding: 0.5% 0%;
-          margin-bottom: 3%; } }
+          width: 350px;
+          padding: 3px 0; } }
+      @media (min-width: 425px) {
+        .slider .rounded-form #select {
+          width: 398px;
+          padding: 4px 0; } }
       @media (min-width: 768px) {
         .slider .rounded-form #select {
-          width: 100%;
-          padding: 3% 0% 3% 1%;
-          border-radius: 6px;
-          margin-top: 2%; } }
+          width: 310px;
+          margin: 10px 0 0 0;
+          padding: 7px 0; } }
       @media (min-width: 1024px) {
         .slider .rounded-form #select {
-          width: 100%;
-          padding: 5% 0% 5% 1%;
-          margin-top: 5.5%;
-          font-size: 13.33px; } }
+          width: 180px;
+          padding: 9px 0 9px 6px; } }
     .slider .rounded-form .round-input {
       border-radius: 4px;
       background-color: #f2f2f2;
       border-style: none;
       color: #888888;
       position: relative;
-      width: 49%;
-      margin-bottom: 1.5%;
-      padding: 1%; }
+      width: 147px;
+      margin: 2.5px 0;
+      padding: 2.5px 3.5px; }
       .slider .rounded-form .round-input::-webkit-input-placeholder {
         color: #888888;
         opacity: 1; }
@@ -480,19 +500,25 @@ h5 {
         opacity: 1; }
       @media (min-width: 375px) {
         .slider .rounded-form .round-input {
-          margin-top: 0.5%; } }
+          width: 173px;
+          padding: 4px;
+          margin: 5px 0 0 0; } }
+      @media (min-width: 425px) {
+        .slider .rounded-form .round-input {
+          width: 197px;
+          padding: 6px 3.5px;
+          margin: 8px 0 0 0; } }
       @media (min-width: 768px) {
         .slider .rounded-form .round-input {
           border-radius: 6px;
-          width: 100%;
-          margin-top: 2%;
-          padding: 3% 0% 3% 2.5%; } }
+          width: 310px;
+          padding: 9px 3.5px;
+          margin: 10px 0 0 0; } }
       @media (min-width: 1024px) {
         .slider .rounded-form .round-input {
           border-radius: 8px;
-          width: 100%;
-          margin-top: 5.5%;
-          padding: 5% 0% 5% 3.5%; } }
+          width: 180px;
+          padding: 11px 0 11px 10px; } }
     .slider .rounded-form .block-submit {
       border-radius: 4px;
       background-color: #5b6ceb;
@@ -500,22 +526,34 @@ h5 {
       box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
       color: white;
       text-align: center;
-      margin-bottom: 2%;
-      padding: 1%;
-      width: 99.5%; }
+      width: 298px;
+      margin: 2.5px 0;
+      padding: 2px; }
+      .slider .rounded-form .block-submit:hover {
+        background-color: #5363db; }
+      @media (min-width: 375px) {
+        .slider .rounded-form .block-submit {
+          width: 350px;
+          margin: 5px 0 0 0;
+          padding: 4px; } }
+      @media (min-width: 425px) {
+        .slider .rounded-form .block-submit {
+          width: 398px;
+          margin: 8px 0 0 0;
+          padding: 6px; } }
       @media (min-width: 768px) {
         .slider .rounded-form .block-submit {
           border-radius: 6px;
-          width: 100%;
-          margin-top: 2%;
-          padding: 3% 0% 3% 2.5%; } }
+          width: 310px;
+          margin: 10px 0 0 0;
+          padding: 9px; } }
       @media (min-width: 1024px) {
         .slider .rounded-form .block-submit {
-          float: right;
           border-radius: 8px;
-          margin: 8% 0%;
-          padding: 5% 0%;
-          width: 50%; } }
+          width: 120px;
+          margin: 14px 0 0 0;
+          padding: 11px;
+          float: right; } }
 
 .yoga-classes {
   position: relative; }
