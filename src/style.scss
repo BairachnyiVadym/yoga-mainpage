@@ -79,7 +79,7 @@ h5 {
 }
 
 figure {
-  @include responsive($laptop) {
+  @include responsive($tablet) {
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0;
@@ -475,11 +475,25 @@ figure {
   &-header-1 {
     font-family: $slider-font-2;
     font-weight: normal;
-    font-size: 5vw; //2.92vw
+    font-size: 6vw; //2.92vw
     color: $yoga-classes-header-2;
     margin-top: 5px;
     @include responsive($laptop) {
       margin-bottom: 30px;
+    }
+  }
+  &-figure {
+    @include responsive($mobile-S) {
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 40px;
+      margin-inline-end: 40px;
+    }
+    @include responsive($laptop) {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
     }
   }
 
@@ -527,6 +541,38 @@ figure {
     &-footer {
       color: $yoga-classes-caption-footer;
     }
+  }
+}
+
+.gallery {
+  @include responsive($laptop) {
+    margin-top: 70px;
+  }
+  #gallery-header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    @include responsive($laptop) {
+      display: none;
+    }
+  }
+  img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row {
+    margin-right: -$col-gutter-reset;
+    margin-left: -$col-gutter-reset;
+    &-fix {
+      position: relative;
+      bottom: 4.5px;
+    }
+  }
+
+  [class^=col-] {
+    padding-right: $col-gutter-reset;;
+    padding-left: $col-gutter-reset;;
   }
 }
 
