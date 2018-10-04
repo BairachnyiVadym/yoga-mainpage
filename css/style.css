@@ -208,16 +208,15 @@ h5 {
   margin-inline-end: 0px;
   font-weight: bold; }
 
-@media (min-width: 768px) {
-  figure {
-    -webkit-margin-before: 0;
-    margin-block-start: 0;
-    -webkit-margin-after: 0;
-    margin-block-end: 0;
-    -webkit-margin-start: 0;
-    margin-inline-start: 0;
-    -webkit-margin-end: 0;
-    margin-inline-end: 0; } }
+figure {
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+  -webkit-margin-end: 0;
+  margin-inline-end: 0; }
 
 .container {
   margin-left: auto;
@@ -666,3 +665,66 @@ h5 {
 .gallery [class^=col-] {
   padding-right: 0px;
   padding-left: 0px; }
+
+.yoga-features {
+  margin-top: 30px;
+  position: relative;
+  background-image: url("../elements/features-bg-image.png");
+  overflow: hidden;
+  background-size: 100%;
+  height: 0;
+  padding-bottom: 36.875%;
+  display: block; }
+  @media (min-width: 1024px) {
+    .yoga-features {
+      margin-top: 70px; } }
+  .yoga-features::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #5363db;
+    opacity: 0.8; }
+  @media (min-width: 1024px) {
+    .yoga-features #features-header {
+      display: none; } }
+  .yoga-features img {
+    display: block;
+    position: relative;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 283;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 100%;
+    padding: 5px; }
+  .yoga-features-figure {
+    margin: 30px 0 0 0; }
+    @media (min-width: 768px) {
+      .yoga-features-figure {
+        margin: 50px 20px 0 20px; } }
+    @media (min-width: 1024px) {
+      .yoga-features-figure {
+        margin: 25px 20px 0 20px; } }
+  .yoga-features .caption {
+    font-family: "Open Sans";
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    display: none;
+    z-index: 283; }
+    @media (min-width: 1024px) {
+      .yoga-features .caption {
+        display: block;
+        font-size: 12px; } }
+    .yoga-features .caption-header {
+      font-weight: bold;
+      margin-top: 1em; }
+      @media (min-width: 768px) {
+        .yoga-features .caption-header {
+          display: block; } }
