@@ -80,8 +80,8 @@ h5 {
 
 figure {
   @include responsive($laptop) {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    margin-block-start: 0;
+    margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 0;
   }
@@ -297,7 +297,7 @@ figure {
 
   &-slogan {
     font-family: $slider-font-1;
-    font-size: 2.50vw; //in viewport width to make text responsive
+    font-size: 2.50vw;
     font-weight: bold;
     color: $main-background-color;
     position: relative;
@@ -313,15 +313,9 @@ figure {
   }
   &-slogan-1 {
     font-family: $slider-font-2;
-    font-size: 2.2vw;                  //in viewport width to make text responsive
-    color: $main-background-color;
-    position: relative;
-    display: none;
-    margin-left: 6px;
-    z-index: 283;
-    @include responsive($tablet) {
-      display: block;
-    }
+    font-size: 2.2vw;
+    font-weight: normal;
+    margin: 0 0 0 6px;
     @include responsive($laptop) {
       margin-left: 10px;
     }
@@ -479,11 +473,10 @@ figure {
     }
   }
   &-header-1 {
-    display: block;
     font-family: $slider-font-2;
+    font-weight: normal;
     font-size: 5vw; //2.92vw
     color: $yoga-classes-header-2;
-    text-align: center;
     margin-top: 5px;
     @include responsive($laptop) {
       margin-bottom: 30px;
@@ -497,7 +490,7 @@ figure {
     margin-right: auto;
     @include responsive($tablet) {
       float: left;
-      margin: 0 15px 15px 0;
+      margin: 0 20px 20px 0;
     }
     @include responsive($laptop) {
       max-width: 50%;
@@ -512,7 +505,7 @@ figure {
       margin: 0 37px 0 38px;
     }
     @include responsive($tablet) {
-      margin: 0 5px 0 5px;
+      margin: 0 10px 0 5px;
     }
   }
 
@@ -533,8 +526,6 @@ figure {
     }
     &-footer {
       color: $yoga-classes-caption-footer;
-      text-align: right;
-      margin-bottom: 30px;
     }
   }
 }
