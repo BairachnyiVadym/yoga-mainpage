@@ -666,8 +666,20 @@ figure {
   padding-right: 0px;
   padding-left: 0px; }
 
-.yoga-features {
+#features-header {
+  display: block;
   margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: "Freestyle Script";
+  color: #777777;
+  font-weight: normal;
+  font-size: 6vw;
+  text-align: center; }
+  @media (min-width: 1024px) {
+    #features-header {
+      display: none; } }
+
+.yoga-features {
   position: relative;
   background-image: url("../elements/features-bg-image.png");
   overflow: hidden;
@@ -675,9 +687,6 @@ figure {
   height: 0;
   padding-bottom: 36.875%;
   display: block; }
-  @media (min-width: 1024px) {
-    .yoga-features {
-      margin-top: 70px; } }
   .yoga-features::after {
     content: "";
     position: absolute;
@@ -688,28 +697,29 @@ figure {
     background: #5363db;
     opacity: 0.8; }
   @media (min-width: 1024px) {
-    .yoga-features #features-header {
-      display: none; } }
+    .yoga-features {
+      margin-top: 70px; } }
   .yoga-features img {
     display: block;
     position: relative;
-    height: 35px;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
-    z-index: 283;
-    border-width: 2px;
-    border-color: white;
-    border-style: solid;
-    border-radius: 100%;
-    padding: 5px; }
+    z-index: 283; }
+    @media (min-width: 1024px) {
+      .yoga-features img {
+        max-width: 30%; } }
   .yoga-features-figure {
-    margin: 30px 0 0 0; }
+    margin: 13px 0 0 0; }
     @media (min-width: 768px) {
       .yoga-features-figure {
-        margin: 50px 20px 0 20px; } }
+        margin: 20px 20px 0 20px; } }
     @media (min-width: 1024px) {
       .yoga-features-figure {
-        margin: 25px 20px 0 20px; } }
+        margin: 10px 25px 0 25px; } }
+    @media (min-width: 1440px) {
+      .yoga-features-figure {
+        margin: 70px 25px 0 25px; } }
   .yoga-features .caption {
     font-family: "Open Sans";
     color: white;
@@ -727,4 +737,5 @@ figure {
       margin-top: 1em; }
       @media (min-width: 768px) {
         .yoga-features .caption-header {
-          display: block; } }
+          display: block;
+          font-size: 12px; } }

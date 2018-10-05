@@ -282,16 +282,6 @@ figure {
   position: relative;
   background-image: url('../elements/slider-background-image.png');
   @include responsive-bg-image(320px, 118px);
-  &::after {
-    content:"";
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background: $img-filter-color;
-    opacity: 0.8;
-  }
 
   &-slogan {
     font-family: $slider-font-1;
@@ -574,8 +564,21 @@ figure {
   }
 }
 
-.yoga-features {
+
+#features-header {
+  display: block;
   margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: $slider-font-2;
+  color: $yoga-classes-header-2;
+  font-weight: normal;
+  font-size: 6vw; //2.92vw
+  text-align: center;
+  @include responsive($laptop) {
+    display: none;
+  }
+}
+.yoga-features {
   position: relative;
   background-image: url('../elements/features-bg-image.png');
   overflow: hidden;
@@ -583,45 +586,28 @@ figure {
   @include responsive($laptop) {
     margin-top: 70px;
   }
-  &::after {
-    content:"";
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background: $img-filter-color;
-    opacity: 0.8;
-  }
 
-  #features-header {
-   //TODO
-    @include responsive($laptop) {
-      display: none;
-    }
-  }
   img {
     display: block;
     position: relative;
-    //max-width: 100%;
-    height: 35px;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
     z-index: 283;
-    //border
-    border-width: 2px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-radius: 100%;
-    padding: 5px;
+    @include responsive($laptop) {
+      max-width: 30%;
+    }
   }
   &-figure {
-    margin: 30px 0 0 0;
+    margin: 13px 0 0 0;
     @include responsive($tablet) {
-      margin: 50px 20px 0 20px;
+      margin: 20px 20px 0 20px;
     }
     @include responsive($laptop) {
-      margin: 25px 20px 0 20px;
+      margin: 10px 25px 0 25px;
+    }
+    @include responsive($laptop-L) {
+      margin: 70px 25px 0 25px;
     }
   }
 
@@ -642,6 +628,7 @@ figure {
       margin-top: 1em;
       @include responsive($tablet) {
         display: block;
+        font-size: 12px;
       }
     }
   }

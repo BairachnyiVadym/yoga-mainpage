@@ -15,4 +15,14 @@
   height: 0;
   padding-bottom: percentage($image-height / $image-width);
   display: block;
+  &::after {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: $img-filter-color;
+    opacity: 0.8;
+  }
 }
