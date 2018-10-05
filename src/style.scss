@@ -94,7 +94,8 @@ figure {
 
 .logo-container {
   max-width: 40px;
-  margin: 5px 0px 5px 193px;
+  margin-top: 5px;
+  margin-left: 68%; //value set in percents to have middle alignment on mobile devices
   @include responsive($tablet) {
     max-width: 60px;
     margin: 9px auto;
@@ -129,6 +130,7 @@ figure {
     position: relative;
     float: right;
     padding: 24px;
+    margin-right: 20px;
     user-select: none;
     @include responsive($tablet) {
       display: none;
