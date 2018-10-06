@@ -331,6 +331,9 @@ figure {
       height: 245px;
       width: 200px;
     }
+    @include responsive($laptop-L) {
+      margin: 145px 0 0 340px;
+    }
 
     &-header {
       font-family: $menu-font;

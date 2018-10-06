@@ -450,6 +450,9 @@ figure {
         margin: 65px 0 0 250px;
         height: 245px;
         width: 200px; } }
+    @media (min-width: 1440px) {
+      .slider .rounded-form {
+        margin: 145px 0 0 340px; } }
     .slider .rounded-form-header {
       font-family: "Open Sans Semibold";
       font-size: 3.5vw;
