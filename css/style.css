@@ -292,8 +292,6 @@ figure {
 
 #nav .menu-btn {
   display: none; }
-  #nav .menu-btn:checked ~ .main-menu {
-    max-height: 240px; }
   #nav .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent; }
   #nav .menu-btn:checked ~ .menu-icon .navicon:before {

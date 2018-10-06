@@ -135,7 +135,6 @@ figure {
     @include responsive($tablet) {
       display: none;
     }
-
     .navicon {
       background: #333;
       display: block;
@@ -165,10 +164,6 @@ figure {
   .menu-btn {
     display: none;
 
-    //TODO: find the way to access main-menu class
-    &:checked ~ .main-menu {
-        max-height: 240px;
-    }
     &:checked ~ .menu-icon .navicon {
       background: transparent;
     }
@@ -635,8 +630,3 @@ figure {
     }
   }
 }
-
-
-
-
-
