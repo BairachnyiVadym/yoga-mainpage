@@ -322,17 +322,17 @@ figure {
     }
     @include responsive($tablet) {
       border-radius: 10px;
-      padding: 10px;
-      margin: 32px 10px 32px 20px;
+      padding: 15px;
+      margin: 25px 10px;
+      float: right;
     }
     @include responsive($laptop) {
       border-radius: 20px;
-      margin: 65px 0 0 250px;
-      height: 245px;
-      width: 200px;
+      margin: 50px 15px 0 240px;
     }
     @include responsive($laptop-L) {
-      margin: 145px 0 0 340px;
+      padding: 20px;
+      margin: 145px 30px 0 300px;
     }
 
     &-header {
@@ -349,23 +349,20 @@ figure {
     }
 
     #select {
-      width: 298px;
+      width: 100%;
       padding: 1px 0;
       @include responsive($mobile-M) {
-        width: 350px;
         padding: 3px 0;
       }
       @include responsive($mobile-L) {
-        width: 398px;
         padding: 4px 0;
       }
       @include responsive($tablet) {
-        width: 310px;
-        margin: 10px 0 0 0;
+        margin-top: 10px;
         padding: 7px 0;
       }
       @include responsive($laptop) {
-        width: 180px;
+        margin-top: 15px;
         padding: 9px 0 9px 6px;
       }
     }
@@ -376,33 +373,30 @@ figure {
       border-style: none;
       color: $input-text-color;
       position: relative;
-      width: 147px;
-      margin: 2.5px 0;
+      width: 49.3%;
+      margin-top: 5px;
       padding: 2.5px 3.5px;
       &::placeholder {
         color: $input-text-color;
         opacity: 1;
       }
       @include responsive($mobile-M) {
-        width: 173px;
         padding: 4px;
-        margin: 5px 0 0 0;
       }
       @include responsive($mobile-L) {
-        width: 197px;
         padding: 6px 3.5px;
-        margin: 8px 0 0 0;
+        margin-top: 8px;
       }
       @include responsive($tablet) {
         border-radius: 6px;
-        width: 310px;
+        width: 100%;
         padding: 9px 3.5px;
-        margin: 10px 0 0 0;
+        margin-top: 10px;
       }
       @include responsive($laptop) {
         border-radius: 8px;
-        width: 180px;
         padding: 11px 0 11px 10px;
+        margin-top: 15px;
       }
     }
 
@@ -412,35 +406,30 @@ figure {
       box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
       color: $main-background-color;
       text-align: center;
-      width: 298px;
-      margin: 2.5px 0;
+      width: 100%;
+      margin-top: 5px;
       padding: 2px;
       &:hover {
         background-color: $img-filter-color;
       }
       @include responsive($mobile-M) {
-        width: 350px;
-        margin: 5px 0 0 0;
         padding: 4px;
       }
       @include responsive($mobile-L) {
-        width: 398px;
-        margin: 8px 0 0 0;
+        margin-top: 8px;
         padding: 6px;
       }
       @include responsive($tablet) {
         border-radius: 6px;
-        width: 310px;
-        margin: 10px 0 0 0;
+        width: 50%;
+        margin-top: 15px;
         padding: 9px;
+        float: right;
       }
       @include responsive($laptop) {
         border-radius: 8px;
-        width: 120px;
-        margin: 14px 0 0 0;
+        margin-top: 20px;
         padding: 11px;
-        float: right;
-
       }
     }
   }
