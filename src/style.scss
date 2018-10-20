@@ -324,11 +324,13 @@ figure {
       border-radius: 10px;
       padding: 15px;
       margin: 25px 10px;
+      max-width: 340px; // prevents elem width to grow when container change occurs
       float: right;
     }
     @include responsive($laptop) {
       border-radius: 20px;
       margin: 50px 15px 0 240px;
+      max-width: 215px; // prevents elem width to grow when container change occurs
     }
     @include responsive($laptop-L) {
       padding: 20px;
