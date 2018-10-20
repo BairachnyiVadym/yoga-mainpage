@@ -48,7 +48,7 @@ function phoneValidationHandler() {
         fld.style.background = 'Yellow';
         alert(error);
         return false;
-    } else if (!(stripped.length == 12)) {
+    } else if (stripped.length != 12) {
         error = "The phone number is the wrong length. Make sure you included an area code. " +
             "Don't include plus sign('+') and parentheses ('()')\n";
         fld.style.background = 'Yellow';
