@@ -645,10 +645,47 @@ figure {
     .gallery #gallery-header {
       display: none; } }
 
+.gallery .image-container {
+  position: relative; }
+
 .gallery img {
+  display: block;
+  height: auto;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
+
+.gallery .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #5b6ceb; }
+
+.gallery .icon {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center; }
+  .gallery .icon:hover {
+    width: 55px;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease; }
+
+.gallery .image-container:hover .overlay {
+  opacity: .8; }
 
 .gallery .row {
   margin-right: 0px;

@@ -305,7 +305,7 @@ figure {
       margin-left: 10px;
     }
   }
-
+  // TODO: vertical align of form
   .rounded-form {
     border-radius: 5px;
     background-color: $main-background-color;
@@ -534,10 +534,48 @@ figure {
       display: none;
     }
   }
+
+  .image-container {
+    position: relative;
+  }
+
   img {
+    display: block;
+    height: auto;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $submit-background-color;
+  }
+
+  .icon {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    &:hover {
+      width: 55px;
+      transition: .3s ease;
+    }
+  }
+
+  .image-container:hover .overlay {
+    opacity: .8;
   }
 
   .row {
