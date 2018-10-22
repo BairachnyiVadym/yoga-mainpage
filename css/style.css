@@ -636,7 +636,6 @@ figure {
 
 .gallery {
   /* The Modal (background) */
-  /* Modal Content (Image) */
   /* Add Animation - Zoom in the Modal */
   /* The Close Button */ }
   @media (min-width: 1024px) {
@@ -691,9 +690,9 @@ figure {
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 1000;
     /* Sit on top */
-    padding-top: 100px;
+    padding-top: 210px;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -707,14 +706,11 @@ figure {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.9);
     /* Black w/ opacity */ }
-  .gallery .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px; }
-    @media (max-width: 768px) {
-      .gallery .modal-content {
-        max-width: 100%; } }
+    .gallery .modal-content {
+      /*Image*/
+      margin: auto;
+      display: block;
+      max-width: 100%; }
   .gallery .modal-content, .gallery #caption {
     -webkit-animation-name: zoom;
     animation-name: zoom;

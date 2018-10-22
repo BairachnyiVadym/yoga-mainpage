@@ -1,15 +1,17 @@
 let modal = document.getElementById('myModal');
 let modalImg = document.getElementById("img01");
-let span = document.getElementsByClassName("close")[0];
+let closeButton = document.getElementsByClassName("close")[0];
 
-let zoomIcon = document.getElementById("i-1");
-zoomIcon.addEventListener("click", modalHandler);
+let zoomIcons = document.getElementsByClassName("icon");
 
-function modalHandler(){
-    modal.style.display = "block";
-    /*modalImg.src = this.src;*/
+for (let i = 0; i < zoomIcons.length; i++) {
+    zoomIcons[i].onclick = function(){
+        let imgSrc = zoomIcons[i].parentElement.parentElement.firstElementChild.src;
+        modal.style.display = "block";
+        modalImg.src = imgSrc;
+    }
 }
 
-span.onclick = function() {
+closeButton.onclick = function() {
     modal.style.display = "none";
 };
