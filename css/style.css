@@ -634,69 +634,131 @@ figure {
     .yoga-classes .caption-footer {
       color: #999999; }
 
-@media (min-width: 1024px) {
-  .gallery {
-    margin-top: 70px; } }
-
-.gallery #gallery-header {
-  margin-top: 30px;
-  margin-bottom: 10px; }
+.gallery {
+  /* The Modal (background) */
+  /* Modal Content (Image) */
+  /* Add Animation - Zoom in the Modal */
+  /* The Close Button */ }
   @media (min-width: 1024px) {
-    .gallery #gallery-header {
-      display: none; } }
+    .gallery {
+      margin-top: 70px; } }
+  .gallery #gallery-header {
+    margin-top: 30px;
+    margin-bottom: 10px; }
+    @media (min-width: 1024px) {
+      .gallery #gallery-header {
+        display: none; } }
+  .gallery .image-container {
+    position: relative; }
+  .gallery img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+  .gallery .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    background-color: #5b6ceb; }
+  .gallery .icon {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: pointer; }
+    .gallery .icon:hover {
+      width: 55px;
+      -webkit-transition: .3s ease;
+      -o-transition: .3s ease;
+      transition: .3s ease; }
+  .gallery .image-container:hover .overlay {
+    opacity: .8; }
+  .gallery .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */ }
+  .gallery .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; }
+    @media (max-width: 768px) {
+      .gallery .modal-content {
+        max-width: 100%; } }
+  .gallery .modal-content, .gallery #caption {
+    -webkit-animation-name: zoom;
+    animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s; }
 
-.gallery .image-container {
-  position: relative; }
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
-.gallery img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-
-.gallery .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
-  background-color: #5b6ceb; }
-
-.gallery .icon {
-  width: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center; }
-  .gallery .icon:hover {
-    width: 55px;
-    -webkit-transition: .3s ease;
-    -o-transition: .3s ease;
-    transition: .3s ease; }
-
-.gallery .image-container:hover .overlay {
-  opacity: .8; }
-
-.gallery .row {
-  margin-right: 0px;
-  margin-left: 0px; }
-  .gallery .row-fix {
-    position: relative;
-    bottom: 4.5px; }
-
-.gallery [class^=col-] {
-  padding-right: 0px;
-  padding-left: 0px; }
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+  .gallery .close {
+    position: absolute;
+    top: 120px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .gallery .close:hover, .gallery .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer; }
+  .gallery .row {
+    margin-right: 0px;
+    margin-left: 0px; }
+    .gallery .row-fix {
+      position: relative;
+      bottom: 4.5px; }
+  .gallery [class^=col-] {
+    padding-right: 0px;
+    padding-left: 0px; }
 
 #features-header {
   display: block;

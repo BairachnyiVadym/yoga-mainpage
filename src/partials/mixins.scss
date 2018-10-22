@@ -5,6 +5,12 @@
   }
 };
 
+@mixin responsive-max-width($resolution) {
+  @media ( max-width: $resolution ) {
+    @content;
+  }
+};
+
 @mixin columns($count, $width) {
   column-count: $count;
   column-width: $width;
