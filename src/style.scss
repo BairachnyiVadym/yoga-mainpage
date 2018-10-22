@@ -584,7 +584,6 @@ figure {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
-    padding-top: 210px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -592,6 +591,7 @@ figure {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    padding-top: 100px; /* Location of the box */ //210px
     &-content {
       /*Image*/
       margin: auto;
@@ -614,8 +614,8 @@ figure {
   /* The Close Button */
   .close {
     position: absolute;
-    top: 120px;
-    right: 35px;
+    top: 15px; //120px;
+    right: 40px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
