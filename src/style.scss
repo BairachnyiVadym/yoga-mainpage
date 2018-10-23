@@ -281,7 +281,7 @@ figure {
   @include responsive-bg-image(320px, 118px);
 
   &-slogan {
-    font-family: $slider-font-1;
+    font-family: $main-header-font-1;
     font-size: 2.50vw;
     font-weight: bold;
     color: $main-background-color;
@@ -441,7 +441,7 @@ figure {
   position: relative;
   &-header {
     display: block;
-    font-family: $slider-font-1;
+    font-family: $main-header-font-1;
     font-weight: bold;
     font-size: 3.5vw; //2.19vw
     color: $submit-background-color;
@@ -503,7 +503,7 @@ figure {
   }
 
   .caption {
-    font-family: $slider-font-1;
+    font-family: $main-header-font-1;
     color: $yoga-classes-caption-body;
     font-size: 13px;
     text-align: left;
@@ -642,6 +642,85 @@ figure {
   }
 }
 
+.about-us {
+  margin-top: 30px;
+  @include responsive($tablet) {
+    margin-top: 70px;
+  }
+  &-caption {
+    margin-left: 15px;
+    max-width: 470px;
+    font-family: $main-header-font-1;
+    @include responsive($tablet) {
+      margin-left: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      color: $submit-background-color;
+    }
+    p {
+      font-size: 14px;
+      color: $menu-font-color;
+    }
+  }
+
+  .slideshow-container {
+    max-width: 85%;
+    position: relative;
+    margin: auto;
+    @include responsive($tablet) {
+      max-width: 570px;
+    }
+  }
+
+  .mySlides {
+    display: none;
+    img {
+      width: 100%;
+      max-height: 300px;
+      border-radius: 8px;
+    }
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 42.5%;
+    height: 40px;
+    width: 40px;
+    padding: 8px 0 0 14px;
+    color: $slideshow-buttons-color;
+    background-color: $main-background-color;
+    box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 100%;
+
+  }
+  .prev {
+    left: -20px;
+  }
+  .next {
+    right: -20px;
+  }
+  .prev:hover, .next:hover {
+    color: $submit-background-color;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+}
 
 #features-header {
   display: block;
@@ -690,7 +769,7 @@ figure {
   }
 
   .caption {
-    font-family: $slider-font-1;
+    font-family: $main-header-font-1;
     color: $main-background-color;
     font-size: 10px;
     text-align: center;

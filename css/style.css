@@ -5,7 +5,7 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 768px) {
   .container {
-    width: 750px; } }
+    width: 720px; } }
 
 @media (min-width: 992px) {
   .container {
@@ -755,6 +755,79 @@ figure {
   .gallery [class^=col-] {
     padding-right: 0px;
     padding-left: 0px; }
+
+.about-us {
+  margin-top: 30px; }
+  @media (min-width: 768px) {
+    .about-us {
+      margin-top: 70px; } }
+  .about-us-caption {
+    margin-left: 15px;
+    max-width: 470px;
+    font-family: "Open Sans"; }
+    @media (min-width: 768px) {
+      .about-us-caption {
+        margin-left: 0; } }
+    .about-us-caption h1 {
+      margin: 0;
+      font-size: 30px;
+      color: #5b6ceb; }
+    .about-us-caption p {
+      font-size: 14px;
+      color: #555555; }
+  .about-us .slideshow-container {
+    max-width: 85%;
+    position: relative;
+    margin: auto; }
+    @media (min-width: 768px) {
+      .about-us .slideshow-container {
+        max-width: 570px; } }
+  .about-us .mySlides {
+    display: none; }
+    .about-us .mySlides img {
+      width: 100%;
+      max-height: 300px;
+      border-radius: 8px; }
+  .about-us .prev, .about-us .next {
+    cursor: pointer;
+    position: absolute;
+    top: 42.5%;
+    height: 40px;
+    width: 40px;
+    padding: 8px 0 0 14px;
+    color: #d7d7d7;
+    background-color: white;
+    -webkit-box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 18px;
+    -webkit-transition: 0.6s ease;
+    -o-transition: 0.6s ease;
+    transition: 0.6s ease;
+    border-radius: 100%; }
+  .about-us .prev {
+    left: -20px; }
+  .about-us .next {
+    right: -20px; }
+  .about-us .prev:hover, .about-us .next:hover {
+    color: #5b6ceb; }
+  .about-us .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
 
 #features-header {
   display: block;
