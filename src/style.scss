@@ -793,3 +793,62 @@ figure {
     }
   }
 }
+
+//TODO: responsive layout
+.prices {
+  margin-top: 30px;
+  width: 370px;
+  height: 494px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+  @include responsive($laptop) {
+    margin-top: 70px;
+  }
+  p {
+    font-family: $main-header-font-1;
+    font-size: 18px;
+    color: $menu-font-color;
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  &-header {
+    background-color: rgb(91, 108, 235);
+    width: 370px;
+    height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    p {
+      margin: 0;
+      padding-top: 25px;
+      color: $main-background-color;
+      font-family: $main-header-font-1;
+      font-weight: bold;
+      .dollar-sign { //TODO:vertical alignment
+        font-size: 32px;
+        margin-right: 10px;
+      }
+      .price {
+        font-size: 67px;
+      }
+      .period {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-button {
+    border-radius: 20px;
+    background-color: $submit-background-color;
+    width: 170px;
+    height: 50px;
+    display: block;
+    margin: 36px auto 0;
+    font-family: $menu-font;
+    font-size: 18px;
+    color: $main-background-color;
+  }
+}
+
+
