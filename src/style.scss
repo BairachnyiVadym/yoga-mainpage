@@ -814,20 +814,23 @@ figure {
   }
 
   &-header {
-    background-color: rgb(91, 108, 235);
+    background-color: $submit-background-color;
     width: 370px;
     height: 150px;
+    line-height: 150px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     p {
       margin: 0;
-      padding-top: 25px;
       color: $main-background-color;
       font-family: $main-header-font-1;
       font-weight: bold;
-      .dollar-sign { //TODO:vertical alignment
+      .dollar-sign {
         font-size: 32px;
-        margin-right: 10px;
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: super;
+        line-height: normal;
       }
       .price {
         font-size: 67px;

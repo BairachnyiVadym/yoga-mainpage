@@ -926,17 +926,20 @@ figure {
     background-color: #5b6ceb;
     width: 370px;
     height: 150px;
+    line-height: 150px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
     .prices-header p {
       margin: 0;
-      padding-top: 25px;
       color: white;
       font-family: "Open Sans";
       font-weight: bold; }
       .prices-header p .dollar-sign {
         font-size: 32px;
-        margin-right: 10px; }
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: super;
+        line-height: normal; }
       .prices-header p .price {
         font-size: 67px; }
       .prices-header p .period {
