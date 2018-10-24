@@ -928,7 +928,8 @@ figure {
     height: 150px;
     line-height: 150px;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px; }
+    border-top-right-radius: 10px;
+    margin-bottom: 60px; }
     .prices-header p {
       margin: 0;
       color: white;
