@@ -681,6 +681,7 @@ figure {
       width: 100%;
       max-height: 300px;
       border-radius: 8px;
+      box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
     }
   }
 
@@ -735,6 +736,8 @@ figure {
     display: none;
   }
 }
+
+//TODO: vertical aligment
 .yoga-features {
   position: relative;
   background-image: url('../elements/features-bg-image.png');

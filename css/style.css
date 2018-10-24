@@ -787,7 +787,9 @@ figure {
     .about-us .mySlides img {
       width: 100%;
       max-height: 300px;
-      border-radius: 8px; }
+      border-radius: 8px;
+      -webkit-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15); }
   .about-us .prev, .about-us .next {
     cursor: pointer;
     position: absolute;
