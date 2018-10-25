@@ -843,7 +843,6 @@ figure {
       }
     }
   }
-
   &-button {
     border-radius: 20px;
     background-color: $submit-background-color;
@@ -857,4 +856,75 @@ figure {
   }
 }
 
+.blockquotes {
+  margin-top: 30px;
+  @include responsive($laptop) {
+    margin-top: 70px;
+  }
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  background-color: $main-background-color;
+  box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+  width: 1170px;
+  height: 250px;
 
+  .comments {
+    padding-top: 30px;
+
+    img {
+      padding: 10px;
+      border-width: 2px;
+      border-color: rgb(215, 215, 215);
+      border-style: solid;
+      border-radius: 50%;
+      max-width: 100%;
+      display: block;
+      margin: auto;
+    }
+  }
+  .quote {
+    margin: 0;
+    font-family: $main-header-font-1;
+    .q-mark {
+      font-size: 60px;
+      color: $submit-background-color;
+      &-open {
+        margin-right: 30px;
+        //huck to place this
+        vertical-align: top;
+        line-height: 75px;
+      }
+      &-close {
+        margin-left: 57px;
+        //huck to place this
+        vertical-align: bottom;
+        line-height: 0px;
+      }
+    }
+    p {
+      display: inline-block;
+      max-width: 70%;
+      font-style: italic;
+      color: $menu-font-color;
+    }
+    &-author {
+      display: block;
+      font-style: normal;
+      color: $menu-font-color;
+      padding-left: 55px;
+      &-name {
+        font-weight: bold;
+        color: $submit-background-color;
+      }
+      &-border {
+        position: absolute;
+        left: 315px;
+        top: 96px;
+        border-left: 2px solid $slideshow-buttons-color;
+        height: 73px;
+      }
+    }
+  }
+}
