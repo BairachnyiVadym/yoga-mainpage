@@ -743,7 +743,7 @@ figure {
     -o-transition: 0.3s;
     transition: 0.3s; }
     .gallery .close:hover, .gallery .close:focus {
-      color: #bbb;
+      font-size: 45px;
       text-decoration: none;
       cursor: pointer; }
   .gallery .row {
