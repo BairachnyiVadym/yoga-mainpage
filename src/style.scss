@@ -685,30 +685,11 @@ figure {
     }
   }
 
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 42.5%;
-    height: 40px;
-    width: 40px;
-    padding: 8px 0 0 14px;
-    color: $slideshow-buttons-color;
-    background-color: $main-background-color;
-    box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 100%;
-
-  }
   .prev {
     left: -20px;
   }
   .next {
     right: -20px;
-  }
-  .prev:hover, .next:hover {
-    color: $submit-background-color;
   }
 
   .fade {
@@ -721,6 +702,25 @@ figure {
     from {opacity: .4}
     to {opacity: 1}
   }
+}
+//this classes placed in most outer scope to have access to it
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 42.5%;
+  height: 40px;
+  width: 40px;
+  padding: 8px 0 0 14px;
+  color: $slideshow-buttons-color;
+  background-color: $main-background-color;
+  box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 100%;
+}
+.prev:hover, .next:hover {
+  color: $submit-background-color;
 }
 
 #features-header {
@@ -857,6 +857,7 @@ figure {
 }
 
 .blockquotes {
+  margin-bottom: 100px;
   margin-top: 30px;
   @include responsive($laptop) {
     margin-top: 70px;
@@ -873,10 +874,10 @@ figure {
   .comments {
     padding-top: 30px;
 
-    img {
+    #avatar {
       padding: 10px;
       border-width: 2px;
-      border-color: rgb(215, 215, 215);
+      border-color: $slideshow-buttons-color;
       border-style: solid;
       border-radius: 50%;
       max-width: 100%;
@@ -927,4 +928,40 @@ figure {
       }
     }
   }
+  .change-trainer {
+    position: absolute;
+    bottom: -32px;
+    left: 430px;
+    line-height: 25px;
+    #avatar-thumbnail {
+      border: 2px solid $slideshow-buttons-color;
+      border-radius: 50%;
+      float: left;
+      margin-right: 15px;
+    }
+    #name-thumbnail {
+      font-weight: bold;
+      color: $menu-font-color;
+      display: inline-block;
+      margin-top: 8px;
+    }
+    #post-thumbnail {
+      color: $yoga-classes-header-2;
+    }
+  }
+  //override some properties from existing classes
+  .prev, .next {
+    top: 18px;
+    height: 30px;
+    width: 30px;
+    padding: 3px 0 0 10px;
+    font-size: 16px;
+  }
+  .prev {
+    left: -80px;
+  }
+  .next {
+    right: -80px;
+  }
 }
+

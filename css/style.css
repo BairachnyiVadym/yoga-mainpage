@@ -790,29 +790,10 @@ figure {
       border-radius: 8px;
       -webkit-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15); }
-  .about-us .prev, .about-us .next {
-    cursor: pointer;
-    position: absolute;
-    top: 42.5%;
-    height: 40px;
-    width: 40px;
-    padding: 8px 0 0 14px;
-    color: #d7d7d7;
-    background-color: white;
-    -webkit-box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    font-size: 18px;
-    -webkit-transition: 0.6s ease;
-    -o-transition: 0.6s ease;
-    transition: 0.6s ease;
-    border-radius: 100%; }
   .about-us .prev {
     left: -20px; }
   .about-us .next {
     right: -20px; }
-  .about-us .prev:hover, .about-us .next:hover {
-    color: #5b6ceb; }
   .about-us .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -830,6 +811,27 @@ figure {
     opacity: .4; }
   to {
     opacity: 1; } }
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 42.5%;
+  height: 40px;
+  width: 40px;
+  padding: 8px 0 0 14px;
+  color: #d7d7d7;
+  background-color: white;
+  -webkit-box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 100%; }
+
+.prev:hover, .next:hover {
+  color: #5b6ceb; }
 
 #features-header {
   display: block;
@@ -957,6 +959,7 @@ figure {
     color: white; }
 
 .blockquotes {
+  margin-bottom: 100px;
   margin-top: 30px;
   position: relative;
   margin-left: auto;
@@ -972,7 +975,7 @@ figure {
       margin-top: 70px; } }
   .blockquotes .comments {
     padding-top: 30px; }
-    .blockquotes .comments img {
+    .blockquotes .comments #avatar {
       padding: 10px;
       border-width: 2px;
       border-color: #d7d7d7;
@@ -1014,3 +1017,30 @@ figure {
         top: 96px;
         border-left: 2px solid #d7d7d7;
         height: 73px; }
+  .blockquotes .change-trainer {
+    position: absolute;
+    bottom: -32px;
+    left: 430px;
+    line-height: 25px; }
+    .blockquotes .change-trainer #avatar-thumbnail {
+      border: 2px solid #d7d7d7;
+      border-radius: 50%;
+      float: left;
+      margin-right: 15px; }
+    .blockquotes .change-trainer #name-thumbnail {
+      font-weight: bold;
+      color: #555555;
+      display: inline-block;
+      margin-top: 8px; }
+    .blockquotes .change-trainer #post-thumbnail {
+      color: #777777; }
+  .blockquotes .prev, .blockquotes .next {
+    top: 18px;
+    height: 30px;
+    width: 30px;
+    padding: 3px 0 0 10px;
+    font-size: 16px; }
+  .blockquotes .prev {
+    left: -80px; }
+  .blockquotes .next {
+    right: -80px; }
