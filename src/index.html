@@ -12,6 +12,7 @@
     <script defer src="../js/modalBox.js"></script>
     <script defer src="../js/slideShow.js"></script>
     <script defer src="../js/lightingPrice.js"></script>
+    <script defer src="../js/nextTrainer.js"></script>
 </head>
 <body>
 
@@ -438,9 +439,8 @@
                     <aside class="blockquotes">
                         <div class="comments fade">
                             <div class="col-xs-3">
-                                <img src="../elements/blockquotes-photo.png" id="avatar">
+                                <img src="../elements/blockquotes-photo.png" class="avatar">
                             </div>
-
                             <div class="col-xs-9">
                                 <blockquote class="quote">
                                     <span class="q-mark q-mark-open">”</span>
@@ -458,14 +458,45 @@
                                 </blockquote>
                             </div>
                         </div>
+                        <div class="comments fade">
+                            <div class="col-xs-3">
+                                <img src="../elements/blockquotes-photo-1.png" class="avatar">
+                            </div>
+                            <div class="col-xs-9">
+                                <blockquote class="quote">
+                                    <span class="q-mark q-mark-open">”</span>
+                                    <p>Aliquam animi dolorem harum hic repellendus sapiente vitae? A consectetur,
+                                        debitis deleniti distinctio eaque enim laborum nesciunt nobis officia pariatur
+                                        quaerat repudiandae!
+                                    </p>
+                                    <span class="q-mark q-mark-close">“</span>
 
-                        <div class="change-trainer">
-                            <img src="../elements/blockquotes-photo-1.png" id="avatar-thumbnail">
-                            <span id="name-thumbnail">Sara Taylor</span><br>
-                            <span id="post-thumbnail">Trainer</span>
+                                    <span class="quote-author">
+                                        Trainer<br>
+                                        <span class="quote-author-name">Sara Taylor</span>
+                                        <span class="quote-author-border"></span>
+                                    </span>
+                                </blockquote>
+                            </div>
+                        </div>
 
-                            <a class="prev">&#10094;</a>
-                            <a class="next">&#10095;</a>
+                        <div class="change-trainer fade">
+                            <img src="../elements/blockquotes-photo-thumbnail.png" class="avatar-thumbnail">
+                            <span class="name-thumbnail">Laura Shepard</span><br>
+                            <span class="post-thumbnail">Trainer</span>
+                        </div>
+                        <div class="change-trainer fade">
+                            <img src="../elements/blockquotes-photo-1-thumbnail.png" class="avatar-thumbnail">
+                            <span class="name-thumbnail">Sara Taylor</span><br>
+                            <span class="post-thumbnail">Trainer</span>
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div id="bullets">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
                         </div>
                     </aside>
                 </div>

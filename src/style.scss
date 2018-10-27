@@ -691,18 +691,8 @@ figure {
   .next {
     right: -20px;
   }
-
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
 }
+
 //this classes placed in most outer scope to have access to it
 .prev, .next {
   cursor: pointer;
@@ -722,6 +712,18 @@ figure {
 .prev:hover, .next:hover {
   color: $submit-background-color;
 }
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+//////////////////
 
 #features-header {
   display: block;
@@ -872,9 +874,10 @@ figure {
   height: 250px;
 
   .comments {
+    display: none;
     padding-top: 30px;
 
-    #avatar {
+    .avatar {
       padding: 10px;
       border-width: 2px;
       border-color: $slideshow-buttons-color;
@@ -929,39 +932,60 @@ figure {
     }
   }
   .change-trainer {
+    display: none;
     position: absolute;
     bottom: -32px;
     left: 430px;
     line-height: 25px;
-    #avatar-thumbnail {
+    .avatar-thumbnail {
       border: 2px solid $slideshow-buttons-color;
       border-radius: 50%;
       float: left;
-      margin-right: 15px;
     }
-    #name-thumbnail {
+    .name-thumbnail {
       font-weight: bold;
       color: $menu-font-color;
       display: inline-block;
+      padding-left: 15px;
       margin-top: 8px;
     }
-    #post-thumbnail {
+    .post-thumbnail {
       color: $yoga-classes-header-2;
+      padding-left: 15px;
     }
   }
   //override some properties from existing classes
   .prev, .next {
-    top: 18px;
+    top: 235px;
     height: 30px;
     width: 30px;
     padding: 3px 0 0 10px;
     font-size: 16px;
   }
   .prev {
-    left: -80px;
+    left: 360px;
   }
   .next {
-    right: -80px;
+    right: 500px;
+  }
+  #bullets {
+    margin-left: 1200px;
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 10px 0;
+      background-color: $submit-background-color;
+      display: block;
+      transition: background-color 0.6s ease;
+      border-radius: 50%;
+      //border: 2px solid $submit-background-color;;
+      &:hover {
+        background-color: #717171;
+      }
+    }
   }
 }
+
+
 
