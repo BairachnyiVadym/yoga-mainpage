@@ -8,11 +8,14 @@
 
     <link rel="stylesheet" href="../css/style.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script defer src="../js/toggleMenu.js"></script>
     <script defer src="../js/modalBox.js"></script>
     <script defer src="../js/slideShow.js"></script>
     <script defer src="../js/lightingPrice.js"></script>
     <script defer src="../js/nextTrainer.js"></script>
+    <script defer src="../js/scrollToSection.js"></script>
 </head>
 <body>
 
@@ -22,9 +25,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-md-4" id="change-order">
                         <ul class="main-menu main-menu-left">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Reservation</a></li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a data-scroll href="#about-us">About us</a></li>
+                            <li><a data-scroll href="#reservation">Reservation</a></li>
+                            <li><a data-scroll href="#gallery">Gallery</a></li>
                         </ul>
                     </div>
 
@@ -44,9 +47,9 @@
 
                     <div class="col-xs-12 col-sm-5 col-md-4">
                         <ul class="main-menu main-menu-right">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Elements</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li><a data-scroll href="#blog">Blog</a></li>
+                            <li><a data-scroll href="#elements">Elements</a></li>
+                            <li><a data-scroll href="#shop">Shop</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,7 +61,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <div class="rounded-form">
+                    <div class="rounded-form" id="reservation">
                         <span class="rounded-form-header">Trial Class</span>
                         <form>
                             <input class="round-input" type="text" name="name" placeholder="Enter your name">
@@ -150,7 +153,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="row">
             <div class="col-xs-12">
                 <span class="yoga-classes-header yoga-classes-header-1" id="gallery-header">Gallery</span>
@@ -242,7 +245,7 @@
         </div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about-us">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
@@ -282,7 +285,7 @@
             </div>
         </div>
 
-        <section class="yoga-features">
+        <section class="yoga-features" id="elements">
             <div class="container">
                 <!--TODO: icon semantics-->
                 <div class="row">
@@ -376,7 +379,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-4">
-                    <section class="prices">
+                    <section class="prices" id="shop">
                         <div class="prices-header">
                             <p>
                                 <span class="dollar-sign">$</span>
@@ -436,7 +439,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <aside class="blockquotes">
+                    <aside class="blockquotes" id="blog">
                         <div class="comments fade">
                             <div class="col-xs-3">
                                 <img src="../elements/blockquotes-photo.png" class="avatar">
