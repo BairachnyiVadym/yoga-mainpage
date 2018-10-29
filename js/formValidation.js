@@ -6,7 +6,7 @@ submitButton.addEventListener("click", phoneValidationHandler);
 function nameValidationHandler() {
     let fld = document.getElementsByName("name")[0];
     let error = "";
-    let illegalChars = /\W/; // allow letters, numbers, and underscores
+    let legalChars = /^[a-zA-Z][a-zA-Z\s]*$/; // allow letters and spaces
 
     if (fld.value == "") {
         fld.style.background = 'Yellow';
@@ -14,13 +14,13 @@ function nameValidationHandler() {
         alert(error);
         return false;
 
-    } else if ((fld.value.length < 2) || (fld.value.length > 15)) {
+    } else if ((fld.value.length < 2) || (fld.value.length > 20)) {
         fld.style.background = 'Yellow';
         error = "The username is the wrong length.\n";
         alert(error);
         return false;
 
-    } else if (illegalChars.test(fld.value)) {
+    } else if (!fld.value.match(legalChars)) {
         fld.style.background = 'Yellow';
         error = "The username contains illegal characters.\n";
         alert(error);
