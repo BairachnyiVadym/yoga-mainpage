@@ -8,20 +8,9 @@
   box-sizing: border-box;
 }
 
-body {
-  padding-top: 50px;
-  @include responsive($tablet) {
-    padding-top: 78px;
-  }
-  @include responsive($laptop) {
-    padding-top: 100px;
-  }
-}
-
 html, body {
   margin: 0;
 }
-
 
 ul, menu, dir {
   display: block;
@@ -60,7 +49,6 @@ select{
     outline: -webkit-focus-ring-color none 0px;
   }
 }
-
 button {
   border: none;
   &:focus {
@@ -86,6 +74,21 @@ figure {
 }
 
 ///////////
+
+//padding-top according to fixed header, bg img
+body {
+  padding-top: 50px;
+  @include responsive($tablet) {
+    padding-top: 78px;
+  }
+  @include responsive($laptop) {
+    padding-top: 100px;
+  }
+  background-image: url("../elements/lotos-decoration.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
 
 .container {
   margin-left: auto;

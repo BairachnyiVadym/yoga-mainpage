@@ -146,15 +146,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-body {
-  padding-top: 50px; }
-  @media (min-width: 768px) {
-    body {
-      padding-top: 78px; } }
-  @media (min-width: 1024px) {
-    body {
-      padding-top: 100px; } }
-
 html, body {
   margin: 0; }
 
@@ -217,6 +208,19 @@ figure {
   margin-inline-start: 0;
   -webkit-margin-end: 0;
   margin-inline-end: 0; }
+
+body {
+  padding-top: 50px;
+  background-image: url("../elements/lotos-decoration.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 75%; }
+  @media (min-width: 768px) {
+    body {
+      padding-top: 78px; } }
+  @media (min-width: 1024px) {
+    body {
+      padding-top: 100px; } }
 
 .container {
   margin-left: auto;
