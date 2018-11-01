@@ -794,52 +794,76 @@ figure {
   }
 }
 
-//TODO: responsive layout
 .prices {
   margin-top: 30px;
-  //width: 77.08%;
-  width: 370px;
-  height: 494px;
+  width: 77.08%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 223px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+  @include responsive($tablet) {
+    width: 100%;
+  }
   @include responsive($laptop) {
     margin-top: 70px;
+    height: 494px;
+  }
+  @include responsive($laptop-L) {
+    width: 370px;
   }
   p {
     font-family: $main-header-font-1;
-    font-size: 18px;
+    font-size: 14px;
     color: $menu-font-color;
     text-align: center;
-    margin-top: 36px;
+    @include responsive($laptop){
+      font-size: 18px;
+      margin-top: 36px;
+    }
   }
 
   &-header {
     background-color: $submit-background-color;
-    width: 370px;
-    //width: 100%;
-    height: 150px;
-    line-height: 150px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    margin-bottom: 60px;
+    @include responsive($laptop) {
+      height: 150px;
+      line-height: 150px;
+      margin-bottom: 60px;
+    }
     p {
       margin: 0;
       color: $main-background-color;
       font-family: $main-header-font-1;
       font-weight: bold;
       .dollar-sign {
-        font-size: 32px;
-        margin-right: 15px;
+        font-size: 22px;
+        margin-right: 10px;
         display: inline-block;
         vertical-align: super;
         line-height: normal;
+        @include responsive($laptop) {
+          font-size: 32px;
+          margin-right: 15px;
+        }
       }
       .price {
-        font-size: 67px;
+        font-size: 47px;
+        @include responsive($laptop) {
+          font-size: 67px;
+        }
       }
       .period {
-        font-size: 18px;
+        font-size: 12px;
+        @include responsive($laptop) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -847,13 +871,19 @@ figure {
   &-button {
     border-radius: 20px;
     background-color: $submit-background-color;
-    width: 170px;
-    height: 50px;
+    width: 130px;
+    height: 40px;
     display: block;
-    margin: 36px auto 0;
+    margin: 20px auto 0;
     font-family: $menu-font;
-    font-size: 18px;
+    font-size: 14px;
     color: $main-background-color;
+    @include responsive($laptop) {
+      width: 170px;
+      height: 50px;
+      margin: 36px auto 0;
+      font-size: 18px;
+    }
   }
 }
 
