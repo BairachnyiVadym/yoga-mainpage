@@ -861,21 +861,32 @@ figure {
 .blockquotes {
   margin-bottom: 100px;
   margin-top: 30px;
-  @include responsive($laptop) {
-    margin-top: 70px;
-  }
   position: relative;
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
   background-color: $main-background-color;
   box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
-  width: 1170px;
+  width: 100%;
   height: 250px;
+  @include responsive($tablet) {
+    width: 90%;
+    height: 200px;
+  }
+  @include responsive($laptop) {
+    margin-top: 70px;
+    height: 250px;
+  }
+  @include responsive($laptop-L) {
+    width: 100%;
+  }
 
   .comments {
     display: none;
-    padding-top: 30px;
+    padding-top: 10px;
+    @include responsive($mobile-L) {
+      padding-top: 30px;
+    }
 
     .avatar {
       padding: 10px;
@@ -892,51 +903,123 @@ figure {
     margin: 0;
     font-family: $main-header-font-1;
     .q-mark {
-      font-size: 60px;
+      font-size: 40px;
       color: $submit-background-color;
+      @include responsive($laptop) {
+        font-size: 60px;
+      }
       &-open {
-        margin-right: 30px;
+        margin-right: 5px;
         //huck to place this
         vertical-align: top;
-        line-height: 75px;
+        line-height: 35px;
+        @include responsive($mobile-L) {
+          margin-right: 10px;
+        }
+        @include responsive($laptop) {
+          margin-right: 30px;
+          line-height: 75px;
+        }
       }
       &-close {
-        margin-left: 57px;
         //huck to place this
         vertical-align: bottom;
         line-height: 0px;
+        @include responsive($laptop) {
+          margin-left: 57px;
+          vertical-align: bottom;
+        }
       }
     }
     p {
+      margin: 0;
       display: inline-block;
-      max-width: 70%;
+      max-width: 80%;
       font-style: italic;
+      font-size: 14px;
       color: $menu-font-color;
+      @include responsive($laptop) {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        max-width: 70%;
+        font-size: 16px;
+      }
     }
     &-author {
       display: block;
       font-style: normal;
+      font-size: 14px;
       color: $menu-font-color;
-      padding-left: 55px;
+      padding-left: 30px;
+      padding-top: 5px;
+      @include responsive($mobile-S) {
+        padding-left: 24px;
+      }
+      @include responsive($tablet) {
+        padding-left: 28px;
+      }
+      @include responsive($laptop) {
+        padding-left: 55px;
+        padding-top: 0;
+        font-size: 16px;
+      }
       &-name {
         font-weight: bold;
         color: $submit-background-color;
       }
       &-border {
         position: absolute;
-        left: 315px;
-        top: 96px;
-        border-left: 2px solid $slideshow-buttons-color;
+        left: 100px;
+        top: 68px;
         height: 73px;
+        border-left: 2px solid $slideshow-buttons-color;
+        @include responsive($mobile-M) {
+          left: 114px;
+        }
+        @include responsive($mobile-L) {
+          left: 126px;
+        }
+        @include responsive($tablet) {
+          left: 182px;
+
+        }
+        @include responsive($laptop) {
+          left: 241px;
+          top: 96px;
+        }
+        @include responsive(1366px) {
+          left: 286px;
+        }
+        @include responsive($laptop-L) {
+          left: 315px;
+
+        }
       }
     }
   }
   .change-trainer {
     display: none;
     position: absolute;
-    bottom: -32px;
-    left: 430px;
+    bottom: -33px;
+    left: 130px;
     line-height: 25px;
+    @include responsive($mobile-M) {
+      left: 101px;
+    }
+    @include responsive($mobile-L) {
+      left: 175px;
+    }
+    @include responsive($tablet) {
+      left: 260px;
+    }
+    @include responsive($laptop) {
+      bottom: -32px;
+      left: 342px;
+    }
+    @include responsive($laptop-L) {
+      bottom: -32px;
+      left: 430px;
+    }
     .avatar-thumbnail {
       border: 2px solid $slideshow-buttons-color;
       border-radius: 50%;
@@ -953,6 +1036,12 @@ figure {
       color: $yoga-classes-header-2;
       padding-left: 15px;
     }
+    .name-thumbnail, .post-thumbnail {
+      display: none;
+      @include responsive($mobile-M) {
+        display: inline-block;
+      }
+    }
   }
   //override some properties from existing classes
   .prev, .next {
@@ -963,29 +1052,69 @@ figure {
     font-size: 16px;
   }
   .prev {
-    left: 360px;
+    left: 60px;
+    @include responsive($mobile-L) {
+      left: 130px;
+    }
+    @include responsive($tablet) {
+      left: 200px;
+      top: 185px;
+    }
+    @include responsive($laptop) {
+      left: 290px;
+      top: 235px;
+    }
+    @include responsive($laptop-L) {
+      left: 360px;
+    }
   }
   .next {
-    right: 500px;
+    right: 50px;
+    @include responsive($mobile-L) {
+      right: 25px;
+    }
+    @include responsive($tablet) {
+      right: 145px;
+      top: 185px;
+    }
+    @include responsive($laptop) {
+      right: 300px;
+      top: 235px;
+    }
+    @include responsive(1366px) {
+      right: 480px;
+    }
+    @include responsive($laptop-L) {
+      right: 500px;
+    }
   }
   #bullets {
-    margin-left: 1200px;
+    display: none;
+    @include responsive($tablet) {
+      display: block;
+      margin-left: 660px;
+    }
+    @include responsive($laptop) {
+      margin-left: 900px;
+    }
+    @include responsive(1366px) {
+      margin-left: 1080px;
+    }
+    @include responsive($laptop-L) {
+      margin-left: 1200px;
+    }
     .dot {
       cursor: pointer;
       height: 15px;
       width: 15px;
       margin: 10px 0;
-      background-color: $submit-background-color;
+      background-color: $slideshow-buttons-color;
       display: block;
       transition: background-color 0.6s ease;
       border-radius: 50%;
-      //border: 2px solid $submit-background-color;;
       &:hover {
-        background-color: #717171;
+        background-color: $submit-background-color;
       }
     }
   }
 }
-
-
-
