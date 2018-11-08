@@ -18,6 +18,7 @@
     <script defer src="../js/scrollToSection.js"></script>
     <script defer src="../js/formValidation.js"></script>
     <script defer src="../js/featuresHeightCalc.js"></script>
+    <script defer src="../js/formHeightCalc.js"></script>
 </head>
 <body>
 
@@ -63,22 +64,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <div class="rounded-form" id="reservation">
-                        <span class="rounded-form-header">Trial Class</span>
-                        <form>
-                            <input class="round-input" type="text" name="name" placeholder="Enter your name">
-                            <input class="round-input" type="text" name="phone" placeholder="Enter your phone">
+                    <div class="form-holder">
+                        <div class="rounded-form" id="reservation">
+                            <span class="rounded-form-header">Trial Class</span>
+                            <form>
+                                <input class="round-input" type="text" name="name" placeholder="Enter your name">
+                                <input class="round-input" type="text" name="phone" placeholder="Enter your phone">
 
-                            <select class="round-input" id="select" name="choose-class">
-                                <option value="" disabled selected hidden>Choose your class</option>
-                                <option value='Yoga for health'>Yoga for health</option>
-                                <option value='Yoga for loose weight'>Yoga for loose weight</option>
-                                <option value='Yoga for children'>Yoga for children</option>
-                                <option value='Yoga for eldery'>Yoga for eldery</option>
-                            </select>
+                                <select class="round-input" id="select" name="choose-class">
+                                    <option value="" disabled selected hidden>Choose your class</option>
+                                    <option value='Yoga for health'>Yoga for health</option>
+                                    <option value='Yoga for loose weight'>Yoga for loose weight</option>
+                                    <option value='Yoga for children'>Yoga for children</option>
+                                    <option value='Yoga for eldery'>Yoga for eldery</option>
+                                </select>
 
-                            <button class="block-submit" id="slider-form-submit" type="button">Try it</button>
-                        </form>
+                                <button class="block-submit" id="slider-form-submit" type="button">Try it</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
 

@@ -428,37 +428,46 @@ body {
     @media (min-width: 1024px) {
       .slider-slogan-1 {
         margin-left: 10px; } }
+  .slider .form-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .slider .form-holder {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; } }
   .slider .rounded-form {
     border-radius: 5px;
     background-color: white;
     -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
     position: relative;
-    margin: 9.5px 6px;
     padding: 5px;
-    z-index: 288; }
-    @media (min-width: 375px) {
-      .slider .rounded-form {
-        margin: 12px 8px 12px 6px; } }
-    @media (min-width: 425px) {
-      .slider .rounded-form {
-        margin: 12px 11px 12px 6px; } }
+    z-index: 288;
+    -ms-flex-preferred-size: 95%;
+    flex-basis: 95%; }
     @media (min-width: 768px) {
       .slider .rounded-form {
         border-radius: 10px;
         padding: 15px;
-        margin: 25px 10px;
         max-width: 340px;
-        float: right; } }
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        margin-right: 5%; } }
     @media (min-width: 1024px) {
       .slider .rounded-form {
         border-radius: 20px;
-        margin: 50px 15px 0 240px;
         max-width: 215px; } }
     @media (min-width: 1440px) {
       .slider .rounded-form {
-        padding: 20px;
-        margin: 145px 30px 0 300px; } }
+        padding: 20px; } }
     .slider .rounded-form-header {
       font-family: "Open Sans Semibold";
       font-size: 3.5vw;
@@ -470,6 +479,9 @@ body {
       @media (min-width: 1024px) {
         .slider .rounded-form-header {
           font-size: 2vw; } }
+      @media (min-width: 1440px) {
+        .slider .rounded-form-header {
+          font-size: 1.5vw; } }
     .slider .rounded-form #select {
       width: 100%;
       padding: 1px 0; }
