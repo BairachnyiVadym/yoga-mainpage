@@ -771,6 +771,9 @@ body {
     @include responsive($tablet) {
       flex-basis: 180px;
     }
+    @include responsive(992px) {
+      flex-basis: 242px;
+    }
     @include responsive($laptop) {
       flex-basis: 242px
     }
