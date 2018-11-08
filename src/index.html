@@ -17,6 +17,7 @@
     <script defer src="../js/nextTrainer.js"></script>
     <script defer src="../js/scrollToSection.js"></script>
     <script defer src="../js/formValidation.js"></script>
+    <script defer src="../js/featuresHeightCalc.js"></script>
 </head>
 <body>
 
@@ -287,98 +288,78 @@
         </div>
 
         <section class="yoga-features" id="elements">
-            <div class="features-holder">
-                <div class="container">
+            <div class="container">
                     <!--TODO: icon semantics-->
-                    <div class="row">
-                        <div class="col-xs-3 col-sm-3">
-                            <figure class="yoga-features-figure">
-                                <img src="../elements/features-icons-1.png">
-                                <figcaption>
-                                    <h5 class="caption caption-header">IMPROVED OVERALL HEALTH</h5>
-                                    <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
+                <div class="features-holder">
+                    <figure class="yoga-features-figure">
+                        <img src="../elements/features-icons-1.png">
+                        <figcaption>
+                            <h5 class="caption caption-header">IMPROVED OVERALL HEALTH</h5>
+                            <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                        </figcaption>
+                    </figure>
 
-                        <div class="col-xs-3 col-sm-3">
-                            <figure class="yoga-features-figure">
-                                <img src="../elements/features-icons-2.png">
-                                <figcaption>
-                                    <h5 class="caption caption-header">INCREASED CONCENTRATION</h5>
-                                    <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
+                    <figure class="yoga-features-figure">
+                        <img src="../elements/features-icons-2.png">
+                        <figcaption>
+                            <h5 class="caption caption-header">INCREASED CONCENTRATION</h5>
+                            <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                        </figcaption>
+                    </figure>
 
-                        <div class="col-xs-3 col-sm-3">
-                            <figure class="yoga-features-figure">
-                                <img src="../elements/features-icons-3.png">
-                                <figcaption>
-                                    <h5 class="caption caption-header">BALANCE YOUR MIND</h5>
-                                    <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
+                    <figure class="yoga-features-figure">
+                        <img src="../elements/features-icons-3.png">
+                        <figcaption>
+                            <h5 class="caption caption-header">BALANCE YOUR MIND</h5>
+                            <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                        </figcaption>
+                    </figure>
 
-                        <div class="col-xs-3 col-sm-3">
-                            <figure class="yoga-features-figure">
-                                <img src="../elements/features-icons-4.png">
-                                <figcaption>
-                                    <h5 class="caption caption-header">SLEEP BETTER</h5>
-                                    <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
+                    <figure class="yoga-features-figure">
+                        <img src="../elements/features-icons-4.png">
+                        <figcaption>
+                            <h5 class="caption caption-header">SLEEP BETTER</h5>
+                            <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                        </figcaption>
+                    </figure>
 
-                    <div class="row">
-                        <div class="col-xs-3 col-sm-3">
-                            <figure class="yoga-features-figure">
-                                <img src="../elements/features-icons-5.png">
-                                <figcaption>
-                                    <h5 class="caption caption-header">WEIGHT LOSS</h5>
-                                    <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
+                    <figure class="yoga-features-figure">
+                        <img src="../elements/features-icons-5.png">
+                        <figcaption>
+                            <h5 class="caption caption-header">WEIGHT LOSS</h5>
+                            <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                        </figcaption>
+                    </figure>
 
-                        <div class="col-xs-3 col-sm-3">
-                            <figure class="yoga-features-figure">
-                                <img src="../elements/features-icons-6.png">
-                                <figcaption>
-                                    <h5 class="caption caption-header">STRENGTHENS YOUR BONES</h5>
-                                    <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
+                    <figure class="yoga-features-figure">
+                        <img src="../elements/features-icons-6.png">
+                        <figcaption>
+                            <h5 class="caption caption-header">STRENGTHENS YOUR BONES</h5>
+                            <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                        </figcaption>
+                    </figure>
 
-                        <div class="col-xs-3 col-sm-3">
-                            <figure class="yoga-features-figure">
-                                <img src="../elements/features-icons-7.png">
-                                <figcaption>
-                                    <h5 class="caption caption-header">INCREASED FLEXIBILITY</h5>
-                                    <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
+                    <figure class="yoga-features-figure">
+                        <img src="../elements/features-icons-7.png">
+                        <figcaption>
+                            <h5 class="caption caption-header">INCREASED FLEXIBILITY</h5>
+                            <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                        </figcaption>
+                    </figure>
 
-                        <div class="col-xs-3 col-sm-3">
-                            <figure class="yoga-features-figure">
-                                <img src="../elements/features-icons-8.png">
-                                <figcaption>
-                                    <h5 class="caption caption-header">LOWER BLOOD PRESSURE</h5>
-                                    <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
+                    <figure class="yoga-features-figure">
+                        <img src="../elements/features-icons-8.png">
+                        <figcaption>
+                            <h5 class="caption caption-header">LOWER BLOOD PRESSURE</h5>
+                            <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
     </section>
 
-   <!-- <section>
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-4">
@@ -507,7 +488,7 @@
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 
 </body>
 </html>

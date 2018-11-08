@@ -742,7 +742,6 @@ body {
   }
 }
 
-//TODO: vertical aligment
 .yoga-features {
   position: relative;
   background-image: url('../elements/features-bg-image.png');
@@ -750,6 +749,31 @@ body {
   @include responsive-bg-image(320px, 118px);
   @include responsive($laptop) {
     margin-top: 70px;
+  }
+
+  .features-holder { //height defines via jQuery
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-evenly;
+  }
+  &-figure {
+    flex-basis: 80px;
+    @include responsive($mobile-M) {
+      flex-basis: 93px;
+    }
+    @include responsive($mobile-L) {
+      flex-basis: 106px;
+    }
+    @include responsive($tablet) {
+      flex-basis: 180px;
+    }
+    @include responsive($laptop) {
+      flex-basis: 242px
+    }
+    @include responsive($laptop-L) {
+      flex-basis: 250px;
+    }
   }
 
   img {
@@ -761,18 +785,6 @@ body {
     z-index: 283;
     @include responsive($laptop) {
       max-width: 30%;
-    }
-  }
-  &-figure {
-    margin: 13px 0 0 0;
-    @include responsive($tablet) {
-      margin: 20px 20px 0 20px;
-    }
-    @include responsive($laptop) {
-      margin: 10px 25px 0 25px;
-    }
-    @include responsive($laptop-L) {
-      margin: 70px 25px 0 25px;
     }
   }
 

@@ -871,6 +871,40 @@ body {
   @media (min-width: 1024px) {
     .yoga-features {
       margin-top: 70px; } }
+  .yoga-features .features-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: space-evenly;
+    align-content: space-evenly; }
+  .yoga-features-figure {
+    -ms-flex-preferred-size: 80px;
+    flex-basis: 80px; }
+    @media (min-width: 375px) {
+      .yoga-features-figure {
+        -ms-flex-preferred-size: 93px;
+        flex-basis: 93px; } }
+    @media (min-width: 425px) {
+      .yoga-features-figure {
+        -ms-flex-preferred-size: 106px;
+        flex-basis: 106px; } }
+    @media (min-width: 768px) {
+      .yoga-features-figure {
+        -ms-flex-preferred-size: 180px;
+        flex-basis: 180px; } }
+    @media (min-width: 1024px) {
+      .yoga-features-figure {
+        -ms-flex-preferred-size: 242px;
+        flex-basis: 242px; } }
+    @media (min-width: 1440px) {
+      .yoga-features-figure {
+        -ms-flex-preferred-size: 250px;
+        flex-basis: 250px; } }
   .yoga-features img {
     display: block;
     position: relative;
@@ -881,17 +915,6 @@ body {
     @media (min-width: 1024px) {
       .yoga-features img {
         max-width: 30%; } }
-  .yoga-features-figure {
-    margin: 13px 0 0 0; }
-    @media (min-width: 768px) {
-      .yoga-features-figure {
-        margin: 20px 20px 0 20px; } }
-    @media (min-width: 1024px) {
-      .yoga-features-figure {
-        margin: 10px 25px 0 25px; } }
-    @media (min-width: 1440px) {
-      .yoga-features-figure {
-        margin: 70px 25px 0 25px; } }
   .yoga-features .caption {
     font-family: "Open Sans";
     color: white;
@@ -914,54 +937,87 @@ body {
 
 .prices {
   margin-top: 30px;
-  width: 370px;
-  height: 494px;
+  width: 77.08%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 223px;
   border-radius: 10px;
   background-color: white;
   -webkit-box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1); }
+  @media (min-width: 768px) {
+    .prices {
+      width: 100%; } }
   @media (min-width: 1024px) {
     .prices {
-      margin-top: 70px; } }
+      margin-top: 70px;
+      height: 494px; } }
+  @media (min-width: 1440px) {
+    .prices {
+      width: 370px; } }
   .prices p {
     font-family: "Open Sans";
-    font-size: 18px;
+    font-size: 14px;
     color: #555555;
-    text-align: center;
-    margin-top: 36px; }
+    text-align: center; }
+    @media (min-width: 1024px) {
+      .prices p {
+        font-size: 18px;
+        margin-top: 36px; } }
   .prices-header {
     background-color: #5b6ceb;
-    width: 370px;
-    height: 150px;
-    line-height: 150px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 60px; }
+    border-top-right-radius: 10px; }
+    @media (min-width: 1024px) {
+      .prices-header {
+        height: 150px;
+        line-height: 150px;
+        margin-bottom: 60px; } }
     .prices-header p {
       margin: 0;
       color: white;
       font-family: "Open Sans";
       font-weight: bold; }
       .prices-header p .dollar-sign {
-        font-size: 32px;
-        margin-right: 15px;
+        font-size: 22px;
+        margin-right: 10px;
         display: inline-block;
         vertical-align: super;
         line-height: normal; }
+        @media (min-width: 1024px) {
+          .prices-header p .dollar-sign {
+            font-size: 32px;
+            margin-right: 15px; } }
       .prices-header p .price {
-        font-size: 67px; }
+        font-size: 47px; }
+        @media (min-width: 1024px) {
+          .prices-header p .price {
+            font-size: 67px; } }
       .prices-header p .period {
-        font-size: 18px; }
+        font-size: 12px; }
+        @media (min-width: 1024px) {
+          .prices-header p .period {
+            font-size: 18px; } }
   .prices-button {
     border-radius: 20px;
     background-color: #5b6ceb;
-    width: 170px;
-    height: 50px;
+    width: 130px;
+    height: 40px;
     display: block;
-    margin: 36px auto 0;
+    margin: 20px auto 0;
     font-family: "Open Sans Semibold";
-    font-size: 18px;
+    font-size: 14px;
     color: white; }
+    @media (min-width: 1024px) {
+      .prices-button {
+        width: 170px;
+        height: 50px;
+        margin: 36px auto 0;
+        font-size: 18px; } }
 
 .blockquotes {
   margin-bottom: 100px;
