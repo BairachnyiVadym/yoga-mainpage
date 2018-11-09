@@ -443,30 +443,36 @@ body {
   }
 }
 
+.sections-header {
+  display: block;
+  font-family: $main-header-font-1;
+  font-weight: bold;
+  font-size: 1em;
+  color: $submit-background-color;
+  text-align: center;
+  margin-top: 30px;
+  @include responsive($laptop) {
+    font-size: 30px;
+    margin-top: 70px;
+  }
+}
+.sections-header-1 {
+  display: block;
+  text-align: center;
+  font-family: $slider-font-2;
+  font-weight: normal;
+  font-size: 1.3em;
+  color: $yoga-classes-header-2;
+  margin-top: 10px;
+  @include responsive($laptop) {
+    margin-bottom: 30px;
+    font-size: 41px;
+  }
+}
+
 .yoga-classes {
   position: relative;
-  &-header {
-    display: block;
-    font-family: $main-header-font-1;
-    font-weight: bold;
-    font-size: 3.5vw; //2.19vw
-    color: $submit-background-color;
-    text-align: center;
-    margin-top: 30px;
-    @include responsive($laptop) {
-      margin-top: 70px;
-    }
-  }
-  &-header-1 {
-    font-family: $slider-font-2;
-    font-weight: normal;
-    font-size: 6vw; //2.92vw
-    color: $yoga-classes-header-2;
-    margin-top: 5px;
-    @include responsive($laptop) {
-      margin-bottom: 30px;
-    }
-  }
+
   &-figure {
     @include responsive($mobile-S) {
       margin-block-start: 1em;
@@ -534,7 +540,6 @@ body {
     margin-top: 70px;
   }
   #gallery-header {
-    margin-top: 30px;
     margin-bottom: 10px;
     @include responsive($laptop) {
       display: none;
@@ -567,7 +572,7 @@ body {
   }
 
   .icon {
-    width: 50px;
+    width: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -575,9 +580,15 @@ body {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
     cursor: pointer;
+    @include responsive($tablet) {
+      width: 50px;
+    }
     &:hover {
-      width: 55px;
+      width: 30px;
       transition: .3s ease;
+      @include responsive($tablet) {
+        width: 55px;
+      }
     }
   }
 
@@ -654,7 +665,7 @@ body {
     margin-top: 70px;
   }
   &-caption {
-    margin-left: 15px;
+    margin-left: 32px;
     max-width: 470px;
     font-family: $main-header-font-1;
     @include responsive($tablet) {
@@ -663,12 +674,19 @@ body {
 
     h1 {
       margin: 0;
-      font-size: 30px;
+      font-size: 1em;
       color: $submit-background-color;
+      @include responsive($laptop) {
+        font-size: 30px;
+      }
     }
     p {
-      font-size: 14px;
+      font-size: 13px;
       color: $menu-font-color;
+      max-width: 90%;
+      @include responsive($tablet) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -692,10 +710,22 @@ body {
   }
 
   .prev {
-    left: -20px;
+    left: -15px;
+    @include responsive($laptop) {
+      left: -20px;
+    }
+    @include responsive($laptop-L) {
+      left: -25px;
+    }
   }
   .next {
-    right: -20px;
+    right: -15px;
+    @include responsive($laptop) {
+      right: -20px;
+    }
+    @include responsive($laptop-L) {
+      right: -25px;
+    }
   }
 }
 
@@ -703,17 +733,33 @@ body {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 42.5%;
-  height: 40px;
-  width: 40px;
-  padding: 8px 0 0 14px;
+  top: 39.5%;
+  height: 30px;
+  width: 30px;
+  padding: 4px 0 0 10px;
   color: $slideshow-buttons-color;
   background-color: $main-background-color;
   box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.6s ease;
   border-radius: 100%;
+  @include responsive($mobile-L) {
+    top: 42.5%;
+    font-size: 18px;
+    padding: 3px 0 0 9.5px;
+  }
+  @include responsive($laptop) {
+    height: 40px;
+    width: 40px;
+    padding: 8px 0 0 14px;
+  }
+  @include responsive($laptop-L) {
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+    padding: 8px 0 0 16px;
+  }
 }
 .prev:hover, .next:hover {
   color: $submit-background-color;
@@ -732,14 +778,8 @@ body {
 //////////////////
 
 #features-header {
-  display: block;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 10px;
-  font-family: $slider-font-2;
-  color: $yoga-classes-header-2;
-  font-weight: normal;
-  font-size: 6vw; //2.92vw
-  text-align: center;
   @include responsive($laptop) {
     display: none;
   }
@@ -910,7 +950,7 @@ body {
 }
 
 .blockquotes {
-  margin-bottom: 100px;
+  margin-bottom: 320px;
   margin-top: 30px;
   position: relative;
   margin-left: auto;
@@ -987,8 +1027,11 @@ body {
       display: inline-block;
       max-width: 80%;
       font-style: italic;
-      font-size: 14px;
+      font-size: 13px;
       color: $menu-font-color;
+      @include responsive($tablet) {
+        font-size: 14px;
+      }
       @include responsive($laptop) {
         margin-top: 14px;
         margin-bottom: 14px;
@@ -1094,6 +1137,7 @@ body {
       }
     }
   }
+
   //override some properties from existing classes
   .prev, .next {
     top: 235px;
