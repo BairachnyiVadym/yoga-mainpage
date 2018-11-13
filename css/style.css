@@ -943,43 +943,82 @@ body {
     justify-content: space-between;
     -ms-flex-line-pack: space-evenly;
     align-content: space-evenly; }
-  .yoga-features-figure {
+  .yoga-features-item {
     -ms-flex-preferred-size: 80px;
     flex-basis: 80px; }
     @media (min-width: 375px) {
-      .yoga-features-figure {
+      .yoga-features-item {
         -ms-flex-preferred-size: 93px;
         flex-basis: 93px; } }
     @media (min-width: 425px) {
-      .yoga-features-figure {
+      .yoga-features-item {
         -ms-flex-preferred-size: 106px;
         flex-basis: 106px; } }
     @media (min-width: 768px) {
-      .yoga-features-figure {
+      .yoga-features-item {
         -ms-flex-preferred-size: 180px;
         flex-basis: 180px; } }
     @media (min-width: 992px) {
-      .yoga-features-figure {
+      .yoga-features-item {
         -ms-flex-preferred-size: 242px;
         flex-basis: 242px; } }
     @media (min-width: 1024px) {
-      .yoga-features-figure {
+      .yoga-features-item {
         -ms-flex-preferred-size: 242px;
         flex-basis: 242px; } }
     @media (min-width: 1440px) {
-      .yoga-features-figure {
+      .yoga-features-item {
         -ms-flex-preferred-size: 250px;
         flex-basis: 250px; } }
-  .yoga-features img {
+  .yoga-features .f-icon {
+    background: url("../elements/sprite.png") no-repeat -118px -208px;
+    width: 50px;
+    height: 50px;
     display: block;
-    position: relative;
-    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
     z-index: 283; }
-    @media (min-width: 1024px) {
-      .yoga-features img {
-        max-width: 30%; } }
+    @media (min-width: 768px) {
+      .yoga-features .f-icon {
+        background-position: -15px -190px;
+        width: 70px;
+        height: 70px; } }
+    .yoga-features .f-icon-2 {
+      background-position: -118px -304px; }
+      @media (min-width: 768px) {
+        .yoga-features .f-icon-2 {
+          background-position: -15px -292px; } }
+    .yoga-features .f-icon-3 {
+      background-position: -118px -400px; }
+      @media (min-width: 768px) {
+        .yoga-features .f-icon-3 {
+          background-position: -15px -394px; } }
+    .yoga-features .f-icon-4 {
+      background-position: -118px -512px; }
+      @media (min-width: 768px) {
+        .yoga-features .f-icon-4 {
+          background-position: -15px -496px; } }
+    .yoga-features .f-icon-5 {
+      background-position: -118px -608px; }
+      @media (min-width: 768px) {
+        .yoga-features .f-icon-5 {
+          background-position: -15px -598px; } }
+    .yoga-features .f-icon-6 {
+      background-position: -118px -708px; }
+      @media (min-width: 768px) {
+        .yoga-features .f-icon-6 {
+          background-position: -15px -700px; } }
+    .yoga-features .f-icon-7 {
+      background-position: -118px -808px; }
+      @media (min-width: 768px) {
+        .yoga-features .f-icon-7 {
+          background-position: -15px -802px; } }
+    .yoga-features .f-icon-8 {
+      background-position: -118px -912px; }
+      @media (min-width: 768px) {
+        .yoga-features .f-icon-8 {
+          background-position: -15px -904px; } }
   .yoga-features .caption {
     font-family: "Open Sans";
     color: white;

@@ -809,7 +809,7 @@ body {
     justify-content: space-between;
     align-content: space-evenly;
   }
-  &-figure {
+  &-item {
     flex-basis: 80px;
     @include responsive($mobile-M) {
       flex-basis: 93px;
@@ -831,15 +831,61 @@ body {
     }
   }
 
-  img {
+  .f-icon {
+    background: url("../elements/sprite.png") no-repeat -118px -208px;
+    width: 50px;
+    height: 50px;
     display: block;
-    position: relative;
-    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
     z-index: 283;
-    @include responsive($laptop) {
-      max-width: 30%;
+    @include responsive($tablet) {
+      background-position: -15px -190px;
+      width: 70px;
+      height: 70px;
+    }
+    &-2 {
+      background-position: -118px -304px;
+      @include responsive($tablet) {
+        background-position: -15px -292px;
+      }
+    }
+    &-3 {
+      background-position: -118px -400px;
+      @include responsive($tablet) {
+        background-position: -15px -394px;
+      }
+    }
+    &-4 {
+      background-position: -118px -512px;
+      @include responsive($tablet) {
+        background-position: -15px -496px;
+      }
+    }
+    &-5 {
+      background-position: -118px -608px;
+      @include responsive($tablet) {
+        background-position: -15px -598px;
+      }
+    }
+    &-6 {
+      background-position: -118px -708px;
+      @include responsive($tablet) {
+        background-position: -15px -700px;
+      }
+    }
+    &-7 {
+      background-position: -118px -808px;
+      @include responsive($tablet) {
+        background-position: -15px -802px;
+      }
+    }
+    &-8 {
+      background-position: -118px -912px;
+      @include responsive($tablet) {
+        background-position: -15px -904px;
+      }
     }
   }
 
