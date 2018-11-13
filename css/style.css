@@ -217,10 +217,10 @@ body {
   background-size: 75%; }
   @media (min-width: 768px) {
     body {
-      padding-top: 78px; } }
+      padding-top: 74px; } }
   @media (min-width: 1024px) {
     body {
-      padding-top: 100px; } }
+      padding-top: 94px; } }
 
 .container {
   margin-left: auto;
@@ -362,16 +362,24 @@ body {
         padding: 0px; } }
 
 #nav .logo {
-  width: 100%;
-  height: auto;
+  background: url("../elements/sprite.png") no-repeat -213px -20px;
+  display: block;
+  width: 40px;
+  height: 25px;
   margin-bottom: 1px;
   z-index: 324; }
   @media (min-width: 768px) {
     #nav .logo {
+      background-position: -118px -13px;
+      width: 60px;
+      height: 38px;
       margin-bottom: 4px; } }
   @media (min-width: 1024px) {
     #nav .logo {
-      margin-bottom: 8px; } }
+      margin-bottom: 8px;
+      background-position: -15px -13px;
+      width: 67px;
+      height: 42px; } }
   #nav .logo-name {
     display: block;
     font-size: 9px;
