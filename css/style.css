@@ -678,6 +678,8 @@ body {
         display: none; } }
   .gallery .image-container {
     position: relative; }
+  .gallery .image-container:hover .overlay {
+    opacity: .8; }
   .gallery img {
     display: block;
     height: auto;
@@ -698,28 +700,27 @@ body {
     transition: .5s ease;
     background-color: #5b6ceb; }
   .gallery .icon {
+    background: url("../elements/sprite.png") no-repeat -93px -124px;
     width: 25px;
+    height: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     cursor: pointer; }
     @media (min-width: 768px) {
       .gallery .icon {
-        width: 50px; } }
+        background-position: -14px -111px;
+        width: 50px;
+        height: 50px; } }
     .gallery .icon:hover {
-      width: 30px;
+      opacity: 0.6;
       -webkit-transition: .3s ease;
       -o-transition: .3s ease;
       transition: .3s ease; }
-      @media (min-width: 768px) {
-        .gallery .icon:hover {
-          width: 55px; } }
-  .gallery .image-container:hover .overlay {
-    opacity: .8; }
   .gallery .modal {
     display: none;
     /* Hidden by default */
@@ -774,11 +775,11 @@ body {
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
     .gallery .close:hover, .gallery .close:focus {
-      font-size: 45px;
+      opacity: 0.6;
       text-decoration: none;
       cursor: pointer; }
   .gallery .row {
