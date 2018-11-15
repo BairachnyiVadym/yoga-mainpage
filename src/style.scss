@@ -1362,9 +1362,35 @@ body {
           background-position: -512px -278px;
           padding-bottom: 10px;
           line-height: 21px;
-          margin-top: 42px;
+          margin-top: 50px;
         }
       }
     }
+  }
+}
+
+.copyright {
+  height: 180px;
+  background-color: $menu-hover-font-color;
+  padding-top: 45px;
+  &-info {
+    font-size: 16px;
+    text-align: center;
+    color: $copyright-color;
+    display: block;
+  }
+  .f-logo-container {
+    margin: 0 auto;
+    max-width: 150px;
+    padding-top: 45px;
+  }
+  &-logo {
+    background: url("../elements/sprite.png") no-repeat -521px -383px;
+    display: inline-block;
+    padding: 6px 0 0 50px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 20px;
+    color: $copyright-color;
   }
 }
