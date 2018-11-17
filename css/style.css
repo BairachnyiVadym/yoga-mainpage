@@ -1358,7 +1358,9 @@ body {
       transition: background-color 0.6s ease;
       border-radius: 50%; }
       .blockquotes #bullets .dot:hover {
-        background-color: #5b6ceb; }
+        background-color: #5363db; }
+    .blockquotes #bullets .active {
+      background-color: #555555; }
 
 .footer {
   background-color: #5b6ceb;

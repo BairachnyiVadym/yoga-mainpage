@@ -1,4 +1,4 @@
-let thumbSlideIndex = 1, mainSlideIndex = 2;
+let thumbSlideIndex = 2, mainSlideIndex = 1;
 
 thumbNextTrainer(thumbSlideIndex);
 nextTrainer(mainSlideIndex);
@@ -9,8 +9,8 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
-    thumbNextTrainer(thumbSlideIndex = n);
-    nextTrainer(mainSlideIndex = n+1);
+    thumbNextTrainer(thumbSlideIndex = n+1);
+    nextTrainer(mainSlideIndex = n);
 }
 
 function thumbNextTrainer(n) {
