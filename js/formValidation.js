@@ -1,4 +1,5 @@
 let submitButton = document.getElementById("slider-form-submit");
+let nameCheck, phoneCheck, accept = "";
 
 submitButton.addEventListener("click", nameValidationHandler);
 submitButton.addEventListener("click", phoneValidationHandler);
@@ -29,6 +30,7 @@ function nameValidationHandler() {
     } else {
         fld.style.background = "#F2F2F2";
     }
+    nameCheck = true;
     return true;
 }
 
@@ -57,5 +59,12 @@ function phoneValidationHandler() {
     } else {
         fld.style.background = "#F2F2F2";
     }
+    phoneCheck = true;
+
+    if (nameCheck && phoneCheck) {
+        accept = "Your information was accepted. Please, wait for a call from our administrator!\n";
+        alert(accept);
+    }
     return true;
 }
+
