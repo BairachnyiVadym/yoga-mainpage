@@ -85,7 +85,7 @@ body {
     padding-top: 94px;
   }
   background-image: url("../elements/lotos-decoration.png");
-  background-position: 100% 95%;
+  background-position: 100% 90%;
   background-repeat: no-repeat;
   background-size: 75%;
 }
@@ -1369,10 +1369,19 @@ body {
   }
 }
 
+.copyright, .f-logo-container {
+  padding-top: 25px;
+  @include responsive($laptop) {
+    padding-top: 45px;
+  }
+}
+
 .copyright {
-  height: 180px;
+  height: 130px;
+  @include responsive($laptop) {
+    height: 180px;
+  }
   background-color: $menu-hover-font-color;
-  padding-top: 45px;
   &-info {
     font-size: 16px;
     text-align: center;
@@ -1382,7 +1391,6 @@ body {
   .f-logo-container {
     margin: 0 auto;
     max-width: 150px;
-    padding-top: 45px;
   }
   &-logo {
     background: url("../elements/sprite.png") no-repeat -521px -383px;
