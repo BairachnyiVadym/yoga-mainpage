@@ -6,7 +6,7 @@ let rename = require('gulp-rename');
 let cleancss = require('gulp-clean-css');
 
 gulp.task('reload-css', function () {
-    gulp.src('./src/*.scss')
+    gulp.src('./src/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 3 versions'],
@@ -19,7 +19,13 @@ gulp.task('reload-css', function () {
         .pipe(livereload());
 });
 
+gulp.task('reload-html', function () {
+   gulp.src('./src/index.html')
+       .pipe(livereload());
+});
+
 gulp.task('default', function() {
     livereload.listen();
-    gulp.watch('./src/*.scss', ['reload-css']);
+    gulp.watch('./src/style.scss', ['reload-css']);
+    gulp.watch('./src/index.html', ['reload-html'])
 });

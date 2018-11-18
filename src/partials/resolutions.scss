@@ -1,0 +1,31 @@
+//1920px - 320px res. range must be covered
+
+//in em
+$xl: 87.5em; // 4k and hi-res desktop
+$lg: 60em; // 1080 and hi-res laptops
+$med: 40em; // hi-res tablets and low-res laptops
+$sm: 28em; // mobile and low-res tablets
+$xs: 20em; // mobile only
+
+//in px - converted from em res-s above, using a default pixel size of 16px
+$xl-px: 1400px; // 4k and hi-res desktop
+$lg-px: 960px; // 1080 and hi-res laptops
+$med-px: 640px; // hi-res tablets and low-res laptops
+$sm-px: 448px; // mobile and low-res tablets
+$xs-px:320px;  // mobile only
+
+//W3C breakpoints
+$xs-w3c-px: 320px; /* Extra small devices (phones, 600px and down) */
+$sm-w3c-px:600px; /* Small devices (portrait tablets and large phones, 600px and up) */
+$med-w3c-px: 768px;/* Medium devices (landscape tablets, 768px and up) */
+$lg-w3c-px: 992px; /* Large devices (laptops/desktops, 992px and up) */
+$xl-w3c-px:1200px; /* Extra large devices (large laptops and desktops, 1200px and up) */
+
+//Google breakpoints
+$mobile-S: 320px;
+$mobile-M: 375px;
+$mobile-L: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+$laptop-L: 1440px;
+$desktop-4K: 2560px;

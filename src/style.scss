@@ -1,0 +1,1407 @@
+@import "./partials/variables";
+@import "./partials/resolutions";
+@import "./partials/mixins";
+@import "./partials/grid";
+
+//overriding default behaviour
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+ul, menu, dir {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+a:-webkit-any-link {
+  color: $menu-font-color;
+  &:active {
+    color: $menu-hover-font-color;
+  }
+}
+
+input {
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  padding: 0px;
+  border: none;
+  border-color: initial;
+  border-image: initial;
+  &:focus {
+    outline-offset: 0px;
+    outline: -webkit-focus-ring-color none 0px;
+  }
+}
+select{
+  &:focus {
+    border: none;
+    outline: -webkit-focus-ring-color none 0px;
+  }
+}
+button {
+  border: none;
+  &:focus {
+    outline: -webkit-focus-ring-color none 0px;
+  }
+}
+
+h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+///////////
+
+//padding-top according to fixed header, bg img
+body {
+  padding-top: 50px;
+  @include responsive($tablet) {
+    padding-top: 74px;
+  }
+  @include responsive($laptop) {
+    padding-top: 94px;
+  }
+  background-image: url("../elements/lotos-decoration.png");
+  background-position: 100% 90%;
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-container {
+  max-width: 40px;
+  margin-top: 5px;
+  margin-left: 68%; //value set in percents to have middle alignment on mobile devices
+  @include responsive($tablet) {
+    max-width: 60px;
+    margin: 9px auto;
+  }
+  @include responsive($laptop) {
+    max-width: 70px;
+    margin: 14px auto;
+  }
+}
+
+.header {
+  background-color: $main-background-color;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 315;
+  @include responsive($tablet) {
+    max-height: 80px;
+  }
+  @include responsive($laptop) {
+    max-height: 100px;
+  }
+}
+
+#nav {
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    float: right;
+    padding: 24px;
+    margin-right: 20px;
+    user-select: none;
+    @include responsive($tablet) {
+      display: none;
+    }
+    .navicon {
+      background: #333;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 18px;
+      &:before,
+      &:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+      }
+      &:before {
+        top: 5px;
+      }
+      &:after {
+        top: -5px;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+
+    &:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+    &:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+    &:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+    &:checked ~ .menu-icon:not(.steps) .navicon:before,
+    &:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }
+  }
+
+  .main-menu {
+    font-size: 14px;
+    font-family: $menu-font;
+    color: $menu-font-color;
+    list-style: none;
+    overflow: hidden;
+    //styles for hamburger-menu appropriate behaviour
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    @include responsive($tablet) {
+      margin-top: 32px;
+      //styles for hamburger-menu appropriate behaviour
+      clear: none;
+      max-height: none;
+    }
+    @include responsive($laptop) {
+      margin-top: 42px;
+    }
+
+    &-left {
+      @include responsive($tablet) {
+        float: right;
+      }
+    }
+    &-right {
+      @include responsive($tablet) {
+        float: left;
+      }
+    }
+
+    li {
+      float: none;
+      z-index: 318;
+      @include responsive($tablet) {
+        float: left;
+      }
+    }
+
+    &-left li {
+      @include responsive($tablet) {
+        margin-left: 30px;
+      }
+    }
+    &-right li {
+      @include responsive($tablet) {
+        margin-right: 30px;
+      }
+    }
+
+    a {
+      display: block;
+      text-align: left;
+      text-decoration: none;
+      line-height: 1.2;
+      padding: 10px 10px;
+      &:hover {
+        color: $menu-hover-font-color;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $menu-hover-font-color;
+      }
+      @include responsive($tablet) {
+        padding: 0px;
+      }
+    }
+  }
+  .logo {
+    background: url("../elements/sprite.png") no-repeat -213px -20px;
+    display: block;
+    width: 40px;
+    height: 25px;
+    margin-bottom: 1px;
+    z-index: 324;
+    @include responsive($tablet) {
+      background-position: -118px -13px;
+      width: 60px;
+      height: 38px;
+      margin-bottom: 4px;
+    }
+    @include responsive($laptop) {
+      margin-bottom: 8px;
+      background-position: -15px -13px;
+      width: 67px;
+      height: 42px;
+    }
+
+    &-name {
+      display: block;
+      font-size: 9px;
+      font-family: $logo-font;
+      text-align: center;
+      color: $menu-hover-font-color;
+      transform: matrix( 1.71410546396865,0,0,1.71410546396865,0,0);
+      z-index: 322;
+      @include responsive($tablet) {
+        font-size: 12px;
+      }
+      @include responsive($laptop) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  background-image: url('../elements/slider-background-image.png');
+  @include responsive-bg-image(320px, 118px);
+
+  &-slogan {
+    font-family: $main-header-font-1;
+    font-size: 2.50vw;
+    font-weight: bold;
+    color: $main-background-color;
+    position: relative;
+    display: none;
+    margin: 102px 0px 20px 6px;
+    z-index: 283;
+    @include responsive($tablet) {
+      display: block;
+    }
+    @include responsive($laptop) {
+      margin: 138px 0px 20px 10px;
+    }
+  }
+  &-slogan-1 {
+    font-family: $slider-font-2;
+    font-size: 2.2vw;
+    font-weight: normal;
+    margin: 0 0 0 6px;
+    @include responsive($laptop) {
+      margin-left: 10px;
+    }
+  }
+  .form-holder { //height defines via jQuery
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include responsive($tablet) {
+      justify-content: flex-end;
+    }
+  }
+
+  .rounded-form {
+    border-radius: 5px;
+    background-color: $main-background-color;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
+    position: relative;
+    padding: 5px;
+    z-index: 288;
+    flex-basis: 95%;
+    @include responsive($tablet) {
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 340px; // prevents elem width to grow when container change occurs
+      flex-basis: auto;
+      margin-right: 5%;
+    }
+    @include responsive($laptop) {
+      border-radius: 20px;
+      max-width: 215px; // prevents elem width to grow when container change occurs
+    }
+    @include responsive($laptop-L) {
+      padding: 20px;
+    }
+
+    &-header {
+      font-family: $menu-font;
+      font-size: 3.5vw;
+      color: $menu-hover-font-color;
+      display: block;
+      @include responsive($tablet) {
+         font-size: 2.5vw;
+      }
+      @include responsive($laptop) {
+        font-size: 2vw;
+      }
+      @include responsive($laptop-L) {
+        font-size: 1.5vw;
+      }
+    }
+
+    #select {
+      width: 100%;
+      padding: 1px 0;
+      @include responsive($mobile-M) {
+        padding: 3px 0;
+      }
+      @include responsive($mobile-L) {
+        padding: 4px 0;
+      }
+      @include responsive($tablet) {
+        margin-top: 10px;
+        padding: 7px 0;
+      }
+      @include responsive($laptop) {
+        margin-top: 15px;
+        padding: 9px 0 9px 6px;
+      }
+    }
+
+    .round-input {
+      border-radius: 4px;
+      background-color: $input-background-color;
+      border-style: none;
+      color: $input-text-color;
+      position: relative;
+      width: 49.3%;
+      margin-top: 5px;
+      padding: 2.5px 3.5px;
+      &::placeholder {
+        color: $input-text-color;
+        opacity: 1;
+      }
+      @include responsive($mobile-M) {
+        padding: 4px;
+      }
+      @include responsive($mobile-L) {
+        padding: 6px 3.5px;
+        margin-top: 8px;
+      }
+      @include responsive($tablet) {
+        border-radius: 6px;
+        width: 100%;
+        padding: 9px 3.5px;
+        margin-top: 10px;
+      }
+      @include responsive($laptop) {
+        border-radius: 8px;
+        padding: 11px 0 11px 10px;
+        margin-top: 15px;
+      }
+    }
+
+    .block-submit {
+      border-radius: 4px;
+      background-color: $submit-background-color;
+      box-shadow: 2.121px 2.121px 5px 0px rgba(0, 0, 0, 0.15);
+      color: $main-background-color;
+      text-align: center;
+      width: 100%;
+      margin-top: 5px;
+      padding: 2px;
+      &:hover {
+        background-color: $img-filter-color;
+      }
+      @include responsive($mobile-M) {
+        padding: 4px;
+      }
+      @include responsive($mobile-L) {
+        margin-top: 8px;
+        padding: 6px;
+      }
+      @include responsive($tablet) {
+        border-radius: 6px;
+        width: 50%;
+        margin-top: 15px;
+        padding: 9px;
+        float: right;
+      }
+      @include responsive($laptop) {
+        border-radius: 8px;
+        margin-top: 20px;
+        padding: 11px;
+      }
+    }
+  }
+}
+
+.sections-header {
+  display: block;
+  font-family: $main-header-font-1;
+  font-weight: bold;
+  font-size: 1em;
+  color: $submit-background-color;
+  text-align: center;
+  margin-top: 30px;
+  @include responsive($laptop) {
+    font-size: 30px;
+    margin-top: 70px;
+  }
+}
+.sections-header-1 {
+  display: block;
+  text-align: center;
+  font-family: $slider-font-2;
+  font-weight: normal;
+  font-size: 1.3em;
+  color: $yoga-classes-header-2;
+  margin-top: 10px;
+  @include responsive($laptop) {
+    margin-bottom: 30px;
+    font-size: 41px;
+  }
+}
+
+.yoga-classes {
+  position: relative;
+
+  &-figure {
+    @include responsive($mobile-S) {
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 40px;
+      margin-inline-end: 40px;
+    }
+    @include responsive($laptop) {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include responsive($tablet) {
+      float: left;
+      margin: 0 20px 20px 0;
+    }
+    @include responsive($laptop) {
+      max-width: 50%;
+    }
+  }
+
+  figcaption {
+    @include responsive($mobile-M) {
+      margin: 0 12px 0 13px;
+    }
+    @include responsive($mobile-L) {
+      margin: 0 37px 0 38px;
+    }
+    @include responsive($tablet) {
+      margin: 0 10px 0 5px;
+    }
+  }
+
+  .caption {
+    font-family: $main-header-font-1;
+    color: $yoga-classes-caption-body;
+    font-size: 13px;
+    text-align: left;
+    @include responsive($tablet) {
+      font-size: 14px;
+    }
+    &-header {
+      color: $yoga-classes-header-2;
+      font-size: .83em;
+      @include responsive($tablet) {
+        padding: 20px 0 6px 0;
+      }
+    }
+    &-footer {
+      color: $yoga-classes-caption-footer;
+    }
+  }
+}
+
+.gallery {
+  @include responsive($laptop) {
+    margin-top: 70px;
+  }
+  #gallery-header {
+    margin-bottom: 10px;
+    @include responsive($laptop) {
+      display: none;
+    }
+  }
+
+  .image-container {
+    position: relative;
+  }
+  .image-container:hover .overlay {
+    opacity: .8;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $submit-background-color;
+  }
+
+  .icon {
+    background: url("../elements/sprite.png") no-repeat -93px -124px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: pointer;
+    @include responsive($tablet) {
+      background-position: -14px -111px;
+      width: 50px;
+      height: 50px;
+    }
+    &:hover {
+      opacity: 0.6;
+      transition: .3s ease;
+    }
+  }
+
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    padding-top: 100px; /* Location of the box */ //210px
+    &-content {
+      /*Image*/
+      margin: auto;
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px; //120px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    &:hover , &:focus {
+      opacity: 0.6;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .row {
+    margin-right: -$col-gutter-reset;
+    margin-left: -$col-gutter-reset;
+    &-fix {
+      position: relative;
+      bottom: 4.5px;
+    }
+  }
+
+  [class^=col-] {
+    padding-right: $col-gutter-reset;;
+    padding-left: $col-gutter-reset;;
+  }
+}
+
+.about-us {
+  margin-top: 30px;
+  @include responsive($tablet) {
+    margin-top: 70px;
+  }
+  &-caption {
+    margin-left: 32px;
+    max-width: 470px;
+    font-family: $main-header-font-1;
+    @include responsive($tablet) {
+      margin-left: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1em;
+      color: $submit-background-color;
+      @include responsive($laptop) {
+        font-size: 30px;
+      }
+    }
+    p {
+      font-size: 13px;
+      color: $menu-font-color;
+      max-width: 90%;
+      @include responsive($tablet) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .slideshow-container {
+    max-width: 85%;
+    position: relative;
+    margin: auto;
+    @include responsive($tablet) {
+      max-width: 570px;
+    }
+  }
+
+  .mySlides {
+    display: none;
+    img {
+      width: 100%;
+      max-height: 300px;
+      border-radius: 8px;
+      box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .prev {
+    left: -15px;
+    @include responsive($laptop) {
+      left: -20px;
+    }
+    @include responsive($laptop-L) {
+      left: -25px;
+    }
+  }
+  .next {
+    right: -15px;
+    @include responsive($laptop) {
+      right: -20px;
+    }
+    @include responsive($laptop-L) {
+      right: -25px;
+    }
+  }
+}
+
+//this classes placed in most outer scope to have access to it
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 39.5%;
+  height: 30px;
+  width: 30px;
+  padding: 4px 0 0 10px;
+  color: $slideshow-buttons-color;
+  background-color: $main-background-color;
+  box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.6s ease;
+  border-radius: 100%;
+  @include responsive($mobile-L) {
+    top: 42.5%;
+    font-size: 18px;
+    padding: 3px 0 0 9.5px;
+  }
+  @include responsive($laptop) {
+    height: 40px;
+    width: 40px;
+    padding: 8px 0 0 14px;
+  }
+  @include responsive($laptop-L) {
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+    padding: 8px 0 0 16px;
+  }
+}
+.prev:hover, .next:hover {
+  color: $submit-background-color;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+//////////////////
+
+#features-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  @include responsive($laptop) {
+    display: none;
+  }
+}
+
+.yoga-features {
+  position: relative;
+  background-image: url('../elements/features-bg-image.png');
+  overflow: hidden;
+  @include responsive-bg-image(320px, 118px);
+  @include responsive($laptop) {
+    margin-top: 70px;
+  }
+
+  .features-holder { //height defines via jQuery
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-evenly;
+  }
+  &-item {
+    flex-basis: 80px;
+    @include responsive($mobile-M) {
+      flex-basis: 93px;
+    }
+    @include responsive($mobile-L) {
+      flex-basis: 106px;
+    }
+    @include responsive($tablet) {
+      flex-basis: 180px;
+    }
+    @include responsive(992px) {
+      flex-basis: 242px;
+    }
+    @include responsive($laptop) {
+      flex-basis: 242px
+    }
+    @include responsive($laptop-L) {
+      flex-basis: 250px;
+    }
+  }
+
+  .f-icon {
+    background: url("../elements/sprite.png") no-repeat -118px -208px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 283;
+    @include responsive($tablet) {
+      background-position: -15px -190px;
+      width: 70px;
+      height: 70px;
+    }
+    &-2 {
+      background-position: -118px -304px;
+      @include responsive($tablet) {
+        background-position: -15px -292px;
+      }
+    }
+    &-3 {
+      background-position: -118px -400px;
+      @include responsive($tablet) {
+        background-position: -15px -394px;
+      }
+    }
+    &-4 {
+      background-position: -118px -512px;
+      @include responsive($tablet) {
+        background-position: -15px -496px;
+      }
+    }
+    &-5 {
+      background-position: -118px -608px;
+      @include responsive($tablet) {
+        background-position: -15px -598px;
+      }
+    }
+    &-6 {
+      background-position: -118px -708px;
+      @include responsive($tablet) {
+        background-position: -15px -700px;
+      }
+    }
+    &-7 {
+      background-position: -118px -808px;
+      @include responsive($tablet) {
+        background-position: -15px -802px;
+      }
+    }
+    &-8 {
+      background-position: -118px -912px;
+      @include responsive($tablet) {
+        background-position: -15px -904px;
+      }
+    }
+  }
+
+  .caption {
+    font-family: $main-header-font-1;
+    color: $main-background-color;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    display: none;
+    z-index: 283;
+    @include responsive($laptop) {
+      display: block;
+      font-size: 12px;
+    }
+    &-header {
+      font-weight: bold;
+      margin-top: 1em;
+      @include responsive($tablet) {
+        display: block;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.prices {
+  margin-top: 30px;
+  width: 77.08%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 223px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+  @include responsive($tablet) {
+    width: 100%;
+  }
+  @include responsive($laptop) {
+    margin-top: 70px;
+    height: 494px;
+  }
+  @include responsive($laptop-L) {
+    width: 370px;
+  }
+  p {
+    font-family: $main-header-font-1;
+    font-size: 14px;
+    color: $menu-font-color;
+    text-align: center;
+    @include responsive($laptop){
+      font-size: 18px;
+      margin-top: 36px;
+    }
+  }
+
+  &-header {
+    background-color: $submit-background-color;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    @include responsive($laptop) {
+      height: 150px;
+      line-height: 150px;
+      margin-bottom: 60px;
+    }
+    p {
+      margin: 0;
+      color: $main-background-color;
+      font-family: $main-header-font-1;
+      font-weight: bold;
+      .dollar-sign {
+        font-size: 22px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: super;
+        line-height: normal;
+        @include responsive($laptop) {
+          font-size: 32px;
+          margin-right: 15px;
+        }
+      }
+      .price {
+        font-size: 47px;
+        @include responsive($laptop) {
+          font-size: 67px;
+        }
+      }
+      .period {
+        font-size: 12px;
+        @include responsive($laptop) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &-button {
+    border-radius: 20px;
+    background-color: $submit-background-color;
+    width: 130px;
+    height: 40px;
+    display: block;
+    margin: 20px auto 0;
+    font-family: $menu-font;
+    font-size: 14px;
+    color: $main-background-color;
+    @include responsive($laptop) {
+      width: 170px;
+      height: 50px;
+      margin: 36px auto 0;
+      font-size: 18px;
+    }
+  }
+}
+
+.blockquotes {
+  margin-top: 30px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  background-color: $main-background-color;
+  box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 250px;
+  @include responsive($tablet) {
+    width: 90%;
+    height: 200px;
+  }
+  @include responsive($laptop) {
+    margin-top: 70px;
+    height: 250px;
+  }
+  @include responsive($laptop-L) {
+    width: 100%;
+  }
+
+  .comments {
+    display: none;
+    padding-top: 10px;
+    @include responsive($mobile-L) {
+      padding-top: 30px;
+    }
+
+    .avatar {
+      padding: 10px;
+      border-width: 2px;
+      border-color: $slideshow-buttons-color;
+      border-style: solid;
+      border-radius: 50%;
+      max-width: 100%;
+      display: block;
+      margin: auto;
+    }
+  }
+  .quote {
+    margin: 0;
+    font-family: $main-header-font-1;
+    .q-mark {
+      font-size: 40px;
+      color: $submit-background-color;
+      @include responsive($laptop) {
+        font-size: 60px;
+      }
+      &-open {
+        margin-right: 5px;
+        //huck to place this
+        vertical-align: top;
+        line-height: 35px;
+        @include responsive($mobile-L) {
+          margin-right: 10px;
+        }
+        @include responsive($laptop) {
+          margin-right: 30px;
+          line-height: 75px;
+        }
+      }
+      &-close {
+        //huck to place this
+        vertical-align: bottom;
+        line-height: 0px;
+        @include responsive($laptop) {
+          margin-left: 57px;
+          vertical-align: bottom;
+        }
+      }
+    }
+    p {
+      margin: 0;
+      display: inline-block;
+      max-width: 80%;
+      font-style: italic;
+      font-size: 13px;
+      color: $menu-font-color;
+      @include responsive($tablet) {
+        font-size: 14px;
+      }
+      @include responsive($laptop) {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        max-width: 70%;
+        font-size: 16px;
+      }
+    }
+    &-author {
+      display: block;
+      font-style: normal;
+      font-size: 14px;
+      color: $menu-font-color;
+      padding-left: 30px;
+      padding-top: 5px;
+      @include responsive($mobile-S) {
+        padding-left: 24px;
+      }
+      @include responsive($tablet) {
+        padding-left: 28px;
+      }
+      @include responsive($laptop) {
+        padding-left: 55px;
+        padding-top: 0;
+        font-size: 16px;
+      }
+      &-name {
+        font-weight: bold;
+        color: $submit-background-color;
+      }
+      &-border {
+        position: absolute;
+        left: 100px;
+        top: 68px;
+        height: 73px;
+        border-left: 2px solid $slideshow-buttons-color;
+        @include responsive($mobile-M) {
+          left: 114px;
+        }
+        @include responsive($mobile-L) {
+          left: 126px;
+        }
+        @include responsive($tablet) {
+          left: 182px;
+
+        }
+        @include responsive($laptop) {
+          left: 241px;
+          top: 96px;
+        }
+        @include responsive(1366px) {
+          left: 286px;
+        }
+        @include responsive($laptop-L) {
+          left: 315px;
+
+        }
+      }
+    }
+  }
+  .change-trainer {
+    display: none;
+    position: absolute;
+    bottom: -33px;
+    left: 130px;
+    line-height: 25px;
+    @include responsive($mobile-M) {
+      left: 101px;
+    }
+    @include responsive($mobile-L) {
+      left: 175px;
+    }
+    @include responsive($tablet) {
+      left: 260px;
+    }
+    @include responsive($laptop) {
+      bottom: -32px;
+      left: 342px;
+    }
+    @include responsive($laptop-L) {
+      bottom: -32px;
+      left: 430px;
+    }
+    .avatar-thumbnail {
+      border: 2px solid $slideshow-buttons-color;
+      border-radius: 50%;
+      float: left;
+    }
+    .name-thumbnail {
+      font-weight: bold;
+      color: $menu-font-color;
+      display: inline-block;
+      padding-left: 15px;
+      margin-top: 8px;
+    }
+    .post-thumbnail {
+      color: $yoga-classes-header-2;
+      padding-left: 15px;
+    }
+    .name-thumbnail, .post-thumbnail {
+      display: none;
+      @include responsive($mobile-M) {
+        display: inline-block;
+      }
+    }
+  }
+
+  //override some properties from existing classes
+  .prev, .next {
+    top: 235px;
+    height: 30px;
+    width: 30px;
+    padding: 3px 0 0 10px;
+    font-size: 16px;
+  }
+  .prev {
+    left: 60px;
+    @include responsive($mobile-L) {
+      left: 130px;
+    }
+    @include responsive($tablet) {
+      left: 200px;
+      top: 185px;
+    }
+    @include responsive($laptop) {
+      left: 290px;
+      top: 235px;
+    }
+    @include responsive($laptop-L) {
+      left: 360px;
+    }
+  }
+  .next {
+    right: 50px;
+    @include responsive($mobile-L) {
+      right: 25px;
+    }
+    @include responsive($tablet) {
+      right: 145px;
+      top: 185px;
+    }
+    @include responsive($laptop) {
+      right: 300px;
+      top: 235px;
+    }
+    @include responsive(1366px) {
+      right: 480px;
+    }
+    @include responsive($laptop-L) {
+      right: 500px;
+    }
+  }
+
+  #bullets {
+    display: none;
+    @include responsive($tablet) {
+      display: block;
+      margin-left: 660px;
+    }
+    @include responsive($laptop) {
+      margin-left: 900px;
+    }
+    @include responsive(1366px) {
+      margin-left: 1080px;
+    }
+    @include responsive($laptop-L) {
+      margin-left: 1200px;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 10px 0;
+      background-color: $slideshow-buttons-color;
+      display: block;
+      transition: background-color 0.6s ease;
+      border-radius: 50%;
+      &:hover {
+        background-color: $menu-hover-font-color;
+      }
+    }
+    .active {
+      background-color: $menu-font-color;
+    }
+  }
+}
+
+.footer {
+  background-color: $submit-background-color;
+  height: 395px;
+  margin-top: 60px;
+  @include responsive($tablet) {
+    height: 270px;
+  }
+  @include responsive($laptop) {
+    height: 450px;
+    padding-top: 80px;
+    margin-top: 200px;
+  }
+  .caption {
+    color: $main-background-color;
+    font-family: $main-header-font-1;
+    &-header {
+      font-weight: bold;
+      @include responsive($laptop) {
+        font-size: 18px;
+        margin-bottom: 60px;
+      }
+    }
+    &-text {
+      font-size: 13px;
+      @include responsive($tablet) {
+        font-size: 14px;
+        max-width: 80%;
+      }
+    }
+  }
+  &-left, &-right {
+    margin: 0 10px 0 10px;
+    .soc-icons{
+      margin-top: 25px;
+      @include responsive($laptop) {
+        margin-top: 60px;
+      }
+      .s-icon {
+        background: url("../elements/sprite.png") no-repeat -512px -13px;
+        width: 17px;
+        height: 21px;
+        display: inline-block;
+        margin-right: 10px;
+        &-2 {
+          background-position: -558px -13px;
+          width: 25px;
+          height: 21px;
+        }
+        &-3 {
+          background-position: -612px -13px;
+          width: 13px;
+          height: 21px;
+        }
+        &-4 {
+          background-position: -654px -13px;
+          width: 19px;
+          height: 21px;
+        }
+        &-5 {
+          background-position: -702px -13px;
+          width: 21px;
+          height: 21px;
+        }
+      }
+    }
+  }
+  &-right {
+    .contact-icons {
+      .c-icon {
+        background: url("../elements/sprite.png") no-repeat -512px -106px;
+        display: block;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        font-size: 11px;
+        color: $main-background-color;
+        text-decoration: none;
+        @include responsive($tablet) {
+          font-size: 12px;
+        }
+        @include responsive($laptop) {
+          font-size: 14px;
+        }
+        &-2 {
+          background-position: -512px -166px;
+        }
+        &-3 {
+          background-position: -512px -226px;
+          padding-bottom: 1px;
+        }
+        &-4 {
+          background-position: -512px -278px;
+          padding-bottom: 10px;
+          line-height: 21px;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+.copyright, .f-logo-container {
+  padding-top: 25px;
+  @include responsive($laptop) {
+    padding-top: 45px;
+  }
+}
+
+.copyright {
+  height: 130px;
+  @include responsive($laptop) {
+    height: 180px;
+  }
+  background-color: $menu-hover-font-color;
+  &-info {
+    font-size: 16px;
+    text-align: center;
+    color: $copyright-color;
+    display: block;
+  }
+  .f-logo-container {
+    margin: 0 auto;
+    max-width: 150px;
+  }
+  &-logo {
+    background: url("../elements/sprite.png") no-repeat -521px -383px;
+    display: inline-block;
+    padding: 6px 0 0 50px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 20px;
+    color: $copyright-color;
+  }
+}

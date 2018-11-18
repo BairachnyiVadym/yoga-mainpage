@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script defer src="../js/toggleMenu.js"></script>
+    <script defer src="../js/modalBox.js"></script>
+    <script defer src="../js/slideShow.js"></script>
+    <script defer src="../js/lightingPrice.js"></script>
+    <script defer src="../js/nextTrainer.js"></script>
+    <script defer src="../js/scrollToSection.js"></script>
+    <script defer src="../js/formValidation.js"></script>
+    <script defer src="../js/featuresHeightCalc.js"></script>
+    <script defer src="../js/formHeightCalc.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav id="nav">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-md-4" id="change-order">
+                        <ul class="main-menu main-menu-left">
+                            <li><a data-scroll class="links" href="#about-us">About us</a></li>
+                            <li><a data-scroll class="links" href="#reservation">Reservation</a></li>
+                            <li><a data-scroll class="links" href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="mobile-header">
+                        <div class="col-xs-8 col-sm-2 col-md-4">
+                            <div class="logo-container">
+                                <span class="logo"></span>
+                                <span class="logo-name">YOGA</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-4">
+                            <input class="menu-btn" type="checkbox" id="menu-btn" />
+                            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-5 col-md-4">
+                        <ul class="main-menu main-menu-right">
+                            <li><a data-scroll class="links" href="#blog">Blog</a></li>
+                            <li><a data-scroll class="links" href="#elements">Elements</a></li>
+                            <li><a data-scroll class="links" href="#shop">Shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="form-holder">
+                        <div class="rounded-form" id="reservation">
+                            <span class="rounded-form-header">Trial Class</span>
+                            <form>
+                                <input class="round-input" type="text" name="name" placeholder="Enter your name">
+                                <input class="round-input" type="text" name="phone" placeholder="Enter your phone">
+
+                                <select class="round-input" id="select" name="choose-class">
+                                    <option value="" disabled selected hidden>Choose your class</option>
+                                    <option value='Yoga for health'>Yoga for health</option>
+                                    <option value='Yoga for loose weight'>Yoga for loose weight</option>
+                                    <option value='Yoga for children'>Yoga for children</option>
+                                    <option value='Yoga for eldery'>Yoga for eldery</option>
+                                </select>
+
+                                <button class="block-submit" id="slider-form-submit" type="button">Try it</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <span class="slider-slogan">JUST BALANCE <br> YOUR MIND & BODY</span>
+                    <span class="slider-slogan slider-slogan-1">Create the healthy living <br> for yourself</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="yoga-classes">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="sections-header">YOGA FEATURE PROGRAM</span>
+                    <span class="sections-header-1">Our classes</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <figure class="yoga-classes-figure">
+                        <img src="../elements/yoga-class-1.png"/>
+                        <figcaption>
+                            <h5 class="caption caption-header">YOGA FOR HEALTH</h5>
+                            <p class="caption">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <p class="caption caption-footer">Ashtanga - Hatha</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <figure class="yoga-classes-figure">
+                        <img src="../elements/yoga-class-2.png"/>
+                        <figcaption>
+                            <h5 class="caption caption-header">YOGA FOR LOOSE WEIGHT</h5>
+                            <p class="caption">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <p class="caption caption-footer">Ashtanga - Hatha</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <figure class="yoga-classes-figure">
+                        <img src="../elements/yoga-class-3.png"/>
+                        <figcaption>
+                            <h5 class="caption caption-header">YOGA FOR CHILDREN</h5>
+                            <p class="caption">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <p class="caption caption-footer">Ashtanga - Hatha</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <figure class="yoga-classes-figure">
+                        <img src="../elements/yoga-class-4.png"/>
+                        <figcaption>
+                            <h5 class="caption caption-header">YOGA FOR ELDERY</h5>
+                            <p class="caption">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <p class="caption caption-footer">Ashtanga - Hatha</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="row">
+            <div class="col-xs-12">
+                <span class="sections-header-1" id="gallery-header">Gallery</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3">
+                <figure class="image-container">
+                    <img src="../elements/gallery-1.png">
+                    <div class="overlay">
+                        <span class="icon"></span>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-xs-3">
+                <figure class="image-container">
+                    <img src="../elements/gallery-2.png">
+                    <div class="overlay">
+                        <span class="icon"></span>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-xs-3">
+                <figure class="image-container">
+                    <img src="../elements/gallery-3.png">
+                    <div class="overlay">
+                        <span class="icon"></span>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-xs-3">
+                <figure class="image-container">
+                    <img src="../elements/gallery-4.png">
+                    <div class="overlay">
+                        <span class="icon"></span>
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <div class="row row-fix">
+            <div class="col-xs-3">
+                <figure class="image-container">
+                    <img src="../elements/gallery-5.png">
+                    <div class="overlay">
+                        <span class="icon"></span>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-xs-3">
+                <figure class="image-container">
+                    <img src="../elements/gallery-6.png">
+                    <div class="overlay">
+                        <span class="icon"></span>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-xs-3">
+                <figure class="image-container">
+                    <img src="../elements/gallery-7.png">
+                    <div class="overlay">
+                        <span class="icon"></span>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="col-xs-3">
+                <figure class="image-container">
+                    <img src="../elements/gallery-8.png">
+                    <div class="overlay">
+                        <span class="icon"></span>
+                    </div>
+                </figure>
+            </div>
+
+            <div id="myModal" class="modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="about-us-caption">
+                        <h1>ABOUT US</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam, asperiores commodi dignissimos
+                            eos eum explicabo facere id in ipsa obcaecati perspiciatis quam, quas qui quibusdam soluta tempore
+                            temporibus. Ratione.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <img src="../elements/slideshow-1.png">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="../elements/slideshow-2.png">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="../elements/slideshow-3.png">
+                        </div>
+
+                        <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="changeSlides(1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row">
+            <div class="col-xs-12">
+                <span class="sections-header-1" id="features-header">Features</span>
+            </div>
+        </div>
+
+        <section class="yoga-features" id="elements">
+            <div class="container">
+                <div class="features-holder">
+                    <div class="yoga-features-item">
+                        <span class="f-icon"></span>
+                        <h5 class="caption caption-header">IMPROVED OVERALL HEALTH</h5>
+                        <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                    </div>
+
+                    <div class="yoga-features-item">
+                        <span class="f-icon f-icon-2"></span>
+                        <h5 class="caption caption-header">INCREASED CONCENTRATION</h5>
+                        <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                    </div>
+
+                    <div class="yoga-features-item">
+                        <span class="f-icon f-icon-3"></span>
+                        <h5 class="caption caption-header">BALANCE YOUR MIND</h5>
+                        <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                    </div>
+
+                    <div class="yoga-features-item">
+                        <span class="f-icon f-icon-4"></span>
+                        <h5 class="caption caption-header">SLEEP BETTER</h5>
+                        <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                    </div>
+
+                    <div class="yoga-features-item">
+                        <span class="f-icon f-icon-5"></span>
+                        <h5 class="caption caption-header">WEIGHT LOSS</h5>
+                        <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                    </div>
+
+                    <div class="yoga-features-item">
+                        <span class="f-icon f-icon-6"></span>
+                        <h5 class="caption caption-header">STRENGTHENS YOUR BONES</h5>
+                        <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                    </div>
+
+                    <div class="yoga-features-item">
+                        <span class="f-icon f-icon-7"></span>
+                        <h5 class="caption caption-header">INCREASED FLEXIBILITY</h5>
+                        <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                    </div>
+
+                    <div class="yoga-features-item">
+                        <span class="f-icon f-icon-8"></span>
+                        <h5 class="caption caption-header">LOWER BLOOD PRESSURE</h5>
+                        <p class="caption">Enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea com.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <section class="prices" id="shop">
+                        <div class="prices-header">
+                            <p>
+                                <span class="dollar-sign">$</span>
+                                <span class="price">49</span>
+                                <span class="period"> / MONTH</span>
+                            </p>
+                        </div>
+
+                        <p>ENTRY DATE: MON – FRI</p>
+                        <p>ENTRY TIME: 8A.M – 8P.M</p>
+                        <p>NUTRITION ADVICOR: NO</p>
+
+                        <button type="button" class="prices-button">Buy now</button>
+                    </section>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <section class="prices">
+                        <div class="prices-header">
+                            <p>
+                                <span class="dollar-sign">$</span>
+                                <span class="price">69</span>
+                                <span class="period"> / MONTH</span>
+                            </p>
+                        </div>
+
+                        <p>ENTRY DATE: MON – FRI</p>
+                        <p>ENTRY TIME: 8A.M – 8P.M</p>
+                        <p>NUTRITION ADVICOR: YES</p>
+
+                        <button type="button" class="prices-button">Buy now</button>
+                    </section>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <section class="prices">
+                        <div class="prices-header">
+                            <p>
+                                <span class="dollar-sign">$</span>
+                                <span class="price">99</span>
+                                <span class="period"> / MONTH</span>
+                            </p>
+                        </div>
+
+                        <p>ENTRY DATE: MON – SUN</p>
+                        <p>ENTRY TIME: 8A.M – 8P.M</p>
+                        <p>NUTRITION ADVICOR: YES</p>
+
+                        <button type="button" class="prices-button">Buy now</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <aside class="blockquotes" id="blog">
+                        <div class="comments fade">
+                            <div class="col-xs-3">
+                                <img src="../elements/blockquotes-photo.png" class="avatar">
+                            </div>
+                            <div class="col-xs-9">
+                                <blockquote class="quote">
+                                    <span class="q-mark q-mark-open">”</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum ipsam nesciunt quia
+                                        sed sequi. Ad aut harum illo iure molestiae nostrum quisquam saepe sint sit totam.
+                                    </p>
+                                    <span class="q-mark q-mark-close">“</span>
+
+                                    <span class="quote-author">
+                                        Trainer<br>
+                                        <span class="quote-author-name">Laura Shepard</span>
+                                        <span class="quote-author-border"></span>
+                                    </span>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="comments fade">
+                            <div class="col-xs-3">
+                                <img src="../elements/blockquotes-photo-1.png" class="avatar">
+                            </div>
+                            <div class="col-xs-9">
+                                <blockquote class="quote">
+                                    <span class="q-mark q-mark-open">”</span>
+                                    <p>Aliquam animi dolorem harum hic repellendus sapiente vitae? A consectetur,
+                                        debitis deleniti distinctio eaque enim laborum nesciunt nobis officia pariatur
+                                        quaerat repudiandae!
+                                    </p>
+                                    <span class="q-mark q-mark-close">“</span>
+
+                                    <span class="quote-author">
+                                        Trainer<br>
+                                        <span class="quote-author-name">Sara Taylor</span>
+                                        <span class="quote-author-border"></span>
+                                    </span>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="change-trainer fade">
+                            <img src="../elements/blockquotes-photo-thumbnail.png" class="avatar-thumbnail">
+                            <span class="name-thumbnail">Laura Shepard</span><br>
+                            <span class="post-thumbnail">Trainer</span>
+                        </div>
+                        <div class="change-trainer fade">
+                            <img src="../elements/blockquotes-photo-1-thumbnail.png" class="avatar-thumbnail">
+                            <span class="name-thumbnail">Sara Taylor</span><br>
+                            <span class="post-thumbnail">Trainer</span>
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div id="bullets">
+                            <!-- TODO: Apply data attributes here (as we did it) and move onClick listeners to the app.js file-->
+                            <span class="dot" data-bullet-index="1" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="footer-left">
+                        <h4 class="caption caption-header">ABOUT</h4>
+                        <p class="caption caption-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi exercitationem ipsum
+                            iure mollitia provident, quia. Ad, architecto asperiores corporis dicta eligendi error nam porro
+                            quis reprehenderit, sed suscipit, totam.
+                        </p>
+                        <div class="soc-icons">
+                            <a href="#" class="s-icon"></a>
+                            <a href="#" class="s-icon s-icon-2"></a>
+                            <a href="#" class="s-icon s-icon-3"></a>
+                            <a href="#" class="s-icon s-icon-4"></a>
+                            <a href="#" class="s-icon s-icon-5"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="row">
+                        <div class="footer-right">
+                            <div class="col-xs-12">
+                                <h4 class="caption caption-header">CONTACT US</h4>
+                            </div>
+                            <div class="col-xs-6">
+                               <div class="contact-icons">
+                                   <a href="#" class="c-icon">5419 Joseph Mountains <br> Apt. 716</a>
+                                   <span class="c-icon c-icon-2">+1 234 567 89 <br> +1 234 678 90</span>
+                               </div>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <div class="contact-icons">
+                                    <a href="#" class="c-icon c-icon-3">joga.info@example.com</a>
+                                    <a href="#" class="c-icon c-icon-4">www.example.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <span class="copyright-info">Copyright  ©  2016-2017 Yoga classes</span>
+        <div class="f-logo-container">
+            <span class="copyright-logo">dZENcode</span>
+        </div>
+    </div>
+
+</body>
+</html>

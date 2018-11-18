@@ -1,0 +1,34 @@
+//@content is a placeholder to allow pass the CSS content block when declaring a mixin
+@mixin responsive($resolution) {
+  @media ( min-width: $resolution ) {
+    @content;
+  }
+};
+
+@mixin responsive-max-width($resolution) {
+  @media ( max-width: $resolution ) {
+    @content;
+  }
+};
+
+@mixin columns($count, $width) {
+  column-count: $count;
+  column-width: $width;
+}
+
+@mixin responsive-bg-image($image-width, $image-height) {
+  background-size: 100%;
+  height: 0;
+  padding-bottom: percentage($image-height / $image-width);
+  display: block;
+  &::after {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: $img-filter-color;
+    opacity: 0.8;
+  }
+}
