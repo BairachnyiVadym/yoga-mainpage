@@ -15,3 +15,5 @@ for (let i = 0; i < zoomIcons.length; i++) {
 closeButton.onclick = function() {
     modal.style.display = "none";
 };
+
+// TODO: replace getElementsByClassName with querySelector

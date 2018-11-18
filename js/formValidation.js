@@ -4,32 +4,28 @@ let nameCheck, phoneCheck, accept = "";
 submitButton.addEventListener("click", nameValidationHandler);
 submitButton.addEventListener("click", phoneValidationHandler);
 
+const setErrorState = (errorText, input) => {
+    input.style.background = 'Yellow';
+    return alert(errorText);
+};
+
 function nameValidationHandler() {
     let fld = document.getElementsByName("name")[0];
-    let error = "";
     let legalChars = /^[a-zA-Z][a-zA-Z\s]*$/; // allow letters and spaces
 
-    if (fld.value == "") {
-        fld.style.background = 'Yellow';
-        error = "You didn't enter a username.\n";
-        alert(error);
-        return false;
-
-    } else if ((fld.value.length < 2) || (fld.value.length > 20)) {
-        fld.style.background = 'Yellow';
-        error = "The username is the wrong length.\n";
-        alert(error);
-        return false;
-
-    } else if (!fld.value.match(legalChars)) {
-        fld.style.background = 'Yellow';
-        error = "The username contains illegal characters.\n";
-        alert(error);
-        return false;
-
-    } else {
-        fld.style.background = "#F2F2F2";
+    if (!fld.value) {
+        return setErrorState("You didn't enter a username.\n", fld);
     }
+
+    if ((fld.value.length < 2) || (fld.value.length > 20)) {
+        return setErrorState("The username is the wrong length.\n", fld);
+    }
+
+    if (!fld.value.match(legalChars)) {
+        return setErrorState("The username contains illegal characters.\n", fld);
+    }
+
+    fld.style.background = "#F2F2F2";
     nameCheck = true;
     return true;
 }
@@ -68,3 +64,5 @@ function phoneValidationHandler() {
     return true;
 }
 
+
+// TODO phoneValidationHandler - needs to be refactored now!!!
