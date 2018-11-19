@@ -353,6 +353,7 @@ body {
       font-size: 3.5vw;
       color: $menu-hover-font-color;
       display: block;
+      margin: 0;
       @include responsive($tablet) {
          font-size: 2.5vw;
       }
@@ -955,11 +956,12 @@ body {
       line-height: 150px;
       margin-bottom: 60px;
     }
-    p {
+    h2 {
       margin: 0;
       color: $main-background-color;
       font-family: $main-header-font-1;
       font-weight: bold;
+      text-align: center;
       .dollar-sign {
         font-size: 22px;
         margin-right: 10px;
