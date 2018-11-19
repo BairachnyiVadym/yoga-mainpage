@@ -1,6 +1,6 @@
 let modal = document.getElementById('myModal');
 let modalImg = document.getElementById("img01");
-let closeButton = document.getElementsByClassName("close")[0];
+let closeButton = document.querySelector(".close");
 
 let zoomIcons = document.getElementsByClassName("icon");
 
@@ -15,5 +15,3 @@ for (let i = 0; i < zoomIcons.length; i++) {
 closeButton.onclick = function() {
     modal.style.display = "none";
 };
-
-// TODO: replace getElementsByClassName with querySelector
