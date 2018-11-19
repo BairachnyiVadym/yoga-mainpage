@@ -480,7 +480,8 @@ body {
       font-family: "Open Sans Semibold";
       font-size: 3.5vw;
       color: #5363db;
-      display: block; }
+      display: block;
+      margin: 0; }
       @media (min-width: 768px) {
         .slider .rounded-form-header {
           font-size: 2.5vw; } }
@@ -1081,30 +1082,31 @@ body {
         height: 150px;
         line-height: 150px;
         margin-bottom: 60px; } }
-    .prices-header p {
+    .prices-header h2 {
       margin: 0;
       color: white;
       font-family: "Open Sans";
-      font-weight: bold; }
-      .prices-header p .dollar-sign {
+      font-weight: bold;
+      text-align: center; }
+      .prices-header h2 .dollar-sign {
         font-size: 22px;
         margin-right: 10px;
         display: inline-block;
         vertical-align: super;
         line-height: normal; }
         @media (min-width: 1024px) {
-          .prices-header p .dollar-sign {
+          .prices-header h2 .dollar-sign {
             font-size: 32px;
             margin-right: 15px; } }
-      .prices-header p .price {
+      .prices-header h2 .price {
         font-size: 47px; }
         @media (min-width: 1024px) {
-          .prices-header p .price {
+          .prices-header h2 .price {
             font-size: 67px; } }
-      .prices-header p .period {
+      .prices-header h2 .period {
         font-size: 12px; }
         @media (min-width: 1024px) {
-          .prices-header p .period {
+          .prices-header h2 .period {
             font-size: 18px; } }
   .prices-button {
     border-radius: 20px;
