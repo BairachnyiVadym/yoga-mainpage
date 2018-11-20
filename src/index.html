@@ -10,6 +10,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <script defer src="../js/app.js"></script>
+
     <script defer src="../js/toggleMenu.js"></script>
     <script defer src="../js/modalBox.js"></script>
     <script defer src="../js/slideShow.js"></script>
@@ -246,7 +248,7 @@
 
                 <!-- Modal Content (The Image) -->
                 <!-- Img src arrives from modalBox.js-->
-                <img alt="yoga practice" src="../elements" class="modal-content" id="img01">
+                <img alt="yoga practice" class="modal-content" id="img01">
             </div>
         </div>
     </section>
@@ -276,8 +278,10 @@
                             <img alt="about us slide" src="../elements/slideshow-3.png">
                         </div>
 
-                        <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="changeSlides(1)">&#10095;</a>
+                        <div id="slide-show">
+                            <a class="prev" data-button-index="-1">&#10094;</a>
+                            <a class="next" data-button-index="1">&#10095;</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -464,13 +468,14 @@
                             <span class="post-thumbnail">Trainer</span>
                         </div>
 
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div id="blockquote-buttons">
+                            <a class="prev" data-button-index="-1">&#10094;</a>
+                            <a class="next" data-button-index="1">&#10095;</a>
+                        </div>
 
                         <div id="bullets">
-                            <!-- TODO: Apply data attributes here (as we did it) and move onClick listeners to the app.js file-->
-                            <span class="dot" data-bullet-index="1" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" data-bullet-index="1"></span>
+                            <span class="dot" data-bullet-index="2"></span>
                         </div>
                     </aside>
                 </div>

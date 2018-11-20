@@ -1,8 +1,15 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function changeSlides(n) {
-    showSlides(slideIndex += n);
+let slideShowButtons = document.getElementById('slide-show').children;
+
+for (let i = 0; i < slideShowButtons.length; i++) {
+    slideShowButtons[i].addEventListener('click', changeSlides);
+}
+
+function changeSlides(event) {
+    let currentButtonData = parseInt(event.target.getAttribute('data-button-index'), 10);
+    showSlides(slideIndex += currentButtonData);
 }
 
 function showSlides(n) {
