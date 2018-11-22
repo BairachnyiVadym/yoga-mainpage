@@ -987,6 +987,7 @@ body {
       }
     }
   }
+
   &-button {
     border-radius: 20px;
     background-color: $submit-background-color;
@@ -1003,6 +1004,9 @@ body {
       margin: 36px auto 0;
       font-size: 18px;
     }
+  }
+  .lighting-price {
+    box-shadow: 0 0 30px rgba(83, 99, 219, 0.5);
   }
 }
 

@@ -5,13 +5,13 @@ for (let i = 0; i < buyNowButtons.length; i++) {
     const current = buyNowButtons[i];
 
     current.onmouseenter = function lightingPrice() {
-        pricesHeader.style.boxShadow = "0 0 30px rgba(83, 99, 219, 0.5)";
-        current.style.boxShadow = "0 0 30px rgba(83, 99, 219, 0.5)";
+        pricesHeader.classList.add('lighting-price');
+        current.classList.add('lighting-price');
     };
 
     current.onmouseleave = function lightingPrice() {
-        pricesHeader.style.boxShadow = "";
-        current.style.boxShadow = "";
+        pricesHeader.classList.remove('lighting-price');
+        current.classList.remove('lighting-price');
     }
 }
 

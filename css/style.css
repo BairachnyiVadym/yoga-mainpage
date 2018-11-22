@@ -1124,6 +1124,9 @@ body {
         height: 50px;
         margin: 36px auto 0;
         font-size: 18px; } }
+  .prices .lighting-price {
+    -webkit-box-shadow: 0 0 30px rgba(83, 99, 219, 0.5);
+    box-shadow: 0 0 30px rgba(83, 99, 219, 0.5); }
 
 .blockquotes {
   margin-top: 30px;
