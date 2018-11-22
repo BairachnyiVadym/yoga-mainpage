@@ -783,6 +783,8 @@ body {
       opacity: 0.6;
       text-decoration: none;
       cursor: pointer; }
+  .gallery .show-modal {
+    display: block; }
   .gallery .row {
     margin-right: 0px;
     margin-left: 0px; }

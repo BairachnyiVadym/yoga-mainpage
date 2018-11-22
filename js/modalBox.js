@@ -6,12 +6,11 @@ let zoomIcons = document.getElementsByClassName("icon");
 
 for (let i = 0; i < zoomIcons.length; i++) {
     zoomIcons[i].onclick = function(){
-        let imgSrc = zoomIcons[i].parentElement.parentElement.firstElementChild.src;
-        modal.style.display = "block";
-        modalImg.src = imgSrc;
+        modalImg.src = zoomIcons[i].parentElement.parentElement.firstElementChild.src;
+        modal.classList.add('show-modal');
     }
 }
 
 closeButton.onclick = function() {
-    modal.style.display = "none";
+    modal.classList.remove('show-modal');
 };

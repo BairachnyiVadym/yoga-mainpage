@@ -654,6 +654,10 @@ body {
     }
   }
 
+  .show-modal {
+    display: block;
+  }
+
   .row {
     margin-right: -$col-gutter-reset;
     margin-left: -$col-gutter-reset;
