@@ -7,20 +7,23 @@ let mainMenu = document.querySelectorAll('.main-menu');
 let menuLinks = document.querySelectorAll('.links');
 
 for (let i = 0; i < menuLinks.length; i++) {
-    menuLinks[i].onclick = function () {
-        mainMenu[0].style.maxHeight = "";
-        mainMenu[1].style.maxHeight = "";
-        menuButton.checked = false;
-        layoutOrderHandler();
+    menuLinks[i].addEventListener('click', linkClickStateHandler);
+}
+
+function linkClickStateHandler() {
+    for (let i = 0; i < mainMenu.length; i++) {
+        mainMenu[i].classList.remove("menu-open");
     }
+    menuButton.checked = false;
+    layoutOrderHandler();
 }
 
 function toggleMenuHandler() {
     for(let i = 0; i < mainMenu.length; i++) {
         if(menuButton.checked) {
-            mainMenu[i].style.maxHeight = "240px";
+            mainMenu[i].classList.add("menu-open");
         } else {
-            mainMenu[i].style.maxHeight = "";
+            mainMenu[i].classList.remove("menu-open");
         }
     }
 }

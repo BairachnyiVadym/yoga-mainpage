@@ -397,6 +397,9 @@ body {
       #nav .logo-name {
         font-size: 15px; } }
 
+#nav .menu-open {
+  max-height: 240px; }
+
 .slider {
   position: relative;
   background-image: url("../elements/slider-background-image.png");
@@ -748,6 +751,8 @@ body {
       margin: auto;
       display: block;
       max-width: 100%; }
+  .gallery .show-modal {
+    display: block; }
   .gallery .modal-content, .gallery #caption {
     -webkit-animation-name: zoom;
     animation-name: zoom;
@@ -783,8 +788,6 @@ body {
       opacity: 0.6;
       text-decoration: none;
       cursor: pointer; }
-  .gallery .show-modal {
-    display: block; }
   .gallery .row {
     margin-right: 0px;
     margin-left: 0px; }
@@ -852,6 +855,10 @@ body {
     @media (min-width: 1440px) {
       .about-us .next {
         right: -25px; } }
+  .about-us .show-slides {
+    display: block; }
+  .about-us .hide-slides {
+    display: none; }
 
 .prev, .next {
   cursor: pointer;
@@ -1368,6 +1375,10 @@ body {
         background-color: #5363db; }
     .blockquotes #bullets .active {
       background-color: #555555; }
+  .blockquotes .show-slides {
+    display: block; }
+  .blockquotes .hide-slides {
+    display: none; }
 
 .footer {
   background-color: #5b6ceb;

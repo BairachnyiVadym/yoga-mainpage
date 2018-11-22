@@ -33,10 +33,12 @@ function thumbNextTrainer(n) {
     if (n < 1) {thumbSlideIndex = len}
 
     for (let i = 0; i < len; i++) {
-        slideThumbs[i].style.display = "none";
+        slideThumbs[i].classList.remove("show-slides");
+        slideThumbs[i].classList.add("hide-slides");
     }
 
-    slideThumbs[thumbSlideIndex-1].style.display = "block";
+    slideThumbs[thumbSlideIndex-1].classList.remove("hide-slides");
+    slideThumbs[thumbSlideIndex-1].classList.add("show-slides");
 }
 
 function nextTrainer(n) {
@@ -47,13 +49,16 @@ function nextTrainer(n) {
     if (n < 1) {mainSlideIndex = len}
 
     for (i = 0; i < len; i++) {
-        mainSlides[i].style.display = "none";
+        mainSlides[i].classList.remove("show-slides");
+        mainSlides[i].classList.add("hide-slides");
     }
     //bullets defined in the outer scope
     for (i = 0; i < bullets.length; i++) {
         bullets[i].className = bullets[i].className.replace(" active", "");
     }
 
-    mainSlides[mainSlideIndex-1].style.display = "block";
+    mainSlides[mainSlideIndex-1].classList.remove("hide-slides");
+    mainSlides[mainSlideIndex-1].classList.add("show-slides");
+
     bullets[mainSlideIndex-1].className += " active";
 }
