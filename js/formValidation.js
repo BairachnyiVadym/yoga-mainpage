@@ -1,15 +1,11 @@
-let submitButton = document.getElementById("slider-form-submit");
 let nameCheck, phoneCheck;
-
-submitButton.addEventListener("click", nameValidationHandler);
-submitButton.addEventListener("click", phoneValidationHandler);
 
 const setErrorState = (errorText, input) => {
     input.style.background = 'Yellow';
     return alert(errorText);
 };
 
-function nameValidationHandler() {
+export function nameValidationHandler() {
     let fld = document.querySelector("input[name=name]");
     let fldValue = document.querySelector("input[name=name]").value;
     let legalChars = /^[a-zA-Z][a-zA-Z\s]*$/; // allow letters and spaces
@@ -30,11 +26,11 @@ function nameValidationHandler() {
     nameCheck = true;
 }
 
-function phoneValidationHandler() {
+export function phoneValidationHandler() {
     let fld = document.querySelector("input[name=phone]");
     let stripped = fld.value.replace(/[\(\)\.\-\ ]/g, '');
 
-    if (fld.value) {
+    if (fld.value === "") {
         return setErrorState("You didn't enter a phone number.\n", fld);
     }
 
