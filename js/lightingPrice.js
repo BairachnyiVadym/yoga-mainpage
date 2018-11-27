@@ -1,17 +1,21 @@
 let buyNowButtons = document.getElementsByClassName("prices-button");
 
-for (let i = 0; i < buyNowButtons.length; i++) {
-    let pricesHeader = buyNowButtons[i].parentElement.firstElementChild;
-    const current = buyNowButtons[i];
+function pricesCollectionEventAttach(collection) {
+    for (let i = 0; i < collection.length; i++) {
+        const pricesHeader = collection[i].parentElement.firstElementChild;
+        const current = collection[i];
 
-    current.onmouseenter = function lightingPrice() {
-        pricesHeader.style.boxShadow = "0 0 30px rgba(83, 99, 219, 0.5)";
-        current.style.boxShadow = "0 0 30px rgba(83, 99, 219, 0.5)";
-    };
+        current.onmouseenter = function lightingPrice() {
+            pricesHeader.classList.add('lighting-price');
+            current.classList.add('lighting-price');
+        };
 
-    current.onmouseleave = function lightingPrice() {
-        pricesHeader.style.boxShadow = "";
-        current.style.boxShadow = "";
+        current.onmouseleave = function lightingPrice() {
+            pricesHeader.classList.remove('lighting-price');
+            current.classList.remove('lighting-price');
+        }
     }
 }
+
+export {buyNowButtons, pricesCollectionEventAttach};
 

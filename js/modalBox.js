@@ -1,19 +1,21 @@
 let modal = document.getElementById('myModal');
 let modalImg = document.getElementById("img01");
-let closeButton = document.getElementsByClassName("close")[0];
+let closeButton = document.querySelector(".close");
 
 let zoomIcons = document.getElementsByClassName("icon");
 
-for (let i = 0; i < zoomIcons.length; i++) {
-    zoomIcons[i].onclick = function(){
-        let imgSrc = zoomIcons[i].parentElement.parentElement.firstElementChild.src;
-        modal.style.display = "block";
-        modalImg.src = imgSrc;
+function galleryCollectionEventAttach(collection) {
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].onclick = function(){
+            modalImg.src = collection[i].parentElement.parentElement.firstElementChild.src;
+            modal.classList.add('show-modal');
+        }
+    }
+
+    closeButton.onclick = function() {
+        modal.classList.remove('show-modal');
     }
 }
 
-closeButton.onclick = function() {
-    modal.style.display = "none";
-};
+export {zoomIcons, galleryCollectionEventAttach};
 
-// TODO: replace getElementsByClassName with querySelector

@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+(function($) {
     function formHeightCalc() {
         let elemHeight = $(".slider").css('height');
         $(".form-holder").height(elemHeight);

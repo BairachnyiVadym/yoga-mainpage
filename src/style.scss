@@ -284,6 +284,9 @@ body {
       }
     }
   }
+  .menu-open {
+    max-height: 240px;
+  }
 }
 
 .slider {
@@ -604,8 +607,6 @@ body {
     }
   }
 
-
-
   /* The Modal (background) */
   .modal {
     display: none; /* Hidden by default */
@@ -625,6 +626,10 @@ body {
       display: block;
       max-width: 100%;
     }
+  }
+
+  .show-modal {
+    display: block;
   }
 
   /* Add Animation - Zoom in the Modal */
@@ -736,6 +741,12 @@ body {
     @include responsive($laptop-L) {
       right: -25px;
     }
+  }
+  .show-slides {
+    display: block;
+  }
+  .hide-slides {
+    display: none;
   }
 }
 
@@ -987,6 +998,7 @@ body {
       }
     }
   }
+
   &-button {
     border-radius: 20px;
     background-color: $submit-background-color;
@@ -1003,6 +1015,9 @@ body {
       margin: 36px auto 0;
       font-size: 18px;
     }
+  }
+  .lighting-price {
+    box-shadow: 0 0 30px rgba(83, 99, 219, 0.5);
   }
 }
 
@@ -1271,6 +1286,12 @@ body {
     .active {
       background-color: $menu-font-color;
     }
+  }
+  .show-slides {
+    display: block;
+  }
+  .hide-slides {
+    display: none;
   }
 }
 

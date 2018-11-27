@@ -1,26 +1,27 @@
-let menuButton = document.getElementById("menu-btn");
-
-menuButton.addEventListener("click", toggleMenuHandler);
-menuButton.addEventListener("click", layoutOrderHandler);
-
 let mainMenu = document.querySelectorAll('.main-menu');
+let menuButton = document.getElementById("menu-btn");
 let menuLinks = document.querySelectorAll('.links');
 
-for (let i = 0; i < menuLinks.length; i++) {
-    menuLinks[i].onclick = function () {
-        mainMenu[0].style.maxHeight = "";
-        mainMenu[1].style.maxHeight = "";
-        menuButton.checked = false;
-        layoutOrderHandler();
+function headerCollectionEventAttach(collection) {
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].addEventListener('click', linkClickStateHandler);
     }
+}
+
+function linkClickStateHandler() {
+    for (let i = 0; i < mainMenu.length; i++) {
+        mainMenu[i].classList.remove("menu-open");
+    }
+    menuButton.checked = false;
+    layoutOrderHandler();
 }
 
 function toggleMenuHandler() {
     for(let i = 0; i < mainMenu.length; i++) {
         if(menuButton.checked) {
-            mainMenu[i].style.maxHeight = "240px";
+            mainMenu[i].classList.add("menu-open");
         } else {
-            mainMenu[i].style.maxHeight = "";
+            mainMenu[i].classList.remove("menu-open");
         }
     }
 }
@@ -35,3 +36,5 @@ function layoutOrderHandler() {
         mobHeader.parentNode.insertBefore(mainMenuLeft, mobHeader);
     }
 }
+
+export {menuButton, menuLinks, toggleMenuHandler, layoutOrderHandler, headerCollectionEventAttach};
