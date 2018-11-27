@@ -1,13 +1,10 @@
+let mainMenu = document.querySelectorAll('.main-menu');
 let menuButton = document.getElementById("menu-btn");
 
-menuButton.addEventListener("click", toggleMenuHandler);
-menuButton.addEventListener("click", layoutOrderHandler);
-
-let mainMenu = document.querySelectorAll('.main-menu');
-let menuLinks = document.querySelectorAll('.links');
-
-for (let i = 0; i < menuLinks.length; i++) {
-    menuLinks[i].addEventListener('click', linkClickStateHandler);
+function headerCollectionEventAttach(collection) {
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].addEventListener('click', linkClickStateHandler);
+    }
 }
 
 function linkClickStateHandler() {
@@ -38,3 +35,5 @@ function layoutOrderHandler() {
         mobHeader.parentNode.insertBefore(mainMenuLeft, mobHeader);
     }
 }
+
+export {menuButton, toggleMenuHandler, layoutOrderHandler, headerCollectionEventAttach};

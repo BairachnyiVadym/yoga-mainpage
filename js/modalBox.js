@@ -2,15 +2,18 @@ let modal = document.getElementById('myModal');
 let modalImg = document.getElementById("img01");
 let closeButton = document.querySelector(".close");
 
-let zoomIcons = document.getElementsByClassName("icon");
+export function galleryCollectionEventAttach(collection) {
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].onclick = function(){
+            modalImg.src = collection[i].parentElement.parentElement.firstElementChild.src;
+            modal.classList.add('show-modal');
+        }
+    }
 
-for (let i = 0; i < zoomIcons.length; i++) {
-    zoomIcons[i].onclick = function(){
-        modalImg.src = zoomIcons[i].parentElement.parentElement.firstElementChild.src;
-        modal.classList.add('show-modal');
+    closeButton.onclick = function() {
+        modal.classList.remove('show-modal');
     }
 }
 
-closeButton.onclick = function() {
-    modal.classList.remove('show-modal');
-};
+
+

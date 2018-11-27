@@ -26,7 +26,7 @@ gulp.task('reload-html', function () {
 });
 
 gulp.task('compile-js', function () {
-    gulp.src('./js/formValidation.js')
+    gulp.src('./js/*.js')
         .pipe(babel())
         .pipe(gulp.dest('./js/es5/'));
 });
@@ -36,6 +36,5 @@ gulp.task('default', function() {
     gulp.watch('./src/style.scss', ['reload-css']);
     gulp.watch('./src/index.html', ['reload-html']);
 
-    gulp.watch('./js/formValidation.js', ['compile-js']);
-    gulp.watch('./js/app.js', ['compile-js']);
+    gulp.watch('./js/application/app.js', ['compile-js']);
 });

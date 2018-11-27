@@ -1,10 +1,10 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-let slideShowButtons = document.getElementById('slide-show').children;
-
-for (let i = 0; i < slideShowButtons.length; i++) {
-    slideShowButtons[i].addEventListener('click', changeSlides);
+export function aboutUsCollectionEventAttach(collection) {
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].addEventListener('click', changeSlides);
+    }
 }
 
 function changeSlides(event) {

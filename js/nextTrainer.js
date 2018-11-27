@@ -1,10 +1,11 @@
 let thumbSlideIndex = 2, mainSlideIndex = 1;
 let bullets = document.getElementsByClassName("dot");
-let blockquoteButtons = document.getElementById("blockquote-buttons").children;
 
-for (let i = 0; i < bullets.length; i++) {
-    bullets[i].addEventListener('click', currentSlide);
-    blockquoteButtons[i].addEventListener('click', plusSlides);
+function blockQuotesCollectionEventAttach(coll, coll2) {
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener('click', currentSlide);
+        coll2[i].addEventListener('click', plusSlides);
+    }
 }
 
 //init with default index values
@@ -62,3 +63,5 @@ function nextTrainer(n) {
 
     bullets[mainSlideIndex-1].className += " active";
 }
+
+export {bullets, blockQuotesCollectionEventAttach};
