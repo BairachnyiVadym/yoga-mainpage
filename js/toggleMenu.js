@@ -1,5 +1,6 @@
 let mainMenu = document.querySelectorAll('.main-menu');
 let menuButton = document.getElementById("menu-btn");
+let menuLinks = document.querySelectorAll('.links');
 
 function headerCollectionEventAttach(collection) {
     for (let i = 0; i < collection.length; i++) {
@@ -36,4 +37,4 @@ function layoutOrderHandler() {
     }
 }
 
-export {menuButton, toggleMenuHandler, layoutOrderHandler, headerCollectionEventAttach};
+export {menuButton, menuLinks, toggleMenuHandler, layoutOrderHandler, headerCollectionEventAttach};

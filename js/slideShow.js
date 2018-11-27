@@ -1,7 +1,9 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-export function aboutUsCollectionEventAttach(collection) {
+let slideShowButtons = document.getElementById('slide-show').children;
+
+function aboutUsCollectionEventAttach(collection) {
     for (let i = 0; i < collection.length; i++) {
         collection[i].addEventListener('click', changeSlides);
     }
@@ -26,3 +28,5 @@ function showSlides(n) {
     slides[slideIndex-1].classList.remove("hide-slides");
     slides[slideIndex-1].classList.add("show-slides");
 }
+
+export {slideShowButtons, aboutUsCollectionEventAttach};

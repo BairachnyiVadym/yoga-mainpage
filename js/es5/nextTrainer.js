@@ -4,11 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.blockQuotesCollectionEventAttach = blockQuotesCollectionEventAttach;
-exports.bullets = void 0;
+exports.blockquoteButtons = exports.bullets = void 0;
 var thumbSlideIndex = 2,
     mainSlideIndex = 1;
 var bullets = document.getElementsByClassName("dot");
 exports.bullets = bullets;
+var blockquoteButtons = document.getElementById("blockquote-buttons").children;
+exports.blockquoteButtons = blockquoteButtons;
 
 function blockQuotesCollectionEventAttach(coll, coll2) {
   for (var i = 0; i < coll.length; i++) {

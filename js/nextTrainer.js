@@ -1,5 +1,6 @@
 let thumbSlideIndex = 2, mainSlideIndex = 1;
 let bullets = document.getElementsByClassName("dot");
+let blockquoteButtons = document.getElementById("blockquote-buttons").children;
 
 function blockQuotesCollectionEventAttach(coll, coll2) {
     for (let i = 0; i < coll.length; i++) {
@@ -64,4 +65,4 @@ function nextTrainer(n) {
     bullets[mainSlideIndex-1].className += " active";
 }
 
-export {bullets, blockQuotesCollectionEventAttach};
+export {bullets, blockquoteButtons, blockQuotesCollectionEventAttach};

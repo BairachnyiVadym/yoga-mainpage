@@ -5,7 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.nameValidationHandler = nameValidationHandler;
 exports.phoneValidationHandler = phoneValidationHandler;
+exports.submitButton = void 0;
 var nameCheck, phoneCheck;
+var submitButton = document.getElementById("slider-form-submit");
+exports.submitButton = submitButton;
 
 var setErrorState = function setErrorState(errorText, input) {
   input.style.background = 'Yellow';

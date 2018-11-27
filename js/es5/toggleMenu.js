@@ -6,10 +6,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.toggleMenuHandler = toggleMenuHandler;
 exports.layoutOrderHandler = layoutOrderHandler;
 exports.headerCollectionEventAttach = headerCollectionEventAttach;
-exports.menuButton = void 0;
+exports.menuLinks = exports.menuButton = void 0;
 var mainMenu = document.querySelectorAll('.main-menu');
 var menuButton = document.getElementById("menu-btn");
 exports.menuButton = menuButton;
+var menuLinks = document.querySelectorAll('.links');
+exports.menuLinks = menuLinks;
 
 function headerCollectionEventAttach(collection) {
   for (var i = 0; i < collection.length; i++) {

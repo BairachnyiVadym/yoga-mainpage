@@ -2,7 +2,9 @@ let modal = document.getElementById('myModal');
 let modalImg = document.getElementById("img01");
 let closeButton = document.querySelector(".close");
 
-export function galleryCollectionEventAttach(collection) {
+let zoomIcons = document.getElementsByClassName("icon");
+
+function galleryCollectionEventAttach(collection) {
     for (let i = 0; i < collection.length; i++) {
         collection[i].onclick = function(){
             modalImg.src = collection[i].parentElement.parentElement.firstElementChild.src;
@@ -15,5 +17,5 @@ export function galleryCollectionEventAttach(collection) {
     }
 }
 
-
+export {zoomIcons, galleryCollectionEventAttach};
 

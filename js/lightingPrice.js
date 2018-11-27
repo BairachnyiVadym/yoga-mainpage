@@ -1,4 +1,6 @@
-export function pricesCollectionEventAttach(collection) {
+let buyNowButtons = document.getElementsByClassName("prices-button");
+
+function pricesCollectionEventAttach(collection) {
     for (let i = 0; i < collection.length; i++) {
         const pricesHeader = collection[i].parentElement.firstElementChild;
         const current = collection[i];
@@ -6,7 +8,7 @@ export function pricesCollectionEventAttach(collection) {
         current.onmouseenter = function lightingPrice() {
             pricesHeader.classList.add('lighting-price');
             current.classList.add('lighting-price');
-        }
+        };
 
         current.onmouseleave = function lightingPrice() {
             pricesHeader.classList.remove('lighting-price');
@@ -15,5 +17,5 @@ export function pricesCollectionEventAttach(collection) {
     }
 }
 
-
+export {buyNowButtons, pricesCollectionEventAttach};
 

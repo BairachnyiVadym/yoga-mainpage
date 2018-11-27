@@ -1,11 +1,12 @@
 let nameCheck, phoneCheck;
+let submitButton = document.getElementById("slider-form-submit");
 
 const setErrorState = (errorText, input) => {
     input.style.background = 'Yellow';
     return alert(errorText);
 };
 
-export function nameValidationHandler() {
+function nameValidationHandler() {
     let fld = document.querySelector("input[name=name]");
     let fldValue = document.querySelector("input[name=name]").value;
     let legalChars = /^[a-zA-Z][a-zA-Z\s]*$/; // allow letters and spaces
@@ -26,7 +27,7 @@ export function nameValidationHandler() {
     nameCheck = true;
 }
 
-export function phoneValidationHandler() {
+function phoneValidationHandler() {
     let fld = document.querySelector("input[name=phone]");
     let stripped = fld.value.replace(/[\(\)\.\-\ ]/g, '');
 
@@ -50,3 +51,5 @@ export function phoneValidationHandler() {
         alert("Your information was accepted. Please, wait for a call from our administrator!\n");
     }
 }
+
+export {submitButton, nameValidationHandler, phoneValidationHandler};

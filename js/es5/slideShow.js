@@ -4,8 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.aboutUsCollectionEventAttach = aboutUsCollectionEventAttach;
+exports.slideShowButtons = void 0;
 var slideIndex = 1;
 showSlides(slideIndex);
+var slideShowButtons = document.getElementById('slide-show').children;
+exports.slideShowButtons = slideShowButtons;
 
 function aboutUsCollectionEventAttach(collection) {
   for (var i = 0; i < collection.length; i++) {

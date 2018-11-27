@@ -4,6 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.pricesCollectionEventAttach = pricesCollectionEventAttach;
+exports.buyNowButtons = void 0;
+var buyNowButtons = document.getElementsByClassName("prices-button");
+exports.buyNowButtons = buyNowButtons;
 
 function pricesCollectionEventAttach(collection) {
   var _loop = function _loop(i) {
